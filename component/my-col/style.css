@@ -1,0 +1,14 @@
+.my-row{
+    width: 100%;
+    padding: 0;
+    font-size: 0;
+}
+.my-row>.my-col{
+    width: 18%;
+    margin: 10px 1%;
+    display: inline-block;
+    float: left;
+}
+.clear{
+    clear: both;
+}

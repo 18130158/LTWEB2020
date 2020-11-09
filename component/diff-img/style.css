@@ -1,0 +1,20 @@
+#diff-img .item img{
+    width: 60px;
+}
+#diff-img .item button{
+    border: 2px solid #fff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+#diff-img .item button.active{
+    border: 2px solid #34BFE8;
+}
+.diff-show{
+    width: 100%;
+    object-fit: cover;
+}
+@media only screen and (max-width:991px){
+    .diff-show img{
+        width: 100%;
+    }
+}

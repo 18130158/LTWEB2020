@@ -1,0 +1,46 @@
+.address-branch{
+    padding-left: 10px;
+}
+.list-branch button{
+    display: block;
+    width: 100%;
+    border: none;
+    background: #fff;
+    text-align: left;
+    padding: 10px 20px;
+}
+.list-branch button i{
+    transition: all 0.4s;
+    margin-right: 10px;
+}
+.address-branch img{
+    width: 24px;
+    display: inline-block;
+    position: absolute;
+    left: 10px;
+}
+.address-branch >ul>li>div{
+    position: relative;
+    padding-left: 50px;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+.address-branch >ul>li>div:hover,
+.address-branch >ul>li>div:focus{
+    background: #F4FCFE;
+}
+.wrap-list{
+    border-radius: 10px;
+    overflow-y: scroll;
+    height: 500px;
+}
+.rotate{
+    transform: rotateZ(90deg);
+}
+.wrap-list::-webkit-scrollbar-thumb{
+    background: rgba(0,0,0,.1);
+    border-radius: 5px;
+}
+.wrap-list::-webkit-scrollbar{
+    width: 5px;
+}
