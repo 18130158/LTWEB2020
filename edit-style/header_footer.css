@@ -1,3 +1,6 @@
+.header{
+    height: 144px;
+}
 .content-banner{
     width: 100%;
 }
@@ -185,7 +188,7 @@
     position: relative;
     display: block;
     transition: all 0.4s;
-    
+
     top: 0;
 }
 .my-service .content{
@@ -394,4 +397,64 @@
 }
 .edit-product-item:hover{
     top: -10px;
+}
+.footer-1{
+    background: #7f7f7f;
+}
+.fa-facebook-square{
+    color: #00007f;
+}
+.fa-youtube{
+    color: red;
+    margin-top: 15px;
+}
+.fa-instagram{
+    color: #7f003f;
+    margin-top: 15px;
+}
+.footer-1 .d-lg-block a{
+    color: white;
+    font-size: 15px;
+}
+
+.wrap-search .input{
+    background: rgba(68,68,68,0.002);
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px;
+    padding-left: 60px;
+    color: rgba(68,68,68,.5);
+}
+.wrap-search input::placeholder{
+    color: rgba(68,68,68,.5);
+}
+.thanhtoan1{
+    margin-top: 15px;
+}
+.thanhtoan2{
+    margin-top: 10px;
+}
+#giaohangtietkiem{
+    width: 63px;
+    height: 41px;
+}
+#giaohangnhanh{
+    width: 54px;
+    height: 33px;
+    border-radius: 2px;
+}
+#giaohangjvatexpress{
+    width: 54px;
+    height: 33px;
+    border-radius: 2px;
+    margin-left: 3px;
+}
+#chungnhan1{
+    width: 38px;
+    height: 36px;
+}
+#chungnhan2{
+    width: 86px;
+    height: 33px;
 }

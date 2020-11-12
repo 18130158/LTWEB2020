@@ -14,7 +14,7 @@
     overflow: hidden;
 }
 .wrap-menu>ul li a:hover{
-    color: #fff;
+    color: #444f5e;
 }
 .wrap-menu>ul{
     display: flex;
@@ -103,7 +103,6 @@
 .wrap-sub-menu ul>li> a{
     display: block!important;
     width: 100%;
-    background: ;
     margin-right: 10px;
     text-align: left;
     padding: 0;

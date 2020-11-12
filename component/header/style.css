@@ -1,5 +1,4 @@
 .header-main, .header-bottom{
-    background: rgba(255,255,255,.1);
     position: absolute;
     top: 0;
     width: 100%;
@@ -101,11 +100,6 @@
 .btn-title svg{
     position: relative;
     top: -3px;
-}
-.wrap-block-right ul li:nth-child(1),
-.wrap-block-right ul li:nth-child(2),
-.wrap-block-right ul li:nth-child(3){
-    float: left;
 }
 .wrap-block-right .icon{
     padding: 10px;
