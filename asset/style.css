@@ -17,6 +17,12 @@ h1, h2, h3, h4, h5, h6{
 .c-dark-1{
     color: #7C848D;
 }
+.c-dark-2{
+    color: #C0C4C8;
+}
+.c-blue{
+    color: #0DCFDA;
+}
 .bg-w{
     background:#fff;
 }
@@ -70,7 +76,7 @@ h1, h2, h3, h4, h5, h6{
 @media only screen and (max-width:991px){
     .mg-pd-none-mb{
         padding: 0;
-	margin:0;
+	    margin:0;
     }
     .xsmall-size{
         font-size: 8px!important;

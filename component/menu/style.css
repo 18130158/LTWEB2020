@@ -14,7 +14,7 @@
     overflow: hidden;
 }
 .wrap-menu>ul li a:hover{
-    color: #444f5e;
+    color: #fff;
 }
 .wrap-menu>ul{
     display: flex;
@@ -103,6 +103,7 @@
 .wrap-sub-menu ul>li> a{
     display: block!important;
     width: 100%;
+    background: ;
     margin-right: 10px;
     text-align: left;
     padding: 0;
@@ -124,6 +125,23 @@
     position: relative;
     top: -3px;
 }
+/*----------------------------------------*/
+.wrap-sub-fix-width{
+    min-width: 250px;
+}
+.wrap-sub-fix-width ul>li>a{
+    padding: 15px 20px;
+    font-weight: 600;
+    transition: all 0.4s;
+}
+.wrap-sub-fix-width ul>li>a:hover{
+    background: #ECEDEE;
+}
+.wrap-sub-fix-width .sub-menu{
+    padding: 10px 0px;
+}
+
+
 /*----------------------------------------*/
 .nav-bars{
     transform: translateY(7px);

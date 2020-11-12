@@ -90,6 +90,19 @@ $('#diff-img').owlCarousel({
     autoWidth:true,
 });
 
+$('#service-01').owlCarousel({
+    loop:false,
+    margin:30,
+    nav:false,
+    autoWidth:true,
+});
+$('#service-02').owlCarousel({
+    loop:true,
+    margin:30,
+    nav:true,
+    autoWidth:true
+});
+
 
 tempItemX = 1;
 $('#leader').owlCarousel({
@@ -247,3 +260,27 @@ function resultPos(keyid, keyindex = 1){
     str = '<strong>'+keyindex+'</strong>'+'<span class="c-light-text"> /'+value+'</span>';
     $(temp0).html(str);
 }
+
+
+
+
+$(window).resize(
+    widthItemSlide()
+);
+function widthItemSlide(){
+    var tempz = $('.posX').offset();
+    var tempzz = tempz.left -25;
+    tempzz+='px';
+    $('.first-item').css('width',tempzz);
+    
+} 
+widthItemSlide();
+
+
+// ------ vir btn
+$('.wrap-vir-btn .owl-prev').click(function(){
+    $('#service-01').trigger('prev.owl.carousel', [300]);
+});
+$('.wrap-vir-btn .owl-next').click(function(){
+    $('#service-01').trigger('next.owl.carousel', [300]);
+})

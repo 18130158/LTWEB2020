@@ -1,0 +1,40 @@
+#image_gioithieu{
+    width: 80%;
+    height: 400px;
+    border: 10px solid grey;
+}
+.titlegioithieu{
+    font-size: 20px;
+    line-height: 3;
+}
+.noidunggioithieu{
+    font-size: 14px;
+}
+.image_map_gioithieu{
+    width: 100%;
+}
+.banve #design{
+    width: 520px;
+    margin-left: -13px;
+}
+#design_add{
+    color: black;
+}
+.sanpham_gioithieu .design_sanpham{
+    margin-top: 50px;
+}
+.design_sanpham #design2{
+    width: 500px;
+}
+.titlegioithieu_sanxuat{
+    font-size: 20px;
+    margin-top: -50px;
+}
+.sanxuat_gioithieu{
+    margin-top: 100px;
+}
+.design_sanxuat{
+    margin-top: -50px;
+}
+
+   
