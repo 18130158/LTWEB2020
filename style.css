@@ -171,6 +171,12 @@
 
 
 /* Topbar */
+header.masthead {
+    position: relative;
+    overflow: hidden;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
 
 .topbar {
     background-color: #fff;
@@ -4215,6 +4221,9 @@
 .shop-services.section {
     padding: 80px 0 0px 0;
     background: #fff;
+}
+.section {
+    padding: 50px;
 }
 
 .shop-services.home {
