@@ -9,15 +9,14 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<!-- Title Tag  -->
-	<title>Đăng ký</title>
+	<title>Đăng nhập</title>
 	<!-- Favicon -->
 	<link rel="icon" type="image/png" href="images/logo-annl-cricle-mini.png">
 	<!-- Web Font -->
 	<link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap"
 		rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-    
-
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
 	<!-- Bootstrap -->
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<!-- Magnific Popup -->
@@ -36,12 +35,82 @@
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="css/responsive.css">
-
-
-
     <link rel="stylesheet" href="css/style-login.css">
+    <style>
+        body {
+            color: #fff;
+            background: white;
+        }
+        .form-control {
+            min-height: 41px;
+            background: #f2f2f2;
+            
+            border: 1px solid grey;
+        }
+        .form-control:focus {
+            background: #e2e2e2;
+        }
+        .form-control, .btn {        
+            border-radius: 2px;
+        }
+        .login-form {
+            width: 350px;
+            margin: 30px auto;
+            text-align: center;
+            
+        }
+        .login-form h2 {
+            margin: 10px 0 25px;
+        }
+        .login-form form {
+            color: #7a7a7a;
+            border: 1px solid #e5e5e5;
+            border-radius: 3px;
+            margin-bottom: 15px;
+            width: 398px;
+            background: #fff;
+            box-shadow: 0px 3px 3px rgba(128, 111, 111, 0.3);
+            padding: 30px;
+            background: linear-gradient(to right bottom,  white,#e5e5e5);
+            box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+        }
+        .login-form .btn {        
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 42px;
+            background: #F7941D;
+            border: none;
+            outline: none !important;
+        }
+        .login-form .btn:hover, .login-form .btn:focus {
+            background: black;
+        }
+        .login-form a {
+            color: black;
+            text-decoration: underline;
+        }
+        .login-form a:hover {
+            text-decoration: none;
+        }
+        .login-form form a {
+            color: #7a7a7a;
+            text-decoration: none;
+        }
+        .login-form form a:hover {
+            text-decoration: underline;
+        }
+        .form-group{
+            font-size: 18px;
+        }
+        .small a:hover{
+            color: #F7941D;
+        }
+        .form_signup a:hover{
+            color: #F7941D;
+        }
+        
+    </style>
 </head>
-
 <body>
     <header class="header shop">
 		<!-- Topbar -->
@@ -102,8 +171,7 @@
 					<div class="col-lg-7 col-md-6 col-12">
 						<div class="search-bar-top">
 							<div class="search-bar">
-
-								<form>
+                                <form>
 									<input name="search" placeholder="Nhập mã hoặc tên sản phẩm..." type="search">
 									<button class="btnn"><i class="ti-search"></i></button>
 								</form>
@@ -205,102 +273,25 @@
 					<div class="bread-inner">
 						<ul class="bread-list">
 							<li><a href="index.html">Trang chủ<i class="ti-arrow-right"></i></a></li>
-							<li class="active"><a href="sign-in.html">Đăng ký</a></li>
+							<li class="active"><a href="login.html">Đăng nhập</a></li>
 						</ul>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-<style>
-	body {
-		color: #fff;
-		background: white;
-	}
-	.form-control {
-		min-height: 41px;
-		background: #f2f2f2;
-		
-		border: 1px solid grey;
-	}
-	.form-control:focus {
-		background: #e2e2e2;
-	}
-	.form-control, .btn {        
-        border-radius: 2px;
-    }
-	.login-form {
-		width: 350px;
-		margin: 30px auto;
-		text-align: center;
-		
-	}
-	.login-form h2 {
-        margin: 10px 0 25px;
-    }
-    .login-form form {
-		color: #7a7a7a;
-		border: 1px solid #e5e5e5;
-		border-radius: 3px;
-    	margin-bottom: 15px;
-        background: #fff;
-        box-shadow: 0px 3px 3px rgba(128, 111, 111, 0.3);
-        padding: 30px;
-		background: linear-gradient(to right bottom,  white,#e5e5e5);
-		box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
-    }
-    .login-form .btn {        
-        font-size: 16px;
-		font-weight: bold;
-		border-radius: 42px;
-		background: #F7941D;
-		border: none;
-        outline: none !important;
-    }
-	.login-form .btn:hover, .login-form .btn:focus {
-		background: black;
-	}
-	.login-form a {
-		color: black;
-		text-decoration: underline;
-	}
-	.login-form a:hover {
-		text-decoration: none;
-	}
-	.login-form form a {
-		color: #7a7a7a;
-		text-decoration: none;
-	}
-	.login-form form a:hover {
-		text-decoration: underline;
-	}
-	.form-group{
-		font-size: 18px;
-	}
-	.small a:hover{
-		color: #F7941D;
-	}
-	.form_signup a:hover{
-		color: #F7941D;
-	}
-</style>
-</head>
-<body>
 	<div class="login-form">
 		<form action="/examples/actions/confirmation.php" method="post" class="form_signup">
 			<h2 class="text-center">
-				<strong>Đăng ký</strong>
+				<strong>Đăng nhập</strong>
 			</h2>   
 			<div class="form-group">
-				<input type="text" class="form-control" name="username" placeholder="Tên đăng ký" required="required" oninvalid="this.setCustomValidity('Nhập tên đăng ký')" style="font-size: 14px;">
+				<input type="text" class="form-control" name="username" placeholder="Tên đăng nhập" required="required" oninvalid="this.setCustomValidity('Nhập tên đăng ký')" style="font-size: 14px;">
 			</div>
-	
-			<div class="form-group">
+	        <div class="form-group">
 				<input type="password" class="form-control" name="password" placeholder="Mật khẩu" required="required" oninvalid="this.setCustomValidity('Nhập mật khẩu')"  style="font-size: 14px;">
-			</div>
-			<div class="form-group">
-				<input type="password" class="form-control" name="password" placeholder="Xác nhận mật khẩu" required="required"oninvalid="this.setCustomValidity('Xác nhận lại mật khẩu')"  style="font-size: 14px;">
-			</div>      
+            </div>
+            <p><a href="#"  style="font-size: 14px;text-decoration: none;text-align: right;">Quên mật khẩu?</a></p> 
 			<div class="form-group">
 				<button type="submit" class="btn btn-primary btn-lg btn-block">
 					<a href="user_information.html" style="text-decoration: none;color: white;">
@@ -308,9 +299,35 @@
 					</a>
 				</button>
 			</div>
-			<p><a href="#"  style="font-size: 14px;text-decoration: none;">Quên mật khẩu?</a></p>
+            <p>
+                Hoặc đăng nhập với:
+            </p>
+			<div class="form-group" >
+				<button type="submit" class="btn btn-primary btn-lg btn-block btnlogin" style="background-color: #0303aa;">
+					<a href="user_information.html" style="text-decoration: none;color: white;">
+                        <i class="fab fa-facebook"></i>
+                        facebook
+					</a>
+				</button>
+            </div>
+            <div class="form-group">
+				<button type="submit" class="btn btn-primary btn-lg btn-block" style="background-color: #dd1818;">
+					<a href="user_information.html" style="text-decoration: none;color: white;">
+                        <i class="fab fa-google"></i>
+                        google
+					</a>
+				</button>
+            </div>
+            <div class="form-group">
+				<button type="submit" class="btn btn-primary btn-lg btn-block" style="background-color: #bf005f;">
+					<a href="user_information.html" style="text-decoration: none;color: white;">
+                        <i class="fab fa-instagram"></i>
+                        instagram
+					</a>
+				</button>
+            </div>
 		</form>
-		<p class="text-center small" style="font-size: 14px;">Bạn đã có tài khoản? <a href="#"  style="font-size: 16px;text-decoration: none;">Đăng nhập ngay!</a></p>
+		<p class="text-center small" style="font-size: 14px;">Bạn chưa có tài khoản? <a href="sign-in.html"  style="font-size: 16px;text-decoration: none;">Đăng ký ngay!</a></p>
 	</div>
 	<!--container end.//-->
 

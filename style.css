@@ -1415,7 +1415,7 @@ header.masthead {
 
 .hero-slider .hero-text .btn {
     color: #fff;
-    background: #FE754A;
+    background: #F7941D;
     padding: 13px 30px;
     line-height: initial;
     border: none;
@@ -1424,8 +1424,8 @@ header.masthead {
 }
 
 .hero-slider .hero-text .btn:hover {
-    background: white;
-    color: black;
+    background:black;
+    color: white;
 }
 
 
