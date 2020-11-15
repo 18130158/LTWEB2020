@@ -1,0 +1,35 @@
+.dropdown-menu {
+    margin: 20px !important;
+}
+
+#drop1 btn {
+    background-color: aliceblue !important;
+}
+
+i {
+    color: rgb(230, 87, 5) !important;
+}
+
+.btn {
+    height: 100%;
+    /* width: 150px; */
+}
+
+tbody {
+    text-align: center;
+}
+table{
+    text-align: center;
+}
+.portlet-grid{
+    margin-left: 50px;
+    width: 93%;
+
+}
+.portlet-grid .panel-heading{
+    text-align: left;
+    
+}
+.panel-body form label{
+    margin-top: 20px;
+}
