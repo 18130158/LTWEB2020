@@ -9,7 +9,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<!-- Title Tag  -->
-	<title>Tin tức</title>
+	<title>Thông tin cá nhân</title>
 	<!-- Favicon -->
 	<link rel="icon" type="image/png" href="images/logo-annl-cricle-mini.png">
 	<!-- Web Font -->
@@ -46,20 +46,77 @@
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     
     <style>
-        .text3{
-            position:absolute;
-            top: 10px;
-            font-family: 'Lobster', cursive;
-            color: white;
-            margin-left: 57px;
+        body {
+            color: #fff;
+            background: white;
         }
-        #titilename:hover{
-            color: #f7941d;
+        .form-control {
+            min-height: 41px;
+            background: #f2f2f2;
+            
+            border: 1px solid grey;
         }
-        #xemthemtintuc:hover{
-            color: #f7941d;
+        .form-control:focus {
+            background: #e2e2e2;
         }
-        
+        .form-control, .btn {        
+            border-radius: 2px;
+        }
+        .login-form {
+            width: 350px;
+            margin: 30px auto;
+            text-align: center;
+            
+        }
+        .login-form h2 {
+            margin: 10px 0 25px;
+        }
+        .login-form form {
+            color: #7a7a7a;
+            border: 1px solid #e5e5e5;
+            border-radius: 3px;
+            width: 387px;
+            margin-bottom: 15px;
+            background: #fff;
+            box-shadow: 0px 3px 3px rgba(128, 111, 111, 0.3);
+            padding: 30px;
+            background: linear-gradient(to right bottom,  white,#e5e5e5);
+            box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+        }
+        .login-form .btn {        
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 42px;
+            background: #F7941D;
+            border: none;
+            outline: none !important;
+        }
+        .login-form .btn:hover, .login-form .btn:focus {
+            background: black;
+        }
+        .login-form a {
+            color: black;
+            text-decoration: underline;
+        }
+        .login-form a:hover {
+            text-decoration: none;
+        }
+        .login-form form a {
+            color: #7a7a7a;
+            text-decoration: none;
+        }
+        .login-form form a:hover {
+            text-decoration: underline;
+        }
+        .form-group{
+            font-size: 18px;
+        }
+        .small a:hover{
+            color: #F7941D;
+        }
+        .form_signup a:hover{
+            color: #F7941D;
+        }
     </style>
 </head>
 <body class="js">
@@ -217,7 +274,7 @@
 		</div>
 		<!--/ End Header Inner -->
 	</header>
-	<!--/ End Header -->
+    <!--/ End Header -->
 
 	<!-- Breadcrumbs -->
 	<div class="breadcrumbs">
@@ -227,214 +284,45 @@
 					<div class="bread-inner">
 						<ul class="bread-list">
 							<li><a href="index.html">Trang chủ<i class="ti-arrow-right"></i></a></li>
-							<li class="active"><a href="news.html">Tin tức</a></li>
+                            <li class="active"><a href="sign-in.html">Đăng ký <i class="ti-arrow-right"></i></a></li>
+							<li class="active"><a href="user_information.html">Thông tin cá nhân</a></li>
 						</ul>
 					</div>
 				</div>
 			</div>
 		</div>
     </div>
-    <header class="masthead text-center text-white">
-		<div class="masthead-content">
-			<div class="container">
-				<div class="row">
-					<div class="col">
-						<a href="index.html">
-							<img class="img-fluid" src="images/logo.png" alt="" style="max-width: 1200px;height: 228px;width: 460px;margin-top: -140px;margin-bottom: -80px;">
-						</a>
-					</div>
-				</div>
+    <div class="login-form">
+		<form action="/examples/actions/confirmation.php" method="post" class="form_signup">
+			<h2 class="text-center">
+				<strong >Thông tin cá nhân</strong>
+			</h2>   
+			<div class="form-group has-error">
+				<input type="text" class="form-control" name="username" placeholder="Họ tên" required="required" oninvalid="this.setCustomValidity('Nhập họ tên')" style="font-size: 14px;">
 			</div>
-			
-	</header>
-    <div class="container">
-        <div>
-            <hr>
-        </div>
-    </div>
-    <div class="container">
-       <strong class="titletintuc" style="font-size: 20pt;">DANH MỤC BÀI VIẾT</strong><br><br>
-        <div class="row">
-            <div class="col-lg-4 col-sm-6 col-12 content_item">
-                <center class="content_item1">
-                    <a href="">
-                        <img src="images/tintuc/hinh2.png" alt="" id="imagetintuc" style="    HEIGHT: 243PX;"><br><br>
-                        <strong id="titilename">NGÀY HỘI GIẢM GIÁ PHỤ KIỆN</strong><br>
-                        <label for="" id="labeltintuc">
-                            <i class="far fa-clock"></i>
-                            20/01/2020
-                        </label><br>
-                        <a href="" id="xemthemtintuc">
-                           <strong> XEM THÊM </strong>
-                        </a>
-                    </a>
-                </center>
-            </div>
-            <div class="col-lg-4 col-sm-6 col-12  content_item">
-                <center class="content_item1">
-                    <a href="">
-                        <img src="images/tintuc/hinh1.jpg" alt="" id="imagetintuc"><br><br>
-                        <strong id="titilename">BACK TO SCHOOL</strong><br>
-                        <label for="" id="labeltintuc">
-                            <i class="far fa-clock"></i>
-                            12/03/2020
-                        </label><br>
-                        <a href="" id="xemthemtintuc">
-                            <strong> XEM THÊM </strong>
-                        </a>
-                    </a>
-                </center>
-            </div>
-            <div class="col-lg-4 col-12 col-sm-6 content_item">
-                <center class="content_item1">
-                    <a href="">
-                        <center>
-                            <h1 class="text3">The best version!</h1>
-                        </center>
-                        <img src="images/tintuc/hinh3.jpg" alt="" id="imagetintuc" style="    height: 240px;"><br><br>
-                        <center style="margin-left: 10px;"><strong id="titilename" style="margin-left: -18px;;">ƯU ĐÃI LỚN</strong></center>
-                        <label for="" id="labeltintuc">
-                            <i class="far fa-clock"></i>
-                            20/07/2020
-                        </label><br>
-                        <a href="" id="xemthemtintuc">
-                            <strong> XEM THÊM </strong>
-                        </a>
-                    </a>
-                </center>
-            </div>
-        </div><br><br>
-            <div class="row">
-                <div class="col-lg-4 col-sm-6 col-12  content_item">
-                    <center class="content_item1">
-                        <a href="">
-                            <img src="images/tintuc/hinh4.png" alt="" id="imagetintuc" style="HEIGHT: 243PX;;"><br><br>
-                            <strong id="titilename">SALE OFF 50%</strong><br>
-                            <label for="" id="labeltintuc">
-                                <i class="far fa-clock"></i>
-                                12/03/2020
-                            </label><br>
-                            <a href="" id="xemthemtintuc">
-                                <strong> XEM THÊM </strong>
-                            </a>
-                        </a>
-                    </center>
-                </div>
-                <div class="col-lg-4 col-sm-6 col-12  content_item">
-                    <center class="content_item1">
-                        <a href="">
-                            <img src="images/tintuc/hinh5.jpg" alt="" id="imagetintuc" style="HEIGHT: 243PX;width: 500px;"><br><br>
-                            <strong id="titilename">GIẢM GIÁ KHỦNG</strong><br>
-                            <label for="" id="labeltintuc">
-                                <i class="far fa-clock"></i>
-                                20/12/2020
-                            </label><br>
-                            <a href="" id="xemthemtintuc">
-                                <strong> XEM THÊM </strong>
-                            </a>
-                        </a>
-                    </center>
-                </div>
-                <div class="col-lg-4 col-sm-6 col-12  content_item">
-                    <center class="content_item1">
-                        <a href="">
-                            <img src="images/tintuc/hinh6.jpg" alt="" id="imagetintuc" style="HEIGHT: 243PX;width: 500px;"><br><br>
-                            <strong id="titilename">TƯNG BỪNG MÙA LỄ HỘI </strong><br>
-                            <label for="" id="labeltintuc">
-                                <i class="far fa-clock"></i>
-                                28/12/2020
-                            </label><br>
-                            <a href="" id="xemthemtintuc">
-                                <strong> XEM THÊM </strong>
-                            </a>
-                        </a>
-                    </center>
-                </div>
-            </div><br><br>
-            
-        <div class="row">
-            <div class="col-lg-4 col-sm-6 col-12  content_item">
-                <center class="content_item1">
-                    <a href="">
-                        <img src="images/tintuc/hinh6.jpg" alt="" id="imagetintuc" style="HEIGHT: 243PX;width: 500px;"><br><br>
-                        <strong id="titilename">TƯNG BỪNG MÙA LỄ HỘI 2</strong><br>
-                        <label for="" id="labeltintuc">
-                            <i class="far fa-clock"></i>
-                            31/12/2020
-                        </label><br>
-                        <a href="" id="xemthemtintuc">
-                            <strong> XEM THÊM </strong>
-                        </a>
-                    </a>
-                </center>
-            </div>
-            <div class="col-lg-4 col-sm-6 col-12 content_item">
-                <center class="content_item1">
-                    <a href="">
-                        <img src="images/tintuc/hinh2.png" alt="" id="imagetintuc" style="    HEIGHT: 243PX;"><br><br>
-                        <strong id="titilename">NGÀY HỘI GIẢM GIÁ PHỤ KIỆN</strong><br>
-                        <label for="" id="labeltintuc">
-                            <i class="far fa-clock"></i>
-                            29/01/2021
-                        </label><br>
-                        <a href="" id="xemthemtintuc">
-                           <strong> XEM THÊM </strong>
-                        </a>
-                    </a>
-                </center>
-            </div>
-            <div class="col-lg-4 col-sm-6 col-12  content_item">
-                <center class="content_item1">
-                    <a href="">
-                        <img src="images/tintuc/hinh4.png" alt="" id="imagetintuc" style="HEIGHT: 243PX;;"><br><br>
-                        <strong id="titilename">SALE OFF 50%</strong><br>
-                        <label for="" id="labeltintuc">
-                            <i class="far fa-clock"></i>
-                            12/03/2021
-                        </label><br>
-                        <a href="" id="xemthemtintuc">
-                            <strong> XEM THÊM </strong>
-                        </a>
-                    </a>
-                </center>
-            </div>
-        </div>
-    </div>
-    </div><br>
-    <center>
-        <div class="phantrangtintuc">
-            <div class="btn-group mr-2" role="group" aria-label="First group" style="margin: auto;" >
-                <button type="button" class="btn btn-secondary btn_phantrang"><a href="news.html">1</a></button>
-                <button type="button" class="btn btn-secondary  btn_phantrang"><a href="news.html">2</a></button>
-                <button type="button" class="btn btn-secondary  btn_phantrang"><a href="news.html">3</a></button>
-            </div>
-        </div>
-    </center>
-    <footer class="py-5 ">
-		<section class="shop-newsletter section">
-			<div class="container">
-				<div class="inner-top">
-					<div class="row">
-						<div class="col-lg-8 offset-lg-2 col-12">
-							<!-- Start Newsletter Inner -->
-							<div class="inner">
-								<h4>Đăng kí</h4>
-								<p>Đăng kí để nhận được ưu đãi lên đến <span>10%</span> cho lần mua đầu tiên</p>
-								<form action="" method="get" target="_blank" class="newsletter-inner">
-                                    <input name="EMAIL" placeholder="Nhập tài khoản email... " required="" type="email" oninvalid="this.setCustomValidity('Mời nhập email!')">
-                                    <button class="btn">Đăng kí</button>
-                                </form>
-							</div>
-							<!-- End Newsletter Inner -->
-						</div>
-					</div>
-				</div>
+	
+			<div class="form-group">
+				<input type="text" class="form-control" name="adress" placeholder="Địa chỉ" required="required" oninvalid="this.setCustomValidity('Nhập địa chỉ')"  style="font-size: 14px;">
 			</div>
-		</section>
-	</footer>
-
-
-	<!-- Start Footer Area -->
+			<div class="form-group">
+				<input type="text" class="form-control" name="mail" placeholder="Email" required="required"oninvalid="this.setCustomValidity('Nhập email')"  style="font-size: 14px;">
+            </div>     
+            <div class="form-group has-error">
+				<input type="text" class="form-control" name="number_phone" placeholder="Số điện thoại" required="required" oninvalid="this.setCustomValidity('Nhập số điện thoại')" style="font-size: 14px;">
+			</div>
+	
+			<div class="form-group">
+				<input type="text" class="form-control" name="birthday" placeholder="Ngày sinh" required="required" oninvalid="this.setCustomValidity('Nhập ngày sinh')"  style="font-size: 14px;">
+			</div>
+			<div class="form-group">
+				<input type="text" class="form-control" name="sex" placeholder="Giới tính" required="required"oninvalid="this.setCustomValidity('Nhập giới tính')"  style="font-size: 14px;">
+			</div>    
+			<div class="form-group">
+				<button type="submit" class="btn btn-primary btn-lg btn-block" style="color: white;">Gửi</button>
+			</div>
+		</form>
+	</div><br>
+    <!-- Start Footer Area -->
 	<footer class="footer">
 		<!-- Footer Top -->
 		<div class="footer-top section">

@@ -171,6 +171,12 @@
 
 
 /* Topbar */
+header.masthead {
+    position: relative;
+    overflow: hidden;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
 
 .topbar {
     background-color: #fff;
@@ -1409,7 +1415,7 @@
 
 .hero-slider .hero-text .btn {
     color: #fff;
-    background: #FE754A;
+    background: #F7941D;
     padding: 13px 30px;
     line-height: initial;
     border: none;
@@ -1418,8 +1424,8 @@
 }
 
 .hero-slider .hero-text .btn:hover {
-    background: white;
-    color: black;
+    background:black;
+    color: white;
 }
 
 
@@ -4215,6 +4221,9 @@
 .shop-services.section {
     padding: 80px 0 0px 0;
     background: #fff;
+}
+.section {
+    padding: 50px;
 }
 
 .shop-services.home {
