@@ -40,7 +40,23 @@
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="css/responsive.css">
-	
+	<style>
+		.btn-cus1{
+			text-transform: capitalize;
+			padding: 0.5rem;
+			background-color: white;
+			color: #666666;
+			border-radius: 3px;
+			border: 1px solid #b8b6b6d5;
+		} 
+		.btn-cus{
+			background-color: white;
+			color: #666666;
+			padding: 0.5rem;
+			border: 1px solid #b8b6b6d5;
+
+		}
+	</style>
 </head>
 <body class="js">
     <header class="header shop">
@@ -238,101 +254,68 @@
 								<!-- Shop By Price -->
 									<div class="single-widget range">
 										<h3 class="title">Mức giá</h3>
-										<div class="price-filter">
-											<div class="price-filter-inner">
-												<div id="slider-range"></div>
-													<div class="price_slider_amount">
-													
-												</div>
-											</div>
-										</div>
+			
 										<ul class="check-box-list">
 											<li>
-												<label class="checkbox-inline" for="1"><input name="news" id="1" type="checkbox">0 - 5 triệu<span class="count">(3)</span></label>
+												<label class="checkbox-inline" for="1"><input name="news" id="1" type="checkbox">0 - 5 triệu<span class="count"></span></label>
 											</li>
 											<li>
-												<label class="checkbox-inline" for="2"><input name="news" id="2" type="checkbox">5 triệu - 20 triệu<span class="count">(5)</span></label>
+												<label class="checkbox-inline" for="2"><input name="news" id="2" type="checkbox">5 triệu - 20 triệu<span class="count"></span></label>
 											</li>
 											<li>
-												<label class="checkbox-inline" for="3"><input name="news" id="3" type="checkbox">Trên 20 triệu<span class="count">(8)</span></label>
+												<label class="checkbox-inline" for="3"><input name="news" id="3" type="checkbox">Trên 20 triệu<span class="count"></span></label>
 											</li>
 										</ul>
 									</div>
-									<!--/ End Shop By Price -->
-								<!-- Single Widget -->
-								<div class="single-widget recent-post">
-									<h3 class="title">Đã xem gần đây</h3>
-									<!-- Single Post -->
-									<div class="single-post first">
-										<div class="image">
-											<img src="images/collection-product/colletion-Recent-post-items/pc1.jpg" alt="#">
-										</div>
-										<div class="content">
-											<h5><a href="#">Titan M</a></h5>
-											<p class="price">9.390.000₫</p>
-											<ul class="reviews">
-												<li class="yellow"><i class="ti-star"></i></li>
-												<li class="yellow"><i class="ti-star"></i></li>
-												<li class="yellow"><i class="ti-star"></i></li>
-												<li class="yellow"><i class="ti-star"></i></li>
-												<li><i class="ti-star"></i></li>
-											</ul>
-										</div>
-									</div>
-									<!-- End Single Post -->
-									<!-- Single Post -->
-									<div class="single-post first">
-										<div class="image">
-											<img src="images/collection-product/colletion-Recent-post-items/pc2.jpg" alt="#">
-										</div>
-										<div class="content">
-											<h5><a href="#">Yumi S</a></h5>
-											<p class="price">18.090.000₫</p>
-											<ul class="reviews">
-												<li class="yellow"><i class="ti-star"></i></li>
-												<li class="yellow"><i class="ti-star"></i></li>
-												<li class="yellow"><i class="ti-star"></i></li>
-												<li class="yellow"><i class="ti-star"></i></li>
-												<li><i class="ti-star"></i></li>
-											</ul>
-										</div>
-									</div>
-									<!-- End Single Post -->
-									<!-- Single Post -->
-									<div class="single-post first">
-										<div class="image">
-											<img src="images/collection-product/colletion-Recent-post-items/pc3.jpg" alt="#">
-										</div>
-										<div class="content">
-											<h5><a href="#">Gost S</a></h5>
-											<p class="price">24.090.000₫</p>
-											<ul class="reviews">
-												<li class="yellow"><i class="ti-star"></i></li>
-												<li class="yellow"><i class="ti-star"></i></li>
-												<li class="yellow"><i class="ti-star"></i></li>
-												<li class="yellow"><i class="ti-star"></i></li>
-												<li class="yellow"><i class="ti-star"></i></li>
-											</ul>
-										</div>
-									</div>
-									<!-- End Single Post -->
-								</div>
-								<!--/ End Single Widget -->
-								<!-- Single Widget -->
-								<div class="single-widget category">
-									<h3 class="title">Hãng sản xuất thịnh hành</h3>
-									<ul class="categor-list">
-										<li><a href="#">Asus</a></li>
-										<li><a href="#">Acer</a></li>
-										<li><a href="#">G Skill</a></li>
-										<li><a href="#">Cosair</a></li>
-										<li><a href="#">Sam sung</a></li>
-									</ul>
-								</div>
-								<!--/ End Single Widget -->
-						</div>
-					</div>
+						       </div>
+					   </div> 
 					<div class="col-lg-9 col-md-8 col-12">
+						<div class="row">
+							<div class="col-lg-3">
+								<h4>
+									Bộ lọc
+								</h4>
+								<span>Thương hiệu</span>
+							</div>
+							<div class="col-lg-9">
+								<div class="thuonghieu ">
+									<br>
+									<button type="button" class="btn btn-outline-dark btn-cus1">Cooler Master</button>
+									<button type="button" class="btn btn-outline-dark btn-cus">SAMA</button>
+									<button type="button" class="btn btn-outline-dark btn-cus">XIGMATEK</button>
+									<button type="button" class="btn btn-outline-dark btn-cus">CORSAIR</button>
+									<button type="button" class="btn btn-outline-dark btn-cus">DEEPCOOL</button>
+									<button type="button" class="btn btn-outline-dark btn-cus">golden field</button>
+								</div>
+								
+							</div>
+						</div> <br>
+						<div class="row">
+							<div class="col-lg-3">
+								<span>Chất liệu</span> 
+							</div>
+							<div class="col-lg-9">
+								<div class="chatlieu">
+									<button type="button" class="btn btn-outline-dark btn-cus1">Thép</button>
+									<button type="button" class="btn btn-outline-dark btn-cus1">Nhựa</button>
+									<button type="button" class="btn btn-outline-dark btn-cus1">Nhôm</button>
+									<button type="button" class="btn btn-outline-dark btn-cus1">Kính</button>
+								</div>
+							</div>
+						</div><br>
+						<div class="row">
+							<div class="col-lg-3">
+								<span>Kích thước mainboard hỗ trợ</span>
+							</div>
+							<div class="col-lg-9">
+								<button type="button" class="btn btn-outline-dark btn-cus1">Micro-ATX</button>
+								<button type="button" class="btn btn-outline-dark btn-cus1">ATX</button>
+								<button type="button" class="btn btn-outline-dark btn-cus1">Mini-ITX</button>
+								<button type="button" class="btn btn-outline-dark btn-cus1">Extended-ATX</button>
+								<button type="button" class="btn btn-outline-dark btn-cus1">ITX</button>
+								<button type="button" class="btn btn-outline-dark btn-cus1">SSI CEB</button>
+							</div>
+						</div> <br>
 						<div class="row">
 							<div class="col-12">
 								<!-- Shop Top -->
