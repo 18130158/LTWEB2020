@@ -1,579 +1,470 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zxx">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>L.A.N | Tất cả sản phẩm</title>
-    <!-- Font awesome -->
-    <link rel="stylesheet" href="./assets/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf">
-    <link rel="stylesheet" href="./assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/css/bootstrap.css">
-    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/vendors/chartjs/Chart.min.css">
-    <link rel="stylesheet" href="assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
-    <link rel="stylesheet" href="assets/css/app.css">
-    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/product.css">
+    <!-- Meta Tag -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name='copyright' content=''>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Title Tag  -->
+    <title>Hoàn trả hàng</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/logoicon.png">    
+    <!-- Web Font -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap"
+        rel="stylesheet">
 
+    <!-- StyleSheet -->
 
-    <link rel="stylesheet" href="./assets/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <!-- Magnific Popup -->
+    <link rel="stylesheet" href="css/magnific-popup.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <!-- Fancybox -->
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+    <!-- Themify Icons -->
+    <link rel="stylesheet" href="css/themify-icons.css">
+  
+    <link rel="stylesheet" href="css/niceselect.css">
+  
+    <link rel="stylesheet" href="css/animate.css">
+   
+    <link rel="stylesheet" href="css/flex-slider.min.css">
+  
+    <link rel="stylesheet" href="css/owl-carousel.css">
+  
+    <link rel="stylesheet" href="css/slicknav.min.css">
+
+  
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
 
 
 </head>
 
-<body>
+<body class="js">
 
-
-    <div id="app">
-        <div id="sidebar" class='active'>
-            <div class="sidebar-wrapper active">
-                <div class="sidebar-header">
-                    <img src="./assets/images/Logo_LAN-store.png" alt="" srcset="" class="img-logo">
+    <!-- Header -->
+    <header class="header shop">
+        <!-- Topbar -->
+        <div class="topbar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-12 col-12">
+                        <!-- Top Left -->
+                        <div class="top-left">
+                            <ul class="list-main">
+                                <li><i class="ti-headphone-alt"></i> 69.69.69.69</li>
+                                <li><i class="ti-email"></i>L.A.N@gmail.com</li>
+                            </ul>
+                        </div>
+                        <!--/ End Top Left -->
+                    </div>
+                    <div class="col-lg-8 col-md-12 col-12">
+                        <!-- Top Right -->
+                        <div class="right-content">
+                            <ul class="list-main">
+                                <li><i class="ti-location-pin"></i><a href="">Địa Chỉ</a></li>
+                                <li><i class="ti-alarm-clock"></i> <a href="#">Deal HOT trong ngày</a></li>
+                                <li><i class="ti-user"></i> <a href="account.html">Tài Khoản</a></li>
+                                <li><i class="ti-power-off"></i><a href="login.html">Đăng Nhập</a></li>
+                                <li><i class="ti-pencil"></i><a href="sign-in.html">Đăng Kí</a></li>
+                            </ul>
+                        </div>
+                        <!-- End Top Right -->
+                    </div>
                 </div>
-                <div class="sidebar-menu">
-                    <ul class="menu">
-
-                        <li class="sidebar-item active ">
-                            <a href="index.html" class='sidebar-link'>
-                                <i data-feather="home" width="20"></i>
-                                <span>Tổng quan</span>
-                            </a>
-                        </li>
-                        <li class="sidebar-item  has-sub">
-                            <a href="#" class='sidebar-link'>
-                                <i data-feather="triangle" width="20"></i>
-                                <span>Đơn hàng & Đánh giá</span>
-                            </a>
-                            <ul class="submenu">
-                                <li>
-                                    <a href="component-alert.html">Quản lí đơn hàng</a>
-                                </li>
-
-                                <li>
-                                    <a href="allproduct.html">Tất cả</a>
-                                </li>
-
-                                <li>
-                                    <a href="component-breadcrumb.html">Đươn hủy</a>
-                                </li>
-
-                                <li>
-                                    <a href="component-buttons.html">Trả hàng & hoàn tiền</a>
-                                </li>
-
-                                <li>
-                                    <a href="component-card.html">Card</a>
-                                </li>
-
-                                <li>
-                                    <a href="component-carousel.html">Carousel</a>
-                                </li>
-
-                                <li>
-                                    <a href="component-dropdowns.html">Dropdowns</a>
-                                </li>
-
-                                <li>
-                                    <a href="component-list-group.html">List Group</a>
-                                </li>
-
-                                <li>
-                                    <a href="component-modal.html">Modal</a>
-                                </li>
-
-                                <li>
-                                    <a href="component-navs.html">Navs</a>
-                                </li>
-
-                                <li>
-                                    <a href="component-pagination.html">Pagination</a>
-                                </li>
-
-                                <li>
-                                    <a href="component-progress.html">Progress</a>
-                                </li>
-
-                                <li>
-                                    <a href="component-spinners.html">Spinners</a>
-                                </li>
-
-                                <li>
-                                    <a href="component-tooltips.html">Tooltips</a>
-                                </li>
-
-                            </ul>
-
-                        </li>
-
-
-
-
-                        <li class="sidebar-item  has-sub">
-                            <a href="#" class='sidebar-link'>
-                                <i data-feather="briefcase" width="20"></i>
-                                <span>Sản phẩm</span>
-                            </a>
-
-                            <ul class="submenu ">
-                                <li>
-                                    <a href="product.html">Tất cả sản phẩm</a>
-
-                                </li>
-                                <li>
-                                    <a href="addproduct.html">Thêm sản phẩm</a>
-
-                                </li>
-
-                                <li>
-                                    <a href="component-extra-divider.html">Divider</a>
-                                </li>
-
-                            </ul>
-
-                        </li>
-
-
-
-
-
-
-
-
-                        <li class="sidebar-item  has-sub">
-                            <a href="#" class='sidebar-link'>
-                                <i data-feather="file-text" width="20"></i>
-                                <span>Khách hàng</span>
-                            </a>
-
-                            <ul class="submenu ">
-
-                                <li>
-                                    <a href="form-element-input.html">Input</a>
-                                </li>
-
-                                <li>
-                                    <a href="form-element-input-group.html">Input Group</a>
-                                </li>
-
-                                <li>
-                                    <a href="form-element-select.html">Select</a>
-                                </li>
-
-                                <li>
-                                    <a href="form-element-radio.html">Radio</a>
-                                </li>
-
-                                <li>
-                                    <a href="form-element-checkbox.html">Checkbox</a>
-                                </li>
-
-                                <li>
-                                    <a href="form-element-textarea.html">Textarea</a>
-                                </li>
-
-                            </ul>
-
-                        </li>
-
-
-
-
-
-                        <li class="sidebar-item  has-sub">
-                            <a href="#" class='sidebar-link'>
-                                <i data-feather="file-text" width="20"></i>
-                                <span>Khuyễn mãi</span>
-                            </a>
-
-                            <ul class="submenu ">
-
-                                <li>
-                                    <a href="form-element-input.html">Input</a>
-                                </li>
-
-                                <li>
-                                    <a href="form-element-input-group.html">Input Group</a>
-                                </li>
-
-                                <li>
-                                    <a href="form-element-select.html">Select</a>
-                                </li>
-
-                                <li>
-                                    <a href="form-element-radio.html">Radio</a>
-                                </li>
-
-                                <li>
-                                    <a href="form-element-checkbox.html">Checkbox</a>
-                                </li>
-
-                                <li>
-                                    <a href="form-element-textarea.html">Textarea</a>
-                                </li>
-
-                            </ul>
-
-                        </li>
-
-
-
-
-                        <li class="sidebar-item  ">
-                            <a href="table.html" class='sidebar-link'>
-                                <i data-feather="grid" width="20"></i>
-                                <span>User</span>
-                            </a>
-
-                        </li>
-
-
-
-
-                        <li class="sidebar-item  ">
-                            <a href="table-datatable.html" class='sidebar-link'>
-                                <i data-feather="file-plus" width="20"></i>
-                                <span>Góp ý</span>
-                            </a>
-
-                        </li>
-
-
-
-
-                        <li class='sidebar-title'>Extra UI</li>
-
-
-
-                        <li class="sidebar-item  has-sub">
-                            <a href="#" class='sidebar-link'>
-                                <i data-feather="user" width="20"></i>
-                                <span>Cấu hình</span>
-                            </a>
-
-                            <ul class="submenu ">
-
-                                <li>
-                                    <a href="ui-chatbox.html">Chatbox</a>
-                                </li>
-
-                                <li>
-                                    <a href="ui-pricing.html">Pricing</a>
-                                </li>
-
-                                <li>
-                                    <a href="ui-todolist.html">To-do List</a>
-                                </li>
-
-                            </ul>
-
-                        </li>
-
-
-
-
-                        <li class="sidebar-item  has-sub">
-                            <a href="#" class='sidebar-link'>
-                                <i data-feather="trending-up" width="20"></i>
-                                <span>Phân tích</span>
-                            </a>
-
-                            <ul class="submenu ">
-
-                                <li>
-                                    <a href="ui-chart-chartjs.html">ChartJS</a>
-                                </li>
-
-                                <li>
-                                    <a href="ui-chart-apexchart.html">Apexchart</a>
-                                </li>
-
-                            </ul>
-
-                        </li>
-
-
-
-
-                        <li class='sidebar-title'>Pages</li>
-
-
-
-                        <li class="sidebar-item  has-sub">
-                            <a href="#" class='sidebar-link'>
-                                <i data-feather="user" width="20"></i>
-                                <span>Authentication</span>
-                            </a>
-
-                            <ul class="submenu ">
-
-                                <li>
-                                    <a href="auth-login.html">Login</a>
-                                </li>
-
-                                <li>
-                                    <a href="auth-register.html">Register</a>
-                                </li>
-
-                                <li>
-                                    <a href="auth-forgot-password.html">Forgot Password</a>
-                                </li>
-
-                            </ul>
-
-                        </li>
-
-
-
-
-                        <li class="sidebar-item  has-sub">
-                            <a href="#" class='sidebar-link'>
-                                <i data-feather="alert-circle" width="20"></i>
-                                <span>Errors</span>
-                            </a>
-
-                            <ul class="submenu ">
-
-                                <li>
-                                    <a href="error-403.html">403</a>
-                                </li>
-
-                                <li>
-                                    <a href="error-404.html">404</a>
-                                </li>
-
-                                <li>
-                                    <a href="error-500.html">500</a>
-                                </li>
-
-                            </ul>
-
-                        </li>
-
-
-
-
-                    </ul>
-                </div>
-                <button class="sidebar-toggler btn x"><i data-feather="x"></i></button>
             </div>
         </div>
-        <div id="main">
-            <nav class="navbar navbar-header navbar-expand navbar-light">
-                <a class="sidebar-toggler" href="#"><span class="navbar-toggler-icon"></span></a>
-                <button class="btn navbar-toggler" type="button" data-toggle="collapse"
-                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav d-flex align-items-center navbar-light ml-auto">
-                        <li class="dropdown nav-icon">
-                            <a href="#" data-toggle="dropdown"
-                                class="nav-link  dropdown-toggle nav-link-lg nav-link-user">
-                                <div class="d-lg-inline-block">
-                                    <i data-feather="bell"></i>
-                                </div>
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-right dropdown-menu-large">
-                                <h6 class='py-2 px-4'>Notifications</h6>
-                                <ul class="list-group rounded-none">
-                                    <li class="list-group-item border-0 align-items-start">
-                                        <div class="avatar bg-success mr-3">
-                                            <span class="avatar-content"><i data-feather="shopping-cart"></i></span>
-                                        </div>
-                                        <div>
-                                            <h6 class='text-bold'>New Order</h6>
-                                            <p class='text-xs'>
-                                                An order made by Ahmad Saugi for product Samsung Galaxy S69
-                                            </p>
-                                        </div>
-                                    </li>
-                                </ul>
+        <!-- End Topbar -->
+        <div class="middle-inner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-3 col-12">
+                        <!-- Logo -->
+                        <div class="logo">
+                            <a href="index.html"><img src="images/logo.png" alt="logo"></a>
+                        </div>
+                        <!--/ End Logo -->
+                        <!-- Search Form -->
+                        <div class="search-top">
+                            <div class="top-search"><a href="#"><i class="ti-search"></i></a></div>
+                            <!-- Search Form -->
+                            <div class="search-top">
+                                <form class="search-form">
+                                    <input type="text" placeholder="Nhập tên sản phẩm..." name="search">
+                                    <button value="search" type="submit"><i class="ti-search"></i></button>
+                                </form>
                             </div>
-                        </li>
-                        <li class="dropdown nav-icon mr-2">
-                            <a href="#" data-toggle="dropdown"
-                                class="nav-link  dropdown-toggle nav-link-lg nav-link-user">
-                                <div class="d-lg-inline-block">
-                                    <i data-feather="mail"></i>
-                                </div>
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-right">
-                                <a class="dropdown-item" href="#"><i data-feather="user"></i> Account</a>
-                                <a class="dropdown-item active" href="#"><i data-feather="mail"></i> Messages</a>
-                                <a class="dropdown-item" href="#"><i data-feather="settings"></i> Settings</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#"><i data-feather="log-out"></i> Logout</a>
+                            <!--/ End Search Form -->
+                        </div>
+                        <!--/ End Search Form -->
+                        <div class="mobile-nav"></div>
+                    </div>
+                    <div class="col-lg-7 col-md-6 col-12">
+                        <div class="search-bar-top">
+                            <div class="search-bar">
+
+                                <form>
+                                    <input name="search" placeholder="Nhập mã hoặc tên sản phẩm..." type="search">
+                                    <button class="btnn"><i class="ti-search"></i></button>
+                                </form>
                             </div>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" data-toggle="dropdown"
-                                class="nav-link dropdown-toggle nav-link-lg nav-link-user">
-                                <div class="avatar mr-1">
-                                    <img src="assets/images/avatar/avatar-s-1.png" alt="" srcset="">
-                                </div>
-                                <div class="d-none d-md-block d-lg-inline-block">Hi, Saugi</div>
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-right">
-                                <a class="dropdown-item" href="#"><i data-feather="user"></i> Account</a>
-                                <a class="dropdown-item active" href="#"><i data-feather="mail"></i> Messages</a>
-                                <a class="dropdown-item" href="#"><i data-feather="settings"></i> Settings</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#"><i data-feather="log-out"></i> Logout</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-12">
+                        <div class="right-bar">
+                            <!-- Search Form -->
+                            <div class="sinlge-bar">
+                                <a href="#" class="single-icon"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
                             </div>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-
-            <div class="info-product">
-                <div class="container-fluid">
-                    <div class="row ">
-                        <div class="col-lg-12 col-md-12 ">
-                            <div class="card">
-
-                                <div class="card-body">
-                                    <div class="row row-margin-top">
-                                        <div class="container-fluid">
-                                            <ul class="nav nav-tabs" id="myTab" role="tablist">
-                                                <li class="nav-item">
-                                                    <a class="nav-link active" id="home-tab" data-toggle="tab"
-                                                        href="#home" role="tab" aria-controls="home"
-                                                        aria-selected="true">Tất cả</a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a class="nav-link" id="online-tab" data-toggle="tab" href="#online"
-                                                        role="tab" aria-controls="online" aria-selected="false">Đang
-                                                        hoạt động</a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a class="nav-link" id="soldout-tab" data-toggle="tab"
-                                                        href="#soldout" role="tab" aria-controls="soldout"
-                                                        aria-selected="false">Hết hàng</a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a class="nav-link" id="lock-tab" data-toggle="tab" href="#lock"
-                                                        role="tab" aria-controls="lock" aria-selected="false">Đã tạm
-                                                        khóa</a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a class="nav-link" id="hidden-tab" data-toggle="tab" href="#hidden"
-                                                        role="tab" aria-controls="hidden" aria-selected="false">Đã
-                                                        ẩn</a>
-                                                </li>
-                                            </ul>
-                                            <div class="tab-content" id="myTabContent">
-                                                <div class="tab-pane fade show active" id="home" role="tabpanel"
-                                                    aria-labelledby="home-tab">
-                                                    <div class="container-fluid">
-                                                        <div class="gap-sm"></div>
-                                                        <div class="row">
-                                                            <div class="col-lg-6 col-md-6 col-sm-12 col-12">
-
-                                                                <div class="input-group mb-3">
-                                                                    <div class="input-group-prepend">
-                                                                        <button
-                                                                            class="btn btn-outline-secondary dropdown-toggle"
-                                                                            type="button" data-toggle="dropdown"
-                                                                            aria-haspopup="true"
-                                                                            aria-expanded="false">Tên sản phẩm</button>
-                                                                        <div class="dropdown-menu">
-                                                                            <a class="dropdown-item" href="#">Mã sản
-                                                                                phẩm</a>
-                                                                            <a class="dropdown-item" href="#">SKU sản
-                                                                                phẩm</a>
-
-                                                                        </div>
-                                                                    </div>
-                                                                    <input type="text" class="form-control"
-                                                                        aria-label="Text input with dropdown button">
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-lg-6 col-md-6 col-sm-12 col-12">
-
-                                                                <div class="input-group">
-                                                                    <div class="input-group mb-3">
-                                                                        <div class="input-group-prepend">
-                                                                            <span class="input-group-text"
-                                                                                id="inputGroup-sizing-default">Danh
-                                                                                mục</span>
-                                                                        </div>
-                                                                        <input type="text" class="form-control"
-                                                                            aria-label="Sizing example input"
-                                                                            aria-describedby="inputGroup-sizing-default">
-                                                                        <button class="btn btn-outline-secondary"
-                                                                            data-toggle="modal"
-                                                                            data-target="#myModal"><a href=""><i
-                                                                                    class="fa fa-pencil"
-                                                                                    aria-hidden="true"
-                                                                                    style="color: rgba(250, 71, 0, 0.836);"></i></a></button>
-                                                                    </div>
-
-
-                                                                </div>
-                                                            </div>
-                                                            <div class="row">
-                                                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
-                                                                    <div class="row row-margin-top">
-                                                                        <div class="col-lg-3 col-md-4 col-6">
-                                                                            <p>Tên sản phẩm:</p>
-                                                                        </div>
-                                                                        <div class="col-lg-9 col-md-8 col-6">
-                                                                            <form>
-                                                                                <div class="form-group">
-                                                                                    <input type="number" name="" id=""
-                                                                                        min=0>
-                                                                                </div>
-                                                                            </form>
-                                                                        </div>
-                                                                    </div>
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="tab-pane fade" id="online" role="tabpanel"
-                                                    aria-labelledby="online-tab">Profileonline</div>
-                                                <div class="tab-pane fade" id="soldout" role="tabpanel"
-                                                    aria-labelledby="soldout-tab">contactsoldout</div>
-                                                <div class="tab-pane fade" id="lock" role="tabpanel"
-                                                    aria-labelledby="lock-tab">contactqa</div>
-                                                <div class="tab-pane fade" id="hidden" role="tabpanel"
-                                                    aria-labelledby="hidden-tab">contactqahidden</div>
-                                            </div>
-
-
-                                        </div>
-
+                            <div class="sinlge-bar">
+                                <a href="#" class="single-icon"><i class="fa fa-user-circle-o"
+                                        aria-hidden="true"></i></a>
+                            </div>
+                            <div class="sinlge-bar shopping">
+                                <a href="#" class="single-icon"><i class="ti-bag"></i> <span
+                                        class="total-count">2</span></a>
+                                <!-- Shopping Item -->
+                                <div class="shopping-item">
+                                    <div class="dropdown-cart-header">
+                                        <span>2 Sản phẩm</span>
 
                                     </div>
-
+                                    <ul class="shopping-list">
+                                        <li>
+                                            <a href="#" class="remove" title="Xóa sản phẩm "><i
+                                                    class="fa fa-remove"></i></a>
+                                            <a class="cart-img" href="#"><img src="images/giohang/chuot-cerberus.jpg"
+                                                    alt="#"></a>
+                                            <h4><a href="#">Chuột Cesberus</a></h4>
+                                            <p class="quantity">1x - <span class="amount">199.000₫</span></p>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="remove" title="Xóa sản phẩm"><i
+                                                    class="fa fa-remove"></i></a>
+                                            <a class="cart-img" href="#"><img src="images/collection-trending-cpu-items/g5400-hover.jpg"
+                                                    alt="#"></a>
+                                            <h4><a href="#">CPU Intel Pentium G5400</a></h4>
+                                            <p class="quantity">1x - <span class="amount">2.000.000₫</span></p>
+                                        </li>
+                                    </ul>
+                                    <div class="bottom">
+                                        <div class="total">
+                                            <span style="color: red;">Tổng Cộng</span>
+                                            <span class="total-amount" style="color: red;">2.199.000₫</span>
+                                        </div>
+                                        <a href="shopingcart.html" class="btn animate">Giỏ hàng</a>
+                                    </div>
                                 </div>
+                                <!--/ End Shopping Item -->
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <!-- Header Inner -->
+        <div class="header-inner">
+            <div class="container">
+                <div class="cat-nav-head">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="menu-area">
+                                <!-- Main Menu -->
+                                <nav class="navbar navbar-expand-lg">
+                                    <div class="navbar-collapse">
+                                        <div class="nav-inner">
+                                            <ul class="nav main-menu menu navbar-nav">
+                                                <li ><a href="index.html">Trang chủ</a></li>
+                                                <li><a href="product1.html">Sản phẩm</a></li>
+                                                <li class="active"><a href="return.html">Hoàn trả hàng</a></li>
+                                                <li><a href="guarantee.html">Bảo hành</a></li>
+                                                <li><a href="about.html">Giới thiệu</a></li>
+                                                <li><a href="contact.html">Liên hệ</a></li>
+                                                <li><a href="news.html">Tin tức</a></li>
+												<li><a href="service.html">Dịch vụ</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </nav>
+                                <!--/ End Main Menu -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/ End Header Inner -->
+    </header>
+    <!--/ End Header -->
 
+    <!-- Breadcrumbs -->
+    <div class="breadcrumbs">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="bread-inner">
+                        <ul class="bread-list">
+                            <li><a href="index.html">Trang chủ<i class="ti-arrow-right"></i></a></li>
+                            <li class="active"><a href="return.html">Hoàn trả hàng</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    </div>
-    </div>
-    </div>
-    <script src="./assets/js/jquery.js"></script>
-    <script src="assets/js/feather-icons/feather.min.js"></script>
-    <script src="assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
-    <script src="assets/js/app.js"></script>
-    <script src="./assets/js/bootstrap.min.js"></script>
-    <script src="assets/vendors/chartjs/Chart.min.js"></script>
-    <script src="assets/vendors/apexcharts/apexcharts.min.js"></script>
-    <script src="assets/js/pages/dashboard.js"></script>
-    <script src="./assets/js/jquery.js"></script>
+    <!-- End Breadcrumbs -->
 
-    <script src="assets/js/main.js"></script>
+    <!-- Start Contact -->
+    <section id="contact-us" class="contact-us section">
+        <div class="container">
+            <div class="contact-head">
+                <div class="row">
+                    <div class="col-lg-8 col-12">
+                        <div class="form-main">
+                            <div class="title">
+                                <h3>Điền đầy đủ thông tin để hoàn trả hàng...</h3>
+                            </div>
+                            <form class="form" method="post" action="mail/mail.php">
+                                <div class="row">
+                                    <div class="col-lg-6 col-12">
+                                        <div class="form-group">
+                                            <label>Họ và tên<span>*</span></label>
+                                            <input name="name" type="text" placeholder="Vui lòng nhập họ và tên...">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-12">
+                                        <div class="form-group">
+                                            <label>Số điện thoại<span>*</span></label>
+                                            <input name="phonenumber" type="text"
+                                                placeholder="Vui lòng nhập số điện thoại...">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-12">
+                                        <div class="form-group">
+                                            <label>Địa chỉ gmail<span>*</span></label>
+                                            <input name="email" type="email" placeholder="Vui lòng nhập gmail...">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-12">
+                                        <div class="form-group">
+                                            <label>Địa chỉ lấy hàng<span>*</span></label>
+                                            <input name="address_return" type="text"
+                                                placeholder="Vui lòng nhập địa chỉ lấy hàng...">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-12">
+                                        <div class="form-group">
+                                            <label>Mã hóa đơn<span>*</span></label>
+                                            <input name="number_return" type="text"
+                                                placeholder="Vui lòng nhập mã hóa đơn...">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <div class="form-group message">
+                                            <label>Lí do trả hàng<span>*</span></label>
+                                            <textarea name="return"
+                                                placeholder="Vui lòng nhập lí do hoàn trả hàng..."></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-group button">
+                                            <button type="message" class="btn ">Xác nhận</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-12">
+                        <div class="single-head">
+                            <div class="single-info">
+                                <i class="fa fa-cog"></i>
+                                <h4 class="title">Hỗ trợ kĩ thuật</h4>
+                                <ul>
+                                    <li>+84 111 000 111</li>
+                                    <li>+84 000 110 123</li>
+                                </ul>
+                            </div>
+                            <div class="single-info">
+                                <i class="fa fa-phone-square"></i>
+                                <h4 class="title">Chính sách bảo hành</h4>
+                                <ul>
+                                    <li>+84 111 000 111</li>
+                                    <li>+84 110 000 123</li>
+                                </ul>
+                            </div>
+                            <div class="single-info">
+                                <i class="fa fa-life-ring"></i>
+                                <h4 class="title">Liên hệ</h4>
+                                <ul>
+                                    <li>+L.A.N@gmail.com</li>
+                                    <li>+84 000 111 000</li>
+                                
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--/ End Contact -->
+
+
+
+    <!-- Start Shop Newsletter  -->
+    <section class="shop-newsletter section">
+        <div class="container">
+            <div class="inner-top">
+                <div class="row">
+                    <div class="col-lg-8 offset-lg-2 col-12">
+                        <!-- Start Newsletter Inner -->
+                        <div class="inner">
+                            <h4>Đăng kí</h4>
+                            <p>Đăng kí để nhận được ưu đãi lên đến <span>10%</span> cho lần mua đầu tiên</p>
+                            <form action="" method="get" target="_blank" class="newsletter-inner">
+                                <input name="EMAIL" placeholder="Nhập tài khoản email... " required="" type="email">
+                                <button class="btn">Đăng kí</button>
+                            </form>
+                        </div>
+                        <!-- End Newsletter Inner -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Shop Newsletter -->
+
+    <!-- Start Footer Area -->
+    <footer class="footer">
+        <!-- Footer Top -->
+        <div class="footer-top section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5 col-md-6 col-12">
+                        <!-- Single Widget -->
+                        <div class="single-footer about">
+                            <div class="logo">
+                                <a href="index.html"><img src="images/logo.png" alt="#"></a>
+                            </div>
+                            <p class="text">Chào mừng đến với trang web L.A.N !! </p>
+                            <p class="call">Mọi thắc mắc vui lòng liên hệ: <span><a href="tel:123456789">+84 000 111
+                                        000</a></span></p>
+                        </div>
+                        <!-- End Single Widget -->
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-12">
+                        <!-- Single Widget -->
+                        <div class="single-footer links">
+                            <h4>Thông tin </h4>
+                            <ul>
+                                <li><a href="#">Đoàn Quang Anh</a></li>
+                                <li><a href="#">Tô Thảo Nhả</a></li>
+                                <li><a href="#">Bùi Thái Mỹ Linh</a></li>
+
+                            </ul>
+                        </div>
+                        <!-- End Single Widget -->
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-12">
+                        <!-- Single Widget -->
+                        <div class="single-footer links">
+                            <h4>Liên Hệ</h4>
+                            <ul>
+                                <li><a href="#"><i class="ti-facebook"></i> Anh Quang</a></li>
+                                <li><a href="#"><i class="ti-facebook"></i> Tô Thảo Nhả</a></li>
+                                <li><a href="#"><i class="ti-facebook"></i> Mỹ Linh</a></li>
+                               
+                            </ul>
+                        </div>
+                        <!-- End Single Widget -->
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <!-- Single Widget -->
+                        <div class="single-footer social">
+                            <h4>Địa chỉ:</h4>
+                            <!-- Single Widget -->
+                            <div class="contact">
+                                <ul>
+                                    <li>Trụ sở chính: KP6, Phường Linh Trung, Quận Thủ Đức, TP. Hồ Chí Minh, Việt Nam
+                                    </li>
+
+                                    <li>L.A.N@gmail.com</li>
+                                    <li>+84 000 111 000</li>
+                                </ul>
+                            </div>
+                            <!-- End Single Widget -->
+                            <ul>
+                                <li><a href="#"><i class="ti-facebook"></i></a></li>
+
+                                <li><a href="#"><i class="ti-google"></i></a></li>
+                                <li><a href="#"><i class="ti-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                        <!-- End Single Widget -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Footer Top -->
+
+    </footer>
+    <!-- /End Footer Area -->
+
+
+
+    <!-- Jquery -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-migrate-3.0.0.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <!-- Popper JS -->
+    <script src="js/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Color JS -->
+    <script src="js/colors.js"></script>
+    <!-- Slicknav JS -->
+    <script src="js/slicknav.min.js"></script>
+    <!-- Owl Carousel JS -->
+    <script src="js/owl-carousel.js"></script>
+    <!-- Magnific Popup JS -->
+    <script src="js/magnific-popup.js"></script>
+    <!-- Fancybox JS -->
+    <script src="js/facnybox.min.js"></script>
+    <!-- Waypoints JS -->
+    <script src="js/waypoints.min.js"></script>
+    <!-- Jquery Counterup JS -->
+    <script src="js/jquery-counterup.min.js"></script>
+    <!-- Countdown JS -->
+    <script src="js/finalcountdown.min.js"></script>
+    <!-- Nice Select JS -->
+    <script src="js/nicesellect.js"></script>
+    <!-- Ytplayer JS -->
+    <script src="js/ytplayer.min.js"></script>
+    <!-- Flex Slider JS -->
+    <script src="js/flex-slider.js"></script>
+    <!-- ScrollUp JS -->
+    <script src="js/scrollup.js"></script>
+    <!-- Onepage Nav JS -->
+    <script src="js/onepage-nav.min.js"></script>
+    <!-- Easing JS -->
+    <script src="js/easing.js"></script>
+    <!-- Google Map JS -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnhgNBg6jrSuqhTeKKEFDWI0_5fZLx0vM"></script>
+    <script src="js/gmap.min.js"></script>
+    <script src="js/map-script.js"></script>
+    <!-- Active JS -->
+    <script src="js/active.js"></script>
 </body>
 
 </html>
