@@ -40,7 +40,24 @@
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="css/responsive.css">
-	
+	<style>
+		.btn-cus1{
+			text-transform: capitalize;
+			padding: 0.5rem;
+			background-color: white;
+			color: #666666;
+			border-radius: 3px;
+			border: 1px solid #b8b6b6d5;
+		} 
+		.btn-cus{
+			background-color: white;
+			color: #666666;
+			padding: 0.5rem;
+			border-radius: 3px;
+			border: 1px solid #b8b6b6d5;
+
+		}
+	</style>
 </head>
 <body class="js">
     <header class="header shop">
@@ -225,137 +242,120 @@
 									<ul class="categor-list">
 										<li><a href="MainBoard_page1.html">Main Board - Bo mạch chủ</a></li>
 										<li><a href="CPU_page1.html">CPU - Bộ vi xử lí</a></li>
-										<li><a href="RAM_page1.html">RAM - Bộ nhớ trong</a></li>
+										<li><a href="RAM_page1.html">Bộ nhớ RAM</a></li>
 										<li><a href="VGA_page1.html">VGA - Card màn hình</a></li>
-										<li><a href="SSD_page1.html">SSD - Ổ cứng thể rắn</a></li>
+										<li><a href="SSD_page1.html">Ổ cứng </a></li>
 										<li><a href="PSU_page1.html">PSU - Nguồn máy tính</a></li>
 										<li><a href="Case_page1.html">Case - Vỏ máy tính</a></li>
-										<li><a href="Gear_page1.html">Gear - Thiết bị ngoại vi</a></li>
+										<li class="gear">
+											<a href="">Gear - Thiết bị ngoại vi</a>
+											<ul class="gear-sub">
+												<li></li>
+												<li><a href="Gear_Headphone.html">Tai nghe</a></li>
+												<li><a href="Gear_Keyboard.html">Bàn phím</a></li>
+												<li><a href="Gear_Mouse.html">Chuột</a></li>
+											</ul>
+										</li>
 									</ul>
 								</div>
 								<!--/ End Single Widget -->
 								<!-- Shop By Price -->
-									<div class="single-widget range">
-										<h3 class="title">Mức giá</h3>
-										<div class="price-filter">
-											<div class="price-filter-inner">
-												<div id="slider-range"></div>
-													<div class="price_slider_amount">
-													
-												</div>
-											</div>
-										</div>
-										<ul class="check-box-list">
-											<li>
-												<label class="checkbox-inline" for="1"><input name="news" id="1" type="checkbox">0 - 5 triệu<span class="count">(3)</span></label>
-											</li>
-											<li>
-												<label class="checkbox-inline" for="2"><input name="news" id="2" type="checkbox">5 triệu - 20 triệu<span class="count">(5)</span></label>
-											</li>
-											<li>
-												<label class="checkbox-inline" for="3"><input name="news" id="3" type="checkbox">Trên 20 triệu<span class="count">(8)</span></label>
-											</li>
-										</ul>
-									</div>
-									<!--/ End Shop By Price -->
-								<!-- Single Widget -->
-								<div class="single-widget recent-post">
-									<h3 class="title">Đã xem gần đây</h3>
-									<!-- Single Post -->
-									<div class="single-post first">
-										<div class="image">
-											<img src="images/collection-product/colletion-Recent-post-items/pc1.jpg" alt="#">
-										</div>
-										<div class="content">
-											<h5><a href="#">Titan M</a></h5>
-											<p class="price">9.390.000₫</p>
-											<ul class="reviews">
-												<li class="yellow"><i class="ti-star"></i></li>
-												<li class="yellow"><i class="ti-star"></i></li>
-												<li class="yellow"><i class="ti-star"></i></li>
-												<li class="yellow"><i class="ti-star"></i></li>
-												<li><i class="ti-star"></i></li>
-											</ul>
-										</div>
-									</div>
-									<!-- End Single Post -->
-									<!-- Single Post -->
-									<div class="single-post first">
-										<div class="image">
-											<img src="images/collection-product/colletion-Recent-post-items/pc2.jpg" alt="#">
-										</div>
-										<div class="content">
-											<h5><a href="#">Yumi S</a></h5>
-											<p class="price">18.090.000₫</p>
-											<ul class="reviews">
-												<li class="yellow"><i class="ti-star"></i></li>
-												<li class="yellow"><i class="ti-star"></i></li>
-												<li class="yellow"><i class="ti-star"></i></li>
-												<li class="yellow"><i class="ti-star"></i></li>
-												<li><i class="ti-star"></i></li>
-											</ul>
-										</div>
-									</div>
-									<!-- End Single Post -->
-									<!-- Single Post -->
-									<div class="single-post first">
-										<div class="image">
-											<img src="images/collection-product/colletion-Recent-post-items/pc3.jpg" alt="#">
-										</div>
-										<div class="content">
-											<h5><a href="#">Gost S</a></h5>
-											<p class="price">24.090.000₫</p>
-											<ul class="reviews">
-												<li class="yellow"><i class="ti-star"></i></li>
-												<li class="yellow"><i class="ti-star"></i></li>
-												<li class="yellow"><i class="ti-star"></i></li>
-												<li class="yellow"><i class="ti-star"></i></li>
-												<li class="yellow"><i class="ti-star"></i></li>
-											</ul>
-										</div>
-									</div>
-									<!-- End Single Post -->
-								</div>
-								<!--/ End Single Widget -->
-								<!-- Single Widget -->
-								<div class="single-widget category">
-									<h3 class="title">Hãng sản xuất thịnh hành</h3>
-									<ul class="categor-list">
-										<li><a href="#">Asus</a></li>
-										<li><a href="#">Acer</a></li>
-										<li><a href="#">G Skill</a></li>
-										<li><a href="#">Cosair</a></li>
-										<li><a href="#">Sam sung</a></li>
+								<div class="single-widget range">
+									<h3 class="title">Mức giá</h3>
+		
+									<ul class="check-box-list">
+										<li>
+											<label class="checkbox-inline" for="1"><input name="news" id="1" type="checkbox">0 - 5 triệu<span class="count"></span></label>
+										</li>
+										<li>
+											<label class="checkbox-inline" for="2"><input name="news" id="2" type="checkbox">5 triệu - 20 triệu<span class="count"></span></label>
+										</li>
+										<li>
+											<label class="checkbox-inline" for="3"><input name="news" id="3" type="checkbox">Trên 20 triệu<span class="count"></span></label>
+										</li>
 									</ul>
 								</div>
-								<!--/ End Single Widget -->
+						   </div>
+				   </div> 
+				<div class="col-lg-9 col-md-8 col-12">
+					<div class="row">
+						<div class="col-lg-3">
+							<h4>
+								Bộ lọc
+							</h4>
+							<span>Thương hiệu</span>
 						</div>
-					</div>
-					<div class="col-lg-9 col-md-8 col-12">
-						<div class="row">
-							<div class="col-12">
-								<!-- Shop Top -->
-								<div class="shop-top">
-									<div class="shop-shorter">
-										
-										<div class="single-shorter">
-											<label>Sắp xếp theo</label>
-											<select>
-												<option selected="selected">Tên sản phẩm</option>
-												<option>Giá sản phẩm</option>
-												<option>Sản phẩm mới</option>
-												<option>Chương trình khuyến mãi</option>
-											</select>
-										</div>
-									</div>
-									<ul class="view-mode">
-										<li class="active"><a href="product1.html"><i class="fa fa-th-large"></i></a></li>
-										<li><a href="product1.html"><i class="fa fa-th-list"></i></a></li>
-									</ul>
-								</div>
-								<!--/ End Shop Top -->
+						<div class="col-lg-9">
+							<div class="thuonghieu ">
+								<br>
+								<button type="button" class="btn btn-outline-dark btn-cus1">Cooler Master</button>
+								<button type="button" class="btn btn-outline-dark btn-cus">ACBEL</button>
+								<button type="button" class="btn btn-outline-dark btn-cus">CORSAIR</button>
+								<button type="button" class="btn btn-outline-dark btn-cus">ANTEC</button>
+								<button type="button" class="btn btn-outline-dark btn-cus1">JETEK</button>
+								<button type="button" class="btn btn-outline-dark btn-cus">GOLDEN FIELD</button>
+								<button type="button" class="btn btn-outline-dark btn-cus1">AeroCool</button>
+
+							</div>
+							
+						</div>
+					</div> <br>
+					<div class="row">
+						<div class="col-lg-3">
+							<span>Chứng nhận hiệu suất</span> 
+						</div>
+						<div class="col-lg-9">
+							<div class="Chungnhan">
+								<button type="button" class="btn btn-outline-dark btn-cus1">80 Plus Bronze</button>
+								<button type="button" class="btn btn-outline-dark btn-cus1">KHT</button>
+								<button type="button" class="btn btn-outline-dark btn-cus1">80 Plus White</button>
+								<button type="button" class="btn btn-outline-dark btn-cus1">80 Plus Gold</button>
+								<button type="button" class="btn btn-outline-dark btn-cus1">80 Plus Platinum</button>
+								<button type="button" class="btn btn-outline-dark btn-cus1">80 Plus</button>
 							</div>
 						</div>
+					</div><br>
+					<div class="row">
+						<div class="col-lg-3">
+							<span>Công suất tối đa</span>
+						</div>
+						<div class="col-lg-9">
+							<button type="button" class="btn btn-outline-dark btn-cus1">750W</button>
+							<button type="button" class="btn btn-outline-dark btn-cus">500W</button>
+							<button type="button" class="btn btn-outline-dark btn-cus1">650W</button>
+							<button type="button" class="btn btn-outline-dark btn-cus1">550W</button>
+							<button type="button" class="btn btn-outline-dark btn-cus">600W</button>
+							<button type="button" class="btn btn-outline-dark btn-cus1">400W</button>
+							<button type="button" class="btn btn-outline-dark btn-cus">450W</button>
+							<button type="button" class="btn btn-outline-dark btn-cus1">700W</button>
+							<button type="button" class="btn btn-outline-dark btn-cus1">850W</button>
+							<button type="button" class="btn btn-outline-dark btn-cus">1200W</button>
+						</div>
+					</div> <br>
+					<div class="row">
+						<div class="col-12">
+							<!-- Shop Top -->
+							<div class="shop-top">
+								<div class="shop-shorter">
+									
+									<div class="single-shorter">
+										<label>Sắp xếp theo</label>
+										<select>
+											<option selected="selected">Tên sản phẩm</option>
+											<option>Giá sản phẩm</option>
+											<option>Sản phẩm mới</option>
+											<option>Chương trình khuyến mãi</option>
+										</select>
+									</div>
+								</div>
+								<ul class="view-mode">
+									<li class="active"><a href="product1.html"><i class="fa fa-th-large"></i></a></li>
+									<li><a href="product1.html"><i class="fa fa-th-list"></i></a></li>
+								</ul>
+							</div>
+							<!--/ End Shop Top -->
+						</div>
+					</div>
 						<div class="row">
 							<div class="col-lg-4 col-md-6 col-12">
                                 <div class="single-product">
@@ -622,12 +622,11 @@
                                     </div>
                                 </div><br><br>
 								<center>
-									<div class="phantrangtintuc">
-										<div class="btn-group mr-2" role="group" aria-label="First group" style="margin: auto;">
-											<a href="PSU_page1.html"><button type="button" class="btn btn-secondary btn_phantrang1" style="background: #f7941d;" >1</button></a>
-											<a href="PSU_page2.html"><button type="button" class="btn btn-secondary  btn_phantrang" >2</button></a>
-											<a href="PSU_page3.html"><button type="button" class="btn btn-secondary  btn_phantrang" >3</button></a>
-										</div>
+									<div class="phantrang" style="text-align: right">
+										<a href="PSU_page1.html"><button type="button" class="btn btn-secondary btn_phantrang1" style="background: #f7941d;">1</button></a>
+										<a href="PSU_page2.html"><button type="button" class="btn btn-secondary  btn_phantrang">2</button></a>
+										<a href="PSU_page3.html"><button type="button" class="btn btn-secondary  btn_phantrang">3</button></a>
+										<a href="PSU_page2.html"><button type="button" class="btn btn-secondary  btn_phantrang "><i class="fa fa-arrow-right"></i></button></a>
 									</div>
 								</center>
 							</div>
@@ -637,34 +636,6 @@
 			</div>
 		</section><br>
 		<!--/ End Product Style 1  -->	
-
-		<!-- Start Shop Newsletter  -->
-		<div class="container">
-			<div>
-				<hr>
-			</div>
-		</div>
-		<section class="shop-newsletter section">
-			<div class="container">
-				<div class="inner-top">
-					<div class="row">
-						<div class="col-lg-8 offset-lg-2 col-12">
-							<!-- Start Newsletter Inner -->
-							<div class="inner">
-								<h4>Đăng kí</h4>
-								<p>Đăng kí để nhận được ưu đãi lên đến <span>10%</span> cho lần mua đầu tiên</p>
-								<form action="" method="get" target="_blank" class="newsletter-inner">
-                                    <input name="EMAIL" placeholder="Nhập tài khoản email... " required="" type="email" oninvalid="this.setCustomValidity('Mời nhập email!')">
-                                    <button class="btn">Đăng kí</button>
-                                </form>
-							</div>
-							<!-- End Newsletter Inner -->
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- End Shop Newsletter -->
 		
 		<!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog">
 			<div class="modal-dialog" role="document">

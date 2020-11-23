@@ -2,7 +2,7 @@
     position: fixed;
     display: block;
     z-index: 99998;
-    
+
     padding: 20px;
     width: 245px;
     background: #fff;
@@ -127,7 +127,7 @@
     transition: all 0.4s ease;
     z-index: 5;
     display: inline-block;
-    padding: 13px 32px;
+    padding: 10px;
     border-radius: 0px;
     text-transform: uppercase;
 }
@@ -375,7 +375,8 @@ header.masthead {
 
 /* Topbar Left Nav */
 
-.header.shop .left-nav {}
+.header.shop .left-nav {
+}
 
 .header.shop .top-left .list-main li:first-child {
     padding-left: 0;
@@ -847,6 +848,7 @@ header.masthead {
 }
 
 .header.shop .main-category {
+    display: none;
     position: absolute;
     left: 0;
     top: 64px;
@@ -856,6 +858,9 @@ header.masthead {
     -webkit-box-shadow: 0px 5px 15px #0000000a;
     -moz-box-shadow: 0px 5px 15px #0000000a;
     box-shadow: 0px 5px 15px #0000000a;
+}
+.header.shop .all-category:hover .main-category{
+    display: block;
 }
 
 .header.shop .main-category li {
@@ -1283,7 +1288,8 @@ header.masthead {
     z-index: 999;
 }
 
-.header.sticky .all-category {}
+.header.sticky .all-category {
+}
 
 .header.sticky .all-category h3 {
     cursor: pointer;
@@ -1381,7 +1387,8 @@ header.masthead {
     height: 510px;
 }
 
-.hero-slider .text-inner {}
+.hero-slider .text-inner {
+}
 
 .hero-slider .hero-text {
     padding: 0 30px;
@@ -1425,7 +1432,7 @@ header.masthead {
 }
 
 .hero-slider .hero-text .btn:hover {
-    background:black;
+    background: black;
     color: white;
 }
 
@@ -1501,7 +1508,8 @@ header.masthead {
     color: #fff;
 }
 
-.hero-area2 .single-slider .content .button {}
+.hero-area2 .single-slider .content .button {
+}
 
 .hero-area2 .single-slider .content .button .btn {
     padding: 9px 25px;
@@ -1561,7 +1569,8 @@ header.masthead {
 
 /* Hero Area 3 */
 
-.hero-area3 {}
+.hero-area3 {
+}
 
 .hero-area3 .big-content {
     background-image: url('https://via.placeholder.com/850x530');
@@ -1593,7 +1602,8 @@ header.masthead {
     color: #F7941D;
 }
 
-.hero-area3 .big-content .des {}
+.hero-area3 .big-content .des {
+}
 
 .hero-area3 .big-content .button {
     margin-top: 40px;
@@ -1640,7 +1650,8 @@ header.masthead {
     color: #F7941D;
 }
 
-.hero-area3 .small-content .des {}
+.hero-area3 .small-content .des {
+}
 
 .hero-area3 .small-content .button {
     margin-top: 10px;
@@ -1692,7 +1703,8 @@ header.masthead {
     color: #F7941D;
 }
 
-.hero-area4 .big-content .des {}
+.hero-area4 .big-content .des {
+}
 
 .hero-area4 .big-content .button {
     margin-top: 40px;
@@ -2395,9 +2407,6 @@ header.masthead {
 }
 
 
-
-
-
 .shop .range .ui-slider-handle.ui-state-default.ui-corner-all {
     background: #F7941D;
     color: #F7941D;
@@ -2444,7 +2453,8 @@ header.masthead {
     margin-top: 10px;
 }
 
-.shop-sidebar .categor-list li {}
+.shop-sidebar .categor-list li {
+}
 
 .shop-sidebar .categor-list li {
     margin-bottom: 10px;
@@ -2465,7 +2475,12 @@ header.masthead {
 .shop-sidebar .categor-list li a:hover {
     color: #F7941D;
 }
-
+.shop-sidebar .categor-list .gear-sub{
+    display: none;
+}
+.shop-sidebar .categor-list .gear:hover .gear-sub{
+    display: block;
+}
 
 /* Recent Post */
 
@@ -2516,7 +2531,7 @@ header.masthead {
 
 .shop-sidebar .single-post .content .price {
     display: block;
-    color:red;
+    color: red;
     font-weight: 500;
     margin: 5px 0 0px 0;
     text-transform: uppercase;
@@ -2564,7 +2579,8 @@ header.masthead {
     font-weight: 500;
 }
 
-.shop .single-shorter option {}
+.shop .single-shorter option {
+}
 
 .shop .nice-select {
     clear: initial;
@@ -2705,7 +2721,8 @@ header.masthead {
     border-bottom: 1px solid #eee;
 }
 
-.shop.single .product-des {}
+.shop.single .product-des {
+}
 
 .shop.single .product-des .total-review {
     font-size: 14px;
@@ -2756,7 +2773,8 @@ header.masthead {
     margin-top: 40px;
 }
 
-.shop.single .product-des .product-buy {}
+.shop.single .product-des .product-buy {
+}
 
 .shop.single .product-des .color {
     display: inline-block;
@@ -3027,7 +3045,8 @@ header.masthead {
     border-color: transparent;
 }
 
-.shop.single .tab-single {}
+.shop.single .tab-single {
+}
 
 .shop.single .single-des {
     margin-top: 35px;
@@ -3039,7 +3058,8 @@ header.masthead {
     font-size: 22px;
 }
 
-.shop.single .single-des ul {}
+.shop.single .single-des ul {
+}
 
 .shop.single .single-des ul li {
     color: #555;
@@ -3060,24 +3080,29 @@ header.masthead {
     border-radius: 50%;
 }
 
-.shop.single .single-des p {}
+.shop.single .single-des p {
+}
 
 .shop.single .item-info {
     width: 100%;
 }
 
-.shop.single .item-info tbody {}
+.shop.single .item-info tbody {
+}
 
-.shop.single .item-info tbody tr {}
+.shop.single .item-info tbody tr {
+}
 
 .shop.single .item-info tbody td {
     border: 1px solid #e6e6e6;
     padding: 10px;
 }
 
-.shop.single .item-info tbody strong {}
+.shop.single .item-info tbody strong {
+}
 
-.shop.single .ratting-main {}
+.shop.single .ratting-main {
+}
 
 .shop.single .avg-ratting {
     margin-bottom: 20px;
@@ -3131,7 +3156,8 @@ header.masthead {
     line-height: 18px;
 }
 
-.shop.single .ratting-main .single-rating ul {}
+.shop.single .ratting-main .single-rating ul {
+}
 
 .shop.single .ratting-main .single-rating ul li {
     display: inline-block;
@@ -3216,7 +3242,8 @@ header.masthead {
     color: #333;
 }
 
-.shop.single .avg-ratting {}
+.shop.single .avg-ratting {
+}
 
 .shop.single .form .form-group input {
     width: 100%;
@@ -3487,7 +3514,8 @@ header.masthead {
     transform: rotate(360deg);
 }
 
-.shopping-cart .border {}
+.shopping-cart .border {
+}
 
 .shopping-cart .table .remove-icon {
     font-size: 16px;
@@ -3503,7 +3531,8 @@ header.masthead {
     text-align: center;
 }
 
-.shopping-summery tbody .price span {}
+.shopping-summery tbody .price span {
+}
 
 .shopping-cart tbody .qty .input-group {
     width: 175px;
@@ -3558,7 +3587,8 @@ header.masthead {
     text-align: center;
 }
 
-.shopping-summery tbody .total-amount span {}
+.shopping-summery tbody .total-amount span {
+}
 
 .shopping-summery tbody .action {
     text-align: center;
@@ -3572,11 +3602,14 @@ header.masthead {
     margin-top: 50px;
 }
 
-.shopping-cart .total-amount .left {}
+.shopping-cart .total-amount .left {
+}
 
-.shopping-cart .total-amount .left .coupon {}
+.shopping-cart .total-amount .left .coupon {
+}
 
-.shopping-cart .total-amount .left .coupon form {}
+.shopping-cart .total-amount .left .coupon form {
+}
 
 .shopping-cart .total-amount .left .coupon form input {
     width: 220px;
@@ -3674,7 +3707,8 @@ header.masthead {
     padding-left: 100px;
 }
 
-.shopping-cart .total-amount .right ul {}
+.shopping-cart .total-amount .right ul {
+}
 
 .shopping-cart .total-amount .right ul li {
     font-size: 15px;
@@ -3743,7 +3777,8 @@ header.masthead {
     margin-bottom: 30px;
 }
 
-.shop.checkout .form {}
+.shop.checkout .form {
+}
 
 .shop.checkout .form .form-group {
     margin-bottom: 25px;
@@ -3775,7 +3810,8 @@ header.masthead {
     background: #F6F7FB;
 }
 
-.shop.checkout .form .form-group input:hover {}
+.shop.checkout .form .form-group input:hover {
+}
 
 .shop.checkout .nice-select {
     width: 100%;
@@ -3793,7 +3829,8 @@ header.masthead {
     overflow: scroll;
 }
 
-.shop.checkout .nice-select .list li {}
+.shop.checkout .nice-select .list li {
+}
 
 .shop.checkout .nice-select .list li.option {
     color: #333;
@@ -3889,7 +3926,7 @@ header.masthead {
     display: block;
     font-size: 15px;
     font-weight: 400;
-    color:red;
+    color: red;
 }
 
 .shop.checkout .single-widget .checkbox {
@@ -3984,8 +4021,6 @@ header.masthead {
 ========================================*/
 
 
-
-
 /*======================================
    Start Shop List CSS
 ========================================*/
@@ -3994,7 +4029,8 @@ header.masthead {
     margin-top: 50px;
 }
 
-.shop-list .list-content .product-price {}
+.shop-list .list-content .product-price {
+}
 
 .shop-list .list-content .product-price span {
     font-size: 14px;
@@ -4034,7 +4070,8 @@ header.masthead {
     margin-left: 3px;
 }
 
-.shop-list .list-content .des {}
+.shop-list .list-content .des {
+}
 
 .shop-list .list-content .btn {
     margin-top: 22px;
@@ -4099,7 +4136,8 @@ header.masthead {
     font-size: 13px;
 }
 
-.pagination .pagination-list li a i {}
+.pagination .pagination-list li a i {
+}
 
 .blog-grids.pagination {
     margin-top: 50px;
@@ -4223,6 +4261,7 @@ header.masthead {
     padding: 80px 0 0px 0;
     background: #fff;
 }
+
 .section {
     padding: 50px;
 }
@@ -4250,8 +4289,8 @@ header.masthead {
     position: absolute;
     left: -15px;
     top: 10px;
-   
-  
+
+
 }
 
 .shop-services .single-service h4 {
@@ -4616,7 +4655,7 @@ header.masthead {
 }
 
 .shop-blog .shop-single-blog .content {
-   
+
     padding: 40px;
 }
 
@@ -4634,7 +4673,7 @@ header.masthead {
     font-size: 16px;
     font-weight: 400;
     margin-bottom: 5px;
-    color:red;
+    color: red;
 }
 
 .shop-blog .shop-single-blog .content .more-btn {
@@ -4797,8 +4836,6 @@ header.masthead {
 }
 
 
-
-
 /*======================================
   End Contact CSS
 ========================================*/
@@ -4935,7 +4972,7 @@ header.masthead {
 
 .footer .about .logo {
     margin-bottom: 20px;
-   
+
 }
 
 .footer .about .logo img {
@@ -4963,7 +5000,8 @@ header.masthead {
     font-weight: 600;
 }
 
-.footer .links ul {}
+.footer .links ul {
+}
 
 .footer .links ul li {
     display: block;
@@ -4984,11 +5022,14 @@ header.masthead {
     padding-left: 10px;
 }
 
-.footer .social {}
+.footer .social {
+}
 
-.footer .social .contact {}
+.footer .social .contact {
+}
 
-.footer .social .contact ul {}
+.footer .social .contact ul {
+}
 
 .footer .social .contact ul li {
     color: #fff;
@@ -5027,14 +5068,16 @@ header.masthead {
 
 /* Copyright */
 
-.footer .copyright {}
+.footer .copyright {
+}
 
 .footer .copyright .inner {
     border-top: 1px solid #eeeeee3d;
     padding: 20px 0;
 }
 
-.footer .copyright .left {}
+.footer .copyright .left {
+}
 
 .footer .copyright .right {
     float: right;
