@@ -16,14 +16,16 @@
     <link rel="stylesheet" href="assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 </head>
 <style>
-    *{
+    * {
         color: black !important;
         font-size: 16px;
     }
-    li a{
+    
+    li a {
         font-size: 14px !important;
     }
 </style>
+
 <body>
     <div id="app">
         <div id="sidebar" class='active'>
@@ -114,6 +116,26 @@
                             </ul>
 
                         </li>
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="fa fa-users" aria-hidden="true" style="font-size: 16px;"></i>
+
+                                <span>Quản lí TK người dùng</span>
+                            </a>
+                            <ul class="submenu">
+
+                                <li>
+                                    <a href="viewcustom.html">Xem khách hàng</a>
+                                </li>
+
+
+
+                                <li>
+                                    <a href="editstatuscustom.html">Thay đổi trạng thái</a>
+                                </li>
+                            </ul>
+
+                        </li>
 
                         <li class="sidebar-item  has-sub">
                             <a href="#" class='sidebar-link'>
@@ -149,7 +171,7 @@
                                 </li>
 
                                 <li>
-                                    <a href="replycomments.html">Sửa tài khoản</a>
+                                    <a href="replycomments.html">Phản hồi bình luận</a>
                                 </li>
 
 
@@ -160,7 +182,7 @@
 
                         <li class="sidebar-item  ">
                             <a href="table-datatable.html" class='sidebar-link'>
-                                <i class="fa fa-file-text" aria-hidden="true" style="16px"></i>
+                                <i class="fa fa-file-text" aria-hidden="true"></i>
                                 <span>Góp ý</span>
                             </a>
 
@@ -175,16 +197,13 @@
         <div id="main">
             <nav class="navbar navbar-header navbar-expand navbar-light">
                 <a class="sidebar-toggler" href="#"><span class="navbar-toggler-icon"></span></a>
-                <button class="btn navbar-toggler" type="button" data-toggle="collapse"
-                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
+                <button class="btn navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav d-flex align-items-center navbar-light ml-auto">
                         <li class="dropdown nav-icon">
-                            <a href="#" data-toggle="dropdown"
-                                class="nav-link  dropdown-toggle nav-link-lg nav-link-user">
+                            <a href="#" data-toggle="dropdown" class="nav-link  dropdown-toggle nav-link-lg nav-link-user">
                                 <div class="d-lg-inline-block">
                                     <i data-feather="bell"></i>
                                 </div>
@@ -207,8 +226,7 @@
                             </div>
                         </li>
                         <li class="dropdown nav-icon mr-2">
-                            <a href="#" data-toggle="dropdown"
-                                class="nav-link  dropdown-toggle nav-link-lg nav-link-user">
+                            <a href="#" data-toggle="dropdown" class="nav-link  dropdown-toggle nav-link-lg nav-link-user">
                                 <div class="d-lg-inline-block">
                                     <i data-feather="mail"></i>
                                 </div>
@@ -222,8 +240,7 @@
                             </div>
                         </li>
                         <li class="dropdown">
-                            <a href="#" data-toggle="dropdown"
-                                class="nav-link dropdown-toggle nav-link-lg nav-link-user">
+                            <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
                                 <div class="avatar mr-1">
                                     <img src="assets/images/favicon.png" alt="" srcset="">
                                 </div>
@@ -249,8 +266,7 @@
                             <div class="card">
                                 <div class="card-header">
                                     <h4 class="title-form">
-                                        <h3 class="title-product">Thông tin cơ bản <span
-                                                class="span-title-product">*</span></h3>
+                                        <h3 class="title-product">Thông tin cơ bản <span class="span-title-product">*</span></h3>
                                     </h4>
                                 </div>
                                 <div class="card-body">
@@ -261,8 +277,7 @@
                                         <div class="col-lg-4 col-md-4 col-4">
                                             <form>
                                                 <div class="form-group">
-                                                    <input type="text" class="form-control"
-                                                        placeholder="Nhập mã sản phẩm...">
+                                                    <input type="text" class="form-control" placeholder="Nhập mã sản phẩm...">
                                                 </div>
                                             </form>
                                         </div>
@@ -274,8 +289,7 @@
                                                 <div class="form-group">
                                                     <form>
 
-                                                        <input type="date" id="birthday" name="birthday"
-                                                            style="padding: 0.5rem 1rem ;">
+                                                        <input type="date" id="birthday" name="birthday" style="padding: 0.5rem 1rem ;">
 
                                                     </form>
                                                 </div>
@@ -301,8 +315,7 @@
                                         <div class="col-lg-10 col-md-8 col-6">
                                             <form>
                                                 <div class="form-group">
-                                                    <input type="file" class="form-control-file"
-                                                        id="exampleFormControlFile1">
+                                                    <input type="file" class="form-control-file" id="exampleFormControlFile1">
                                                 </div>
                                             </form>
                                         </div>
@@ -313,11 +326,10 @@
                                             <p>Chi tiết sản phẩm <span class="span-title-product">*</span></p>
                                         </div>
                                         <div class="col-lg-10 col-md-8 col-6">
-                                            <textarea class="form-control" id="exampleFormControlTextarea1"
-                                                rows="4" placeholder="Nhập mô tả sản phẩm..."></textarea>
+                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="Nhập mô tả sản phẩm..."></textarea>
                                         </div>
                                     </div>
-                                  
+
                                     <div class="gap-sm"></div>
                                     <div class="row">
                                         <div class="col-lg-2 col-md-4 col-6">
@@ -343,7 +355,7 @@
                                         <div class="col-lg-10 col-md-8 col-6">
                                             <input type="text" class="form-control">
                                         </div>
-                                    </div>  
+                                    </div>
                                     <div class="gap-sm"></div>
                                     <div class="row">
                                         <div class="col-lg-2 col-md-2 col-2">
@@ -358,8 +370,8 @@
                                         <div class="col-lg-4 col-md-4 col-4">
                                             <input type="number" class="form-control" min="0" placeholder="Nhập giá bán...">
                                         </div>
-                                    </div> 
-                                    
+                                    </div>
+
                                     <div class="gap-sm"></div>
                                     <div class="row">
                                         <div class="col-lg-2 col-md-2 col-6">
@@ -379,435 +391,24 @@
                                         <div class="col-lg-4 col-md-4 col-6">
                                             <input type="number" class="form-control" min="0" placeholder="Nhập số lượng sản phẩm nhập...">
                                         </div>
-                                    </div>  
-
-                                    <div class="gap-sm"></div>
-                              
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- <div class="info-product">
-                <div class="container-fluid">
-                    <div class="row ">
-                        <div class="col-lg-12 col-md-12 ">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h4 class="title-form">
-                                        <h3 class="title-product"> Thêm 1 sản phẩm mới <span
-                                                class="span-title-product">*</span></h3>
-                                    </h4>
-                                </div>
-                                <div class="card-body">
-
-                                    <div class="row row-margin-top">
-
-                                        <div class="col-lg-2 col-md-4 col-6">
-                                            <p>Hình ảnh sản phẩm:</p>
-                                        </div>
-                                        <div class="col-lg-10 col-md-8 col-6">
-                                            <form>
-                                                <div class="form-group">
-                                                    <input type="file" class="form-control-file"
-                                                        id="exampleFormControlFile1">
-                                                </div>
-                                            </form>
-                                        </div>
                                     </div>
+
                                     <div class="gap-sm"></div>
                                     <div class="row">
-                                        <div class="col-lg-2 col-md-4 col-6">
-                                            <p>Danh mục sản phẩm:</p>
+                                        <div class="col-12" style="text-align: center;">
+                                            <button class="btn btn-outline-primary" style="padding-left: 1.2rem; padding-right: 1.2rem; margin-right: 40px;">Lưu</button>
+                                            <button type="button" class="btn btn-outline-danger">Thoát</button>
                                         </div>
-                                        <div class="col-lg-10 col-md-8 col-6">
-                                            <select class="form-control">
-                                                <option>Ram</option>
-                                                <option>CPU</option>
-                                                <option>VGA</option>
-                                                <option>Thiết bị ngoại vi</option>
-                                                <option>Màn hình</option>
-                                                <option>Nguồn</option>
-                                            </select>
-                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="gap-xs"></div>
-            <div class="detail-product">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-lg-12 col-md-12 ">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h4 class="title-form">
-                                        <h3 class="title-product">Thông tin cơ bản <span
-                                                class="span-title-product">*</span></h3>
-                                    </h4>
-                                </div>
-                                <div class="card-body">
-                                    <div class="row row-margin-top">
-                                        <div class="col-lg-2 col-md-4 col-6">
-                                            <p>Tên sản phẩm:</p>
-                                        </div>
-                                        <div class="col-lg-10 col-md-8 col-6">
-                                            <form>
-                                                <div class="form-group">
-                                                    <input type="text" class="form-control">
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                    <div class="gap-sm"></div>
-                                    <div class="row">
-                                        <div class="col-lg-2 col-md-4 col-6">
-                                            <p>Mô tả sản phẩm <span class="span-title-product">*</span></p>
-                                        </div>
-                                        <div class="col-lg-10 col-md-8 col-6">
-                                            <textarea class="form-control" id="exampleFormControlTextarea1"
-                                                rows="4"></textarea>
-                                        </div>
-                                    </div>
-                                    <div class="gap-sm"></div>
-                                    <div class="row">
-                                        <div class="col-lg-2 col-md-4 col-6">
-                                            <p>Thương hiệu<u></u> <span class="span-title-product">*</span></p>
-                                        </div>
-                                        <div class="col-lg-10 col-md-8 col-6">
-                                            <input type="text" class="form-control">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="gap-xs"></div>
-            <div class="detail-product">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-lg-12 col-md-12 ">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h4 class="title-form">
-                                        <h3 class="title-product">Thông tin bán hàng <span
-                                                class="span-title-product">*</span></h3>
-                                    </h4>
-                                </div>
-                                <div class="card-body">
-                                    <div class="row  row-margin-top">
-                                        <div class="col-lg-2 col-md-4 col-6">
-                                            <p>Giá sản phẩm:</p>
-                                        </div>
-                                        <div class="col-lg-10 col-md-8 col-6">
-                                            <form>
-                                                <div class="form-group">
-                                                    <div class="input-group mb-3">
-                                                        <div class="input-group-prepend">
-                                                            <span class="input-group-text" id="basic-addon1">₫</span>
-                                                        </div>
-                                                        <input type="text" class="form-control" placeholder="Nhập vào"
-                                                            aria-describedby="basic-addon1">
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                    <div class="gap-sm"></div>
-                                    <div class="row">
-                                        <div class="col-lg-2 col-md-4 col-6">
-                                            <p>Kho hàng:<span class="span-title-product">*</span></p>
-                                        </div>
-                                        <div class="col-lg-10 col-md-8 col-6">
-                                            <input type="text" class="form-control"
-                                                placeholder="Nhập số lượng hàng còn trong kho...">
-                                        </div>
-                                    </div>
-                                    <div class="gap-sm"></div>
-                                    <div class="row">
-                                        <div class="col-lg-2 col-md-4 col-6">
-                                            <p>Mua nhiều giảm giá:</p>
-                                        </div>
-                                        <div class="col-lg-10 col-md-8 col-6">
-                                            <button type="button"
-                                                class="btn btn-outline-info btn-more-product"><span>+</span> Thêm khoảng
-                                                giá
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="gap-xs"></div>
-            <div class="detail-product">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-lg-12 col-md-12 ">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h4 class="title-form">
-                                        <h3 class="title-product">Quản lí hình ảnh <span
-                                                class="span-title-product">*</span></h3>
-                                    </h4>
-                                </div>
-                                <div class="card-body row-margin-top">
+        </div>
 
-                                    <div class="row ">
-                                        <div class="col-lg-2 col-md-2 col-4">
-                                            <p class="content-img-product">Hình ảnh sản phẩm:</p>
-                                        </div>
-                                        <div class="col-lg-10 col-md-10 col-8">
-                                            <div class="container-fluid">
-                                                <div class="row">
-                                                    <div class="col-lg-3 col-md-3 col-sm-6 col-12">
-                                                        <button class="btn-upfile-cus"> <span>+</span>
-                                                        </button>
-                                                        <p class="content-btn-upfile-cus">Ảnh bìa</p>
-                                                        <div class="gap-xs"></div>
-                                                    </div>
-                                                    <div class="col-lg-3 col-md-3 col-sm-6 col-12">
-                                                        <button class="btn-upfile-cus"> <span>+</span>
-                                                        </button>
-                                                        <p class="content-btn-upfile-cus">Ảnh 1</p>
-                                                        <div class="gap-xs"></div>
-                                                    </div>
-                                                    <div class="col-lg-3 col-md-3 col-sm-6 col-12">
-                                                        <button class="btn-upfile-cus"> <span>+</span>
-                                                        </button>
-                                                        <p class="content-btn-upfile-cus">Ảnh 2</p>
-                                                        <div class="gap-xs"></div>
-                                                    </div>
-                                                    <div class="col-lg-3 col-md-3 col-sm-6 col-12">
-                                                        <button class="btn-upfile-cus"> <span>+</span>
-                                                        </button>
-                                                        <p class="content-btn-upfile-cus">Ảnh 3</p>
-                                                        <div class="gap-xs"></div>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-lg-3 col-md-3 col-sm-6 col-12">
-                                                        <button class="btn-upfile-cus"> <span>+</span>
-                                                        </button>
-                                                        <p class="content-btn-upfile-cus">Ảnh 4</p>
-                                                        <div class="gap-xs"></div>
-                                                    </div>
-                                                    <div class="col-lg-3 col-md-3 col-sm-6 col-12">
-                                                        <button class="btn-upfile-cus"> <span>+</span>
-                                                        </button>
-                                                        <p class="content-btn-upfile-cus">Ảnh 5</p>
-                                                        <div class="gap-xs"></div>
-                                                    </div>
-                                                    <div class="col-lg-3 col-md-3 col-sm-6 col-12">
-                                                        <button class="btn-upfile-cus"> <span>+</span>
-                                                        </button>
-                                                        <p class="content-btn-upfile-cus">Ảnh 6</p>
-                                                        <div class="gap-xs"></div>
-                                                    </div>
-                                                    <div class="col-lg-3 col-md-3 col-sm-6 col-12">
-                                                        <button class="btn-upfile-cus"> <span>+</span>
-                                                        </button>
-                                                        <p class="content-btn-upfile-cus">Ảnh 7</p>
-                                                        <div class="gap-xs"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="gap-xs"></div>
-            <div class="detail-product">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-lg-12 col-md-12 ">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h4 class="title-form">
-                                        <h3 class="title-product">Vận chuyển <span class="span-title-product">*</span>
-                                        </h3>
-                                    </h4>
-                                </div>
-                                <div class="card-body">
-
-                                    <div class="row row-margin-top">
-                                        <div class="col-lg-2 col-md-2 col-4">
-                                            <p>Cân nặng (Sau khi đóng gói):</p>
-                                        </div>
-                                        <div class="col-lg-10 col-md-10 col-8">
-                                            <div class="input-group mb-3">
-                                                <input type="text" class="form-control"
-                                                    placeholder="Nhập vào cân nặng..." aria-describedby="basic-addon1">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text" id="basic-addon1">gram</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="gap-sm"></div>
-                                    <div class="row ">
-                                        <div class="col-lg-2 col-md-2 col-4">
-                                            <p>Kích thước đóng gói:</p>
-                                        </div>
-                                        <div class="col-lg-10 col-md-10 col-8">
-                                            <div class="container-fluid">
-                                                <div class="row">
-                                                    <div class="col-lg-4 col-md-4 col-sm-12">
-                                                        <div class="input-group mb-3">
-                                                            <div class="input-group-prepend">
-                                                                <span class="input-group-text"
-                                                                    id="basic-addon1">D</span>
-                                                            </div>
-                                                            <input type="text" class="form-control"
-                                                                placeholder="Nhập chiều dài..."
-                                                                aria-describedby="basic-addon1">
-                                                            <div class="input-group-prepend">
-                                                                <span class="input-group-text"
-                                                                    id="basic-addon1">cm</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-lg-4 col-md-4 col-sm-12">
-                                                        <div class="input-group mb-3">
-                                                            <div class="input-group-prepend">
-                                                                <span class="input-group-text"
-                                                                    id="basic-addon1">R</span>
-                                                            </div>
-                                                            <input type="text" class="form-control"
-                                                                placeholder="Nhập chiều rộng..."
-                                                                aria-describedby="basic-addon1">
-                                                            <div class="input-group-prepend">
-                                                                <span class="input-group-text"
-                                                                    id="basic-addon1">cm</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-lg-4 col-md-4 col-sm-12">
-                                                        <div class="input-group mb-3">
-                                                            <div class="input-group-prepend">
-                                                                <span class="input-group-text"
-                                                                    id="basic-addon1">C</span>
-                                                            </div>
-                                                            <input type="text" class="form-control"
-                                                                placeholder="Nhập chiều cao..."
-                                                                aria-describedby="basic-addon1">
-                                                            <div class="input-group-prepend">
-                                                                <span class="input-group-text"
-                                                                    id="basic-addon1">cm</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="gap-xs"></div>
-            <div class="detail-product">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-lg-12 col-md-12 ">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h4 class="title-form">
-                                        <h3 class="title-product">Thông tin khác <span
-                                                class="span-title-product">*</span>
-                                        </h3>
-                                    </h4>
-                                </div>
-                                <div class="card-body">
-                                    <div class="row row-margin-top">
-                                        <div class="col-lg-2 col-md-2 col-4">
-                                            <p>Hàng đặt trước:</p>
-                                        </div>
-                                        <div class="col-lg-10 col-md-10 col-8">
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                                    id="inlineRadio1" value="option1">
-                                                <label class="form-check-label" for="inlineRadio1">Không</label>
-                                            </div>
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                                    id="inlineRadio2" value="option2">
-                                                <label class="form-check-label" for="inlineRadio2">Đặt trước</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="gap-sm"></div>
-                                    <div class="row ">
-                                        <div class="col-lg-2 col-md-2 col-4">
-                                            <p>Tình trạng :</p>
-                                        </div>
-                                        <div class="col-lg-10 col-md-10 col-8">
-                                            <div class="form-group">
-                                                <select class="form-control" id="exampleFormControlSelect1">
-                                                    <option>Mới</option>
-                                                    <option>Đã qua sử dụng</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="gap-sm"></div>
-                                    <div class="row ">
-                                        <div class="col-lg-2 col-md-2 col-4">
-                                            <p>SUK Sản phẩm:</p>
-                                        </div>
-                                        <div class="col-lg-10 col-md-10 col-8">
-                                            <input type="text" class="form-control" placeholder="Nhập mã SUK...">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="gap-xs"></div>
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-12 col-btn-save-cannel-product">
-                        <div class="container-fluid">
-                            <div class="row">
-                                <div class="col-lg-7 col-md-7 col-sm-12">
-                                    <button type="button" class="btn btn-outline-success btn-save-product">Lưu &
-                                        Ẩn</button>
-                                    <button type="button" class="btn btn-outline-success btn-save-product">Lưu & Hiển
-                                        thị </button>
-                                    <div class="gap-xs"></div>
-                                </div>
-                                <div class="col-lg-5 col-md-5 col-sm-12">
-                                    <button type="button" class="btn btn-danger btn-cannel-product">Hủy</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="gap-lg"></div>
-        </div> -->
-
-    </div>
-    
     </div>
     <footer>
         <div>

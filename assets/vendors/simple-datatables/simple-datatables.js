@@ -1,4 +1,4 @@
-(function (f) {
+(function(f) {
     if (typeof exports === "object" && typeof module !== "undefined") {
         module.exports = f()
     } else if (typeof define === "function" && define.amd) {
@@ -16,9 +16,9 @@
         }
         g.simpleDatatables = f()
     }
-})(function () {
+})(function() {
     var define, module, exports;
-    return (function () {
+    return (function() {
         function r(e, n, t) {
             function o(i, f) {
                 if (!n[i]) {
@@ -32,7 +32,7 @@
                     var p = n[i] = {
                         exports: {}
                     };
-                    e[i][0].call(p.exports, function (r) {
+                    e[i][0].call(p.exports, function(r) {
                         var n = e[i][1][r];
                         return o(n || r)
                     }, p, p.exports, r, e, n, t)
@@ -44,8 +44,8 @@
         }
         return r
     })()({
-        1: [function (require, module, exports) {
-            (function (global) {
+        1: [function(require, module, exports) {
+            (function(global) {
                 "use strict";
                 var commonjsGlobal = "undefined" != typeof globalThis ? globalThis : "undefined" != typeof window ? window : "undefined" != typeof global ? global : "undefined" != typeof self ? self : {};
 
@@ -54,327 +54,327 @@
                         exports: {}
                     }, n.exports), n.exports
                 }
-                var dayjs_min = createCommonjsModule(function (t, n) {
-                    t.exports = function () {
-                        var t = "millisecond",
-                            n = "second",
-                            e = "minute",
-                            r = "hour",
-                            i = "day",
-                            s = "week",
-                            o = "month",
-                            a = "quarter",
-                            u = "year",
-                            h = /^(\d{4})-?(\d{1,2})-?(\d{0,2})[^0-9]*(\d{1,2})?:?(\d{1,2})?:?(\d{1,2})?.?(\d{1,3})?$/,
-                            f = /\[([^\]]+)]|Y{2,4}|M{1,4}|D{1,2}|d{1,4}|H{1,2}|h{1,2}|a|A|m{1,2}|s{1,2}|Z{1,2}|SSS/g,
-                            c = function (t, n, e) {
-                                var r = String(t);
-                                return !r || r.length >= n ? t : "" + Array(n + 1 - r.length).join(e) + t
-                            },
-                            d = {
-                                s: c,
-                                z: function (t) {
-                                    var n = -t.utcOffset(),
-                                        e = Math.abs(n),
-                                        r = Math.floor(e / 60),
-                                        i = e % 60;
-                                    return (n <= 0 ? "+" : "-") + c(r, 2, "0") + ":" + c(i, 2, "0")
+                var dayjs_min = createCommonjsModule(function(t, n) {
+                        t.exports = function() {
+                            var t = "millisecond",
+                                n = "second",
+                                e = "minute",
+                                r = "hour",
+                                i = "day",
+                                s = "week",
+                                o = "month",
+                                a = "quarter",
+                                u = "year",
+                                h = /^(\d{4})-?(\d{1,2})-?(\d{0,2})[^0-9]*(\d{1,2})?:?(\d{1,2})?:?(\d{1,2})?.?(\d{1,3})?$/,
+                                f = /\[([^\]]+)]|Y{2,4}|M{1,4}|D{1,2}|d{1,4}|H{1,2}|h{1,2}|a|A|m{1,2}|s{1,2}|Z{1,2}|SSS/g,
+                                c = function(t, n, e) {
+                                    var r = String(t);
+                                    return !r || r.length >= n ? t : "" + Array(n + 1 - r.length).join(e) + t
                                 },
-                                m: function (t, n) {
-                                    var e = 12 * (n.year() - t.year()) + (n.month() - t.month()),
-                                        r = t.clone().add(e, o),
-                                        i = n - r < 0,
-                                        s = t.clone().add(e + (i ? -1 : 1), o);
-                                    return Number(-(e + (n - r) / (i ? r - s : s - r)) || 0)
-                                },
-                                a: function (t) {
-                                    return t < 0 ? Math.ceil(t) || 0 : Math.floor(t)
-                                },
-                                p: function (h) {
-                                    return {
-                                        M: o,
-                                        y: u,
-                                        w: s,
-                                        d: i,
-                                        h: r,
-                                        m: e,
-                                        s: n,
-                                        ms: t,
-                                        Q: a
-                                    }[h] || String(h || "").toLowerCase().replace(/s$/, "")
-                                },
-                                u: function (t) {
-                                    return void 0 === t
-                                }
-                            },
-                            l = {
-                                name: "en",
-                                weekdays: "Sunday_Monday_Tuesday_Wednesday_Thursday_Friday_Saturday".split("_"),
-                                months: "January_February_March_April_May_June_July_August_September_October_November_December".split("_")
-                            },
-                            m = "en",
-                            $ = {};
-                        $[m] = l;
-                        var M = function (t) {
-                            return t instanceof v
-                        },
-                            D = function (t, n, e) {
-                                var r;
-                                if (!t) return m;
-                                if ("string" == typeof t) $[t] && (r = t), n && ($[t] = n, r = t);
-                                else {
-                                    var i = t.name;
-                                    $[i] = t, r = i
-                                }
-                                return e || (m = r), r
-                            },
-                            y = function (t, n, e) {
-                                if (M(t)) return t.clone();
-                                var r = n ? "string" == typeof n ? {
-                                    format: n,
-                                    pl: e
-                                } : n : {};
-                                return r.date = t, new v(r)
-                            },
-                            g = d;
-                        g.l = D, g.i = M, g.w = function (t, n) {
-                            return y(t, {
-                                locale: n.$L,
-                                utc: n.$u
-                            })
-                        };
-                        var v = function () {
-                            function c(t) {
-                                this.$L = this.$L || D(t.locale, null, !0), this.parse(t)
-                            }
-                            var d = c.prototype;
-                            return d.parse = function (t) {
-                                this.$d = function (t) {
-                                    var n = t.date,
-                                        e = t.utc;
-                                    if (null === n) return new Date(NaN);
-                                    if (g.u(n)) return new Date;
-                                    if (n instanceof Date) return new Date(n);
-                                    if ("string" == typeof n && !/Z$/i.test(n)) {
-                                        var r = n.match(h);
-                                        if (r) return e ? new Date(Date.UTC(r[1], r[2] - 1, r[3] || 1, r[4] || 0, r[5] || 0, r[6] || 0, r[7] || 0)) : new Date(r[1], r[2] - 1, r[3] || 1, r[4] || 0, r[5] || 0, r[6] || 0, r[7] || 0)
+                                d = {
+                                    s: c,
+                                    z: function(t) {
+                                        var n = -t.utcOffset(),
+                                            e = Math.abs(n),
+                                            r = Math.floor(e / 60),
+                                            i = e % 60;
+                                        return (n <= 0 ? "+" : "-") + c(r, 2, "0") + ":" + c(i, 2, "0")
+                                    },
+                                    m: function(t, n) {
+                                        var e = 12 * (n.year() - t.year()) + (n.month() - t.month()),
+                                            r = t.clone().add(e, o),
+                                            i = n - r < 0,
+                                            s = t.clone().add(e + (i ? -1 : 1), o);
+                                        return Number(-(e + (n - r) / (i ? r - s : s - r)) || 0)
+                                    },
+                                    a: function(t) {
+                                        return t < 0 ? Math.ceil(t) || 0 : Math.floor(t)
+                                    },
+                                    p: function(h) {
+                                        return {
+                                            M: o,
+                                            y: u,
+                                            w: s,
+                                            d: i,
+                                            h: r,
+                                            m: e,
+                                            s: n,
+                                            ms: t,
+                                            Q: a
+                                        }[h] || String(h || "").toLowerCase().replace(/s$/, "")
+                                    },
+                                    u: function(t) {
+                                        return void 0 === t
                                     }
-                                    return new Date(n)
-                                }(t), this.init()
-                            }, d.init = function () {
-                                var t = this.$d;
-                                this.$y = t.getFullYear(), this.$M = t.getMonth(), this.$D = t.getDate(), this.$W = t.getDay(), this.$H = t.getHours(), this.$m = t.getMinutes(), this.$s = t.getSeconds(), this.$ms = t.getMilliseconds()
-                            }, d.$utils = function () {
-                                return g
-                            }, d.isValid = function () {
-                                return !("Invalid Date" === this.$d.toString())
-                            }, d.isSame = function (t, n) {
-                                var e = y(t);
-                                return this.startOf(n) <= e && e <= this.endOf(n)
-                            }, d.isAfter = function (t, n) {
-                                return y(t) < this.startOf(n)
-                            }, d.isBefore = function (t, n) {
-                                return this.endOf(n) < y(t)
-                            }, d.$g = function (t, n, e) {
-                                return g.u(t) ? this[n] : this.set(e, t)
-                            }, d.year = function (t) {
-                                return this.$g(t, "$y", u)
-                            }, d.month = function (t) {
-                                return this.$g(t, "$M", o)
-                            }, d.day = function (t) {
-                                return this.$g(t, "$W", i)
-                            }, d.date = function (t) {
-                                return this.$g(t, "$D", "date")
-                            }, d.hour = function (t) {
-                                return this.$g(t, "$H", r)
-                            }, d.minute = function (t) {
-                                return this.$g(t, "$m", e)
-                            }, d.second = function (t) {
-                                return this.$g(t, "$s", n)
-                            }, d.millisecond = function (n) {
-                                return this.$g(n, "$ms", t)
-                            }, d.unix = function () {
-                                return Math.floor(this.valueOf() / 1e3)
-                            }, d.valueOf = function () {
-                                return this.$d.getTime()
-                            }, d.startOf = function (t, a) {
-                                var h = this,
-                                    f = !!g.u(a) || a,
-                                    c = g.p(t),
-                                    d = function (t, n) {
-                                        var e = g.w(h.$u ? Date.UTC(h.$y, n, t) : new Date(h.$y, n, t), h);
-                                        return f ? e : e.endOf(i)
-                                    },
-                                    l = function (t, n) {
-                                        return g.w(h.toDate()[t].apply(h.toDate(), (f ? [0, 0, 0, 0] : [23, 59, 59, 999]).slice(n)), h)
-                                    },
-                                    m = this.$W,
-                                    $ = this.$M,
-                                    M = this.$D,
-                                    D = "set" + (this.$u ? "UTC" : "");
-                                switch (c) {
-                                    case u:
-                                        return f ? d(1, 0) : d(31, 11);
-                                    case o:
-                                        return f ? d(1, $) : d(0, $ + 1);
-                                    case s:
-                                        var y = this.$locale().weekStart || 0,
-                                            v = (m < y ? m + 7 : m) - y;
-                                        return d(f ? M - v : M + (6 - v), $);
-                                    case i:
-                                    case "date":
-                                        return l(D + "Hours", 0);
-                                    case r:
-                                        return l(D + "Minutes", 1);
-                                    case e:
-                                        return l(D + "Seconds", 2);
-                                    case n:
-                                        return l(D + "Milliseconds", 3);
-                                    default:
-                                        return this.clone()
-                                }
-                            }, d.endOf = function (t) {
-                                return this.startOf(t, !1)
-                            }, d.$set = function (s, a) {
-                                var h, f = g.p(s),
-                                    c = "set" + (this.$u ? "UTC" : ""),
-                                    d = (h = {}, h[i] = c + "Date", h.date = c + "Date", h[o] = c + "Month", h[u] = c + "FullYear", h[r] = c + "Hours", h[e] = c + "Minutes", h[n] = c + "Seconds", h[t] = c + "Milliseconds", h)[f],
-                                    l = f === i ? this.$D + (a - this.$W) : a;
-                                if (f === o || f === u) {
-                                    var m = this.clone().set("date", 1);
-                                    m.$d[d](l), m.init(), this.$d = m.set("date", Math.min(this.$D, m.daysInMonth())).toDate()
-                                } else d && this.$d[d](l);
-                                return this.init(), this
-                            }, d.set = function (t, n) {
-                                return this.clone().$set(t, n)
-                            }, d.get = function (t) {
-                                return this[g.p(t)]()
-                            }, d.add = function (t, a) {
-                                var h, f = this;
-                                t = Number(t);
-                                var c = g.p(a),
-                                    d = function (n) {
-                                        var e = y(f);
-                                        return g.w(e.date(e.date() + Math.round(n * t)), f)
-                                    };
-                                if (c === o) return this.set(o, this.$M + t);
-                                if (c === u) return this.set(u, this.$y + t);
-                                if (c === i) return d(1);
-                                if (c === s) return d(7);
-                                var l = (h = {}, h[e] = 6e4, h[r] = 36e5, h[n] = 1e3, h)[c] || 1,
-                                    m = this.valueOf() + t * l;
-                                return g.w(m, this)
-                            }, d.subtract = function (t, n) {
-                                return this.add(-1 * t, n)
-                            }, d.format = function (t) {
-                                var n = this;
-                                if (!this.isValid()) return "Invalid Date";
-                                var e = t || "YYYY-MM-DDTHH:mm:ssZ",
-                                    r = g.z(this),
-                                    i = this.$locale(),
-                                    s = this.$H,
-                                    o = this.$m,
-                                    a = this.$M,
-                                    u = i.weekdays,
-                                    h = i.months,
-                                    c = function (t, r, i, s) {
-                                        return t && (t[r] || t(n, e)) || i[r].substr(0, s)
-                                    },
-                                    d = function (t) {
-                                        return g.s(s % 12 || 12, t, "0")
-                                    },
-                                    l = i.meridiem || function (t, n, e) {
-                                        var r = t < 12 ? "AM" : "PM";
-                                        return e ? r.toLowerCase() : r
-                                    },
-                                    m = {
-                                        YY: String(this.$y).slice(-2),
-                                        YYYY: this.$y,
-                                        M: a + 1,
-                                        MM: g.s(a + 1, 2, "0"),
-                                        MMM: c(i.monthsShort, a, h, 3),
-                                        MMMM: h[a] || h(this, e),
-                                        D: this.$D,
-                                        DD: g.s(this.$D, 2, "0"),
-                                        d: String(this.$W),
-                                        dd: c(i.weekdaysMin, this.$W, u, 2),
-                                        ddd: c(i.weekdaysShort, this.$W, u, 3),
-                                        dddd: u[this.$W],
-                                        H: String(s),
-                                        HH: g.s(s, 2, "0"),
-                                        h: d(1),
-                                        hh: d(2),
-                                        a: l(s, o, !0),
-                                        A: l(s, o, !1),
-                                        m: String(o),
-                                        mm: g.s(o, 2, "0"),
-                                        s: String(this.$s),
-                                        ss: g.s(this.$s, 2, "0"),
-                                        SSS: g.s(this.$ms, 3, "0"),
-                                        Z: r
-                                    };
-                                return e.replace(f, function (t, n) {
-                                    return n || m[t] || r.replace(":", "")
+                                },
+                                l = {
+                                    name: "en",
+                                    weekdays: "Sunday_Monday_Tuesday_Wednesday_Thursday_Friday_Saturday".split("_"),
+                                    months: "January_February_March_April_May_June_July_August_September_October_November_December".split("_")
+                                },
+                                m = "en",
+                                $ = {};
+                            $[m] = l;
+                            var M = function(t) {
+                                    return t instanceof v
+                                },
+                                D = function(t, n, e) {
+                                    var r;
+                                    if (!t) return m;
+                                    if ("string" == typeof t) $[t] && (r = t), n && ($[t] = n, r = t);
+                                    else {
+                                        var i = t.name;
+                                        $[i] = t, r = i
+                                    }
+                                    return e || (m = r), r
+                                },
+                                y = function(t, n, e) {
+                                    if (M(t)) return t.clone();
+                                    var r = n ? "string" == typeof n ? {
+                                        format: n,
+                                        pl: e
+                                    } : n : {};
+                                    return r.date = t, new v(r)
+                                },
+                                g = d;
+                            g.l = D, g.i = M, g.w = function(t, n) {
+                                return y(t, {
+                                    locale: n.$L,
+                                    utc: n.$u
                                 })
-                            }, d.utcOffset = function () {
-                                return 15 * -Math.round(this.$d.getTimezoneOffset() / 15)
-                            }, d.diff = function (t, h, f) {
-                                var c, d = g.p(h),
-                                    l = y(t),
-                                    m = 6e4 * (l.utcOffset() - this.utcOffset()),
-                                    $ = this - l,
-                                    M = g.m(this, l);
-                                return M = (c = {}, c[u] = M / 12, c[o] = M, c[a] = M / 3, c[s] = ($ - m) / 6048e5, c[i] = ($ - m) / 864e5, c[r] = $ / 36e5, c[e] = $ / 6e4, c[n] = $ / 1e3, c)[d] || $, f ? M : g.a(M)
-                            }, d.daysInMonth = function () {
-                                return this.endOf(o).$D
-                            }, d.$locale = function () {
-                                return $[this.$L]
-                            }, d.locale = function (t, n) {
-                                if (!t) return this.$L;
-                                var e = this.clone();
-                                return e.$L = D(t, n, !0), e
-                            }, d.clone = function () {
-                                return g.w(this.toDate(), this)
-                            }, d.toDate = function () {
-                                return new Date(this.$d)
-                            }, d.toJSON = function () {
-                                return this.isValid() ? this.toISOString() : null
-                            }, d.toISOString = function () {
-                                return this.$d.toISOString()
-                            }, d.toString = function () {
-                                return this.$d.toUTCString()
-                            }, c
-                        }();
-                        return y.prototype = v.prototype, y.extend = function (t, n) {
-                            return t(n, v, y), y
-                        }, y.locale = D, y.isDayjs = M, y.unix = function (t) {
-                            return y(1e3 * t)
-                        }, y.en = $[m], y.Ls = $, y
-                    }()
-                }),
-                    customParseFormat = createCommonjsModule(function (t, n) {
+                            };
+                            var v = function() {
+                                function c(t) {
+                                    this.$L = this.$L || D(t.locale, null, !0), this.parse(t)
+                                }
+                                var d = c.prototype;
+                                return d.parse = function(t) {
+                                    this.$d = function(t) {
+                                        var n = t.date,
+                                            e = t.utc;
+                                        if (null === n) return new Date(NaN);
+                                        if (g.u(n)) return new Date;
+                                        if (n instanceof Date) return new Date(n);
+                                        if ("string" == typeof n && !/Z$/i.test(n)) {
+                                            var r = n.match(h);
+                                            if (r) return e ? new Date(Date.UTC(r[1], r[2] - 1, r[3] || 1, r[4] || 0, r[5] || 0, r[6] || 0, r[7] || 0)) : new Date(r[1], r[2] - 1, r[3] || 1, r[4] || 0, r[5] || 0, r[6] || 0, r[7] || 0)
+                                        }
+                                        return new Date(n)
+                                    }(t), this.init()
+                                }, d.init = function() {
+                                    var t = this.$d;
+                                    this.$y = t.getFullYear(), this.$M = t.getMonth(), this.$D = t.getDate(), this.$W = t.getDay(), this.$H = t.getHours(), this.$m = t.getMinutes(), this.$s = t.getSeconds(), this.$ms = t.getMilliseconds()
+                                }, d.$utils = function() {
+                                    return g
+                                }, d.isValid = function() {
+                                    return !("Invalid Date" === this.$d.toString())
+                                }, d.isSame = function(t, n) {
+                                    var e = y(t);
+                                    return this.startOf(n) <= e && e <= this.endOf(n)
+                                }, d.isAfter = function(t, n) {
+                                    return y(t) < this.startOf(n)
+                                }, d.isBefore = function(t, n) {
+                                    return this.endOf(n) < y(t)
+                                }, d.$g = function(t, n, e) {
+                                    return g.u(t) ? this[n] : this.set(e, t)
+                                }, d.year = function(t) {
+                                    return this.$g(t, "$y", u)
+                                }, d.month = function(t) {
+                                    return this.$g(t, "$M", o)
+                                }, d.day = function(t) {
+                                    return this.$g(t, "$W", i)
+                                }, d.date = function(t) {
+                                    return this.$g(t, "$D", "date")
+                                }, d.hour = function(t) {
+                                    return this.$g(t, "$H", r)
+                                }, d.minute = function(t) {
+                                    return this.$g(t, "$m", e)
+                                }, d.second = function(t) {
+                                    return this.$g(t, "$s", n)
+                                }, d.millisecond = function(n) {
+                                    return this.$g(n, "$ms", t)
+                                }, d.unix = function() {
+                                    return Math.floor(this.valueOf() / 1e3)
+                                }, d.valueOf = function() {
+                                    return this.$d.getTime()
+                                }, d.startOf = function(t, a) {
+                                    var h = this,
+                                        f = !!g.u(a) || a,
+                                        c = g.p(t),
+                                        d = function(t, n) {
+                                            var e = g.w(h.$u ? Date.UTC(h.$y, n, t) : new Date(h.$y, n, t), h);
+                                            return f ? e : e.endOf(i)
+                                        },
+                                        l = function(t, n) {
+                                            return g.w(h.toDate()[t].apply(h.toDate(), (f ? [0, 0, 0, 0] : [23, 59, 59, 999]).slice(n)), h)
+                                        },
+                                        m = this.$W,
+                                        $ = this.$M,
+                                        M = this.$D,
+                                        D = "set" + (this.$u ? "UTC" : "");
+                                    switch (c) {
+                                        case u:
+                                            return f ? d(1, 0) : d(31, 11);
+                                        case o:
+                                            return f ? d(1, $) : d(0, $ + 1);
+                                        case s:
+                                            var y = this.$locale().weekStart || 0,
+                                                v = (m < y ? m + 7 : m) - y;
+                                            return d(f ? M - v : M + (6 - v), $);
+                                        case i:
+                                        case "date":
+                                            return l(D + "Hours", 0);
+                                        case r:
+                                            return l(D + "Minutes", 1);
+                                        case e:
+                                            return l(D + "Seconds", 2);
+                                        case n:
+                                            return l(D + "Milliseconds", 3);
+                                        default:
+                                            return this.clone()
+                                    }
+                                }, d.endOf = function(t) {
+                                    return this.startOf(t, !1)
+                                }, d.$set = function(s, a) {
+                                    var h, f = g.p(s),
+                                        c = "set" + (this.$u ? "UTC" : ""),
+                                        d = (h = {}, h[i] = c + "Date", h.date = c + "Date", h[o] = c + "Month", h[u] = c + "FullYear", h[r] = c + "Hours", h[e] = c + "Minutes", h[n] = c + "Seconds", h[t] = c + "Milliseconds", h)[f],
+                                        l = f === i ? this.$D + (a - this.$W) : a;
+                                    if (f === o || f === u) {
+                                        var m = this.clone().set("date", 1);
+                                        m.$d[d](l), m.init(), this.$d = m.set("date", Math.min(this.$D, m.daysInMonth())).toDate()
+                                    } else d && this.$d[d](l);
+                                    return this.init(), this
+                                }, d.set = function(t, n) {
+                                    return this.clone().$set(t, n)
+                                }, d.get = function(t) {
+                                    return this[g.p(t)]()
+                                }, d.add = function(t, a) {
+                                    var h, f = this;
+                                    t = Number(t);
+                                    var c = g.p(a),
+                                        d = function(n) {
+                                            var e = y(f);
+                                            return g.w(e.date(e.date() + Math.round(n * t)), f)
+                                        };
+                                    if (c === o) return this.set(o, this.$M + t);
+                                    if (c === u) return this.set(u, this.$y + t);
+                                    if (c === i) return d(1);
+                                    if (c === s) return d(7);
+                                    var l = (h = {}, h[e] = 6e4, h[r] = 36e5, h[n] = 1e3, h)[c] || 1,
+                                        m = this.valueOf() + t * l;
+                                    return g.w(m, this)
+                                }, d.subtract = function(t, n) {
+                                    return this.add(-1 * t, n)
+                                }, d.format = function(t) {
+                                    var n = this;
+                                    if (!this.isValid()) return "Invalid Date";
+                                    var e = t || "YYYY-MM-DDTHH:mm:ssZ",
+                                        r = g.z(this),
+                                        i = this.$locale(),
+                                        s = this.$H,
+                                        o = this.$m,
+                                        a = this.$M,
+                                        u = i.weekdays,
+                                        h = i.months,
+                                        c = function(t, r, i, s) {
+                                            return t && (t[r] || t(n, e)) || i[r].substr(0, s)
+                                        },
+                                        d = function(t) {
+                                            return g.s(s % 12 || 12, t, "0")
+                                        },
+                                        l = i.meridiem || function(t, n, e) {
+                                            var r = t < 12 ? "AM" : "PM";
+                                            return e ? r.toLowerCase() : r
+                                        },
+                                        m = {
+                                            YY: String(this.$y).slice(-2),
+                                            YYYY: this.$y,
+                                            M: a + 1,
+                                            MM: g.s(a + 1, 2, "0"),
+                                            MMM: c(i.monthsShort, a, h, 3),
+                                            MMMM: h[a] || h(this, e),
+                                            D: this.$D,
+                                            DD: g.s(this.$D, 2, "0"),
+                                            d: String(this.$W),
+                                            dd: c(i.weekdaysMin, this.$W, u, 2),
+                                            ddd: c(i.weekdaysShort, this.$W, u, 3),
+                                            dddd: u[this.$W],
+                                            H: String(s),
+                                            HH: g.s(s, 2, "0"),
+                                            h: d(1),
+                                            hh: d(2),
+                                            a: l(s, o, !0),
+                                            A: l(s, o, !1),
+                                            m: String(o),
+                                            mm: g.s(o, 2, "0"),
+                                            s: String(this.$s),
+                                            ss: g.s(this.$s, 2, "0"),
+                                            SSS: g.s(this.$ms, 3, "0"),
+                                            Z: r
+                                        };
+                                    return e.replace(f, function(t, n) {
+                                        return n || m[t] || r.replace(":", "")
+                                    })
+                                }, d.utcOffset = function() {
+                                    return 15 * -Math.round(this.$d.getTimezoneOffset() / 15)
+                                }, d.diff = function(t, h, f) {
+                                    var c, d = g.p(h),
+                                        l = y(t),
+                                        m = 6e4 * (l.utcOffset() - this.utcOffset()),
+                                        $ = this - l,
+                                        M = g.m(this, l);
+                                    return M = (c = {}, c[u] = M / 12, c[o] = M, c[a] = M / 3, c[s] = ($ - m) / 6048e5, c[i] = ($ - m) / 864e5, c[r] = $ / 36e5, c[e] = $ / 6e4, c[n] = $ / 1e3, c)[d] || $, f ? M : g.a(M)
+                                }, d.daysInMonth = function() {
+                                    return this.endOf(o).$D
+                                }, d.$locale = function() {
+                                    return $[this.$L]
+                                }, d.locale = function(t, n) {
+                                    if (!t) return this.$L;
+                                    var e = this.clone();
+                                    return e.$L = D(t, n, !0), e
+                                }, d.clone = function() {
+                                    return g.w(this.toDate(), this)
+                                }, d.toDate = function() {
+                                    return new Date(this.$d)
+                                }, d.toJSON = function() {
+                                    return this.isValid() ? this.toISOString() : null
+                                }, d.toISOString = function() {
+                                    return this.$d.toISOString()
+                                }, d.toString = function() {
+                                    return this.$d.toUTCString()
+                                }, c
+                            }();
+                            return y.prototype = v.prototype, y.extend = function(t, n) {
+                                return t(n, v, y), y
+                            }, y.locale = D, y.isDayjs = M, y.unix = function(t) {
+                                return y(1e3 * t)
+                            }, y.en = $[m], y.Ls = $, y
+                        }()
+                    }),
+                    customParseFormat = createCommonjsModule(function(t, n) {
                         var e, r, i, s, o, a, u, h, f;
-                        t.exports = (r = /(\[[^[]*\])|([-:\/.()\s]+)|(A|a|YYYY|YY?|MM?M?M?|Do|DD?|hh?|HH?|mm?|ss?|S{1,3}|z|ZZ?)/g, o = /\d*[^\s\d-:\/.()]+/, u = [/[+-]\d\d:?\d\d/, function (t) {
+                        t.exports = (r = /(\[[^[]*\])|([-:\/.()\s]+)|(A|a|YYYY|YY?|MM?M?M?|Do|DD?|hh?|HH?|mm?|ss?|S{1,3}|z|ZZ?)/g, o = /\d*[^\s\d-:\/.()]+/, u = [/[+-]\d\d:?\d\d/, function(t) {
                             var n, e;
                             (this.zone || (this.zone = {})).offset = (n = t.match(/([+-]|\d\d)/g), 0 == (e = 60 * n[1] + +n[2]) ? 0 : "+" === n[0] ? -e : e)
                         }], h = {
-                            A: [/[AP]M/, function (t) {
+                            A: [/[AP]M/, function(t) {
                                 this.afternoon = "PM" === t
                             }],
-                            a: [/[ap]m/, function (t) {
+                            a: [/[ap]m/, function(t) {
                                 this.afternoon = "pm" === t
                             }],
-                            S: [/\d/, function (t) {
+                            S: [/\d/, function(t) {
                                 this.milliseconds = 100 * +t
                             }],
-                            SS: [i = /\d\d/, function (t) {
+                            SS: [i = /\d\d/, function(t) {
                                 this.milliseconds = 10 * +t
                             }],
-                            SSS: [/\d{3}/, function (t) {
+                            SSS: [/\d{3}/, function(t) {
                                 this.milliseconds = +t
                             }],
-                            s: [s = /\d\d?/, (a = function (t) {
-                                return function (n) {
+                            s: [s = /\d\d?/, (a = function(t) {
+                                return function(n) {
                                     this[t] = +n
                                 }
                             })("seconds")],
@@ -387,7 +387,7 @@
                             hh: [s, a("hours")],
                             D: [s, a("day")],
                             DD: [i, a("day")],
-                            Do: [o, function (t) {
+                            Do: [o, function(t) {
                                 var n = e.ordinal,
                                     r = t.match(/\d+/);
                                 if (this.day = r[0], n)
@@ -395,64 +395,64 @@
                             }],
                             M: [s, a("month")],
                             MM: [i, a("month")],
-                            MMM: [o, function (t) {
+                            MMM: [o, function(t) {
                                 var n = e,
                                     r = n.months,
                                     i = n.monthsShort,
-                                    s = i ? i.findIndex(function (n) {
+                                    s = i ? i.findIndex(function(n) {
                                         return n === t
-                                    }) : r.findIndex(function (n) {
+                                    }) : r.findIndex(function(n) {
                                         return n.substr(0, 3) === t
                                     });
                                 if (s < 0) throw new Error;
                                 this.month = s + 1
                             }],
-                            MMMM: [o, function (t) {
+                            MMMM: [o, function(t) {
                                 var n = e.months.indexOf(t);
                                 if (n < 0) throw new Error;
                                 this.month = n + 1
                             }],
                             Y: [/[+-]?\d+/, a("year")],
-                            YY: [i, function (t) {
+                            YY: [i, function(t) {
                                 t = +t, this.year = t + (t > 68 ? 1900 : 2e3)
                             }],
                             YYYY: [/\d{4}/, a("year")],
                             Z: u,
                             ZZ: u
-                        }, f = function (t, n, e) {
+                        }, f = function(t, n, e) {
                             try {
-                                var i = function (t) {
-                                    for (var n = t.match(r), e = n.length, i = 0; i < e; i += 1) {
-                                        var s = n[i],
-                                            o = h[s],
-                                            a = o && o[0],
-                                            u = o && o[1];
-                                        n[i] = u ? {
-                                            regex: a,
-                                            parser: u
-                                        } : s.replace(/^\[|\]$/g, "")
-                                    }
-                                    return function (t) {
-                                        for (var r = {}, i = 0, s = 0; i < e; i += 1) {
-                                            var o = n[i];
-                                            if ("string" == typeof o) s += o.length;
-                                            else {
-                                                var a = o.regex,
-                                                    u = o.parser,
-                                                    h = t.substr(s),
-                                                    f = a.exec(h)[0];
-                                                u.call(r, f), t = t.replace(f, "")
-                                            }
+                                var i = function(t) {
+                                        for (var n = t.match(r), e = n.length, i = 0; i < e; i += 1) {
+                                            var s = n[i],
+                                                o = h[s],
+                                                a = o && o[0],
+                                                u = o && o[1];
+                                            n[i] = u ? {
+                                                regex: a,
+                                                parser: u
+                                            } : s.replace(/^\[|\]$/g, "")
                                         }
-                                        return function (t) {
-                                            var n = t.afternoon;
-                                            if (void 0 !== n) {
-                                                var e = t.hours;
-                                                n ? e < 12 && (t.hours += 12) : 12 === e && (t.hours = 0), delete t.afternoon
+                                        return function(t) {
+                                            for (var r = {}, i = 0, s = 0; i < e; i += 1) {
+                                                var o = n[i];
+                                                if ("string" == typeof o) s += o.length;
+                                                else {
+                                                    var a = o.regex,
+                                                        u = o.parser,
+                                                        h = t.substr(s),
+                                                        f = a.exec(h)[0];
+                                                    u.call(r, f), t = t.replace(f, "")
+                                                }
                                             }
-                                        }(r), r
-                                    }
-                                }(n)(t),
+                                            return function(t) {
+                                                var n = t.afternoon;
+                                                if (void 0 !== n) {
+                                                    var e = t.hours;
+                                                    n ? e < 12 && (t.hours += 12) : 12 === e && (t.hours = 0), delete t.afternoon
+                                                }
+                                            }(r), r
+                                        }
+                                    }(n)(t),
                                     s = i.year,
                                     o = i.month,
                                     a = i.day,
@@ -474,10 +474,10 @@
                             } catch (t) {
                                 return new Date("")
                             }
-                        }, function (t, n, r) {
+                        }, function(t, n, r) {
                             var i = n.prototype,
                                 s = i.parse;
-                            i.parse = function (t) {
+                            i.parse = function(t) {
                                 var n = t.date,
                                     i = t.format,
                                     o = t.pl,
@@ -512,7 +512,7 @@
 
             }).call(this, typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
         }, {}],
-        2: [function (require, module, exports) {
+        2: [function(require, module, exports) {
             "use strict";
             Object.defineProperty(exports, "__esModule", {
                 value: !0
@@ -567,21 +567,22 @@
                         if (1 == e || e == s || e >= r && e <= h) {
                             const s = t[e - 1];
                             s.classList.remove("active"), o.push(s)
-                        } return o.forEach(e => {
-                            const s = e.children[0].getAttribute("data-page");
-                            if (n) {
-                                const e = n.children[0].getAttribute("data-page");
-                                if (s - e == 2) d.push(t[e]);
-                                else if (s - e != 1) {
-                                    const t = createElement("li", {
-                                        class: "ellipsis",
-                                        html: `<a href="#">${i}</a>`
-                                    });
-                                    d.push(t)
-                                }
+                        }
+                    return o.forEach(e => {
+                        const s = e.children[0].getAttribute("data-page");
+                        if (n) {
+                            const e = n.children[0].getAttribute("data-page");
+                            if (s - e == 2) d.push(t[e]);
+                            else if (s - e != 1) {
+                                const t = createElement("li", {
+                                    class: "ellipsis",
+                                    html: `<a href="#">${i}</a>`
+                                });
+                                d.push(t)
                             }
-                            d.push(e), n = e
-                        }), d
+                        }
+                        d.push(e), n = e
+                    }), d
                 };
             class Rows {
                 constructor(t, e) {
@@ -637,11 +638,11 @@
                 order(t) {
                     let e, s, a, i, n, l, r;
                     const h = [
-                        [],
-                        [],
-                        [],
-                        []
-                    ],
+                            [],
+                            [],
+                            [],
+                            []
+                        ],
                         o = this.dt;
                     t.forEach((t, a) => {
                         n = o.headings[t], l = "false" !== n.getAttribute("data-sortable"), (e = n.cloneNode(!0)).originalCellIndex = a, e.sortable = l, h[0].push(e), o.hiddenColumns.includes(t) || ((s = n.cloneNode(!0)).originalCellIndex = a, s.sortable = l, h[1].push(s))
@@ -694,10 +695,10 @@
                 filter(t, e, s, a) {
                     const i = this.dt;
                     if (i.filterState || (i.filterState = {
-                        originalData: i.data
-                    }), !i.filterState[t]) {
+                            originalData: i.data
+                        }), !i.filterState[t]) {
                         const e = [...a, () => !0];
-                        i.filterState[t] = function () {
+                        i.filterState[t] = function() {
                             let t = 0;
                             return () => e[t++ % e.length]
                         }()
@@ -725,7 +726,7 @@
                         c = [];
                     if ("date" === d.getAttribute("data-type")) {
                         let t = !1;
-                        d.hasAttribute("data-format") && (t = d.getAttribute("data-format")), c.push(new Promise(function (t) {
+                        d.hasAttribute("data-format") && (t = d.getAttribute("data-format")), c.push(new Promise(function(t) {
                             t(require("./date-4abbfef1.js"))
                         }).then(({
                             parseDate: e
@@ -765,30 +766,30 @@
                     }), i.data = n, i.update()
                 }
             }
-            const dataToTable = function (t) {
-                let e = !1,
-                    s = !1;
-                if ((t = t || this.options.data).headings) {
-                    e = createElement("thead");
-                    const s = createElement("tr");
-                    t.headings.forEach(t => {
-                        const e = createElement("th", {
-                            html: t
-                        });
-                        s.appendChild(e)
-                    }), e.appendChild(s)
-                }
-                t.data && t.data.length && (s = createElement("tbody"), t.data.forEach(e => {
-                    if (t.headings && t.headings.length !== e.length) throw new Error("The number of rows do not match the number of headings.");
-                    const a = createElement("tr");
-                    e.forEach(t => {
-                        const e = createElement("td", {
-                            html: t
-                        });
-                        a.appendChild(e)
-                    }), s.appendChild(a)
-                })), e && (null !== this.table.tHead && this.table.removeChild(this.table.tHead), this.table.appendChild(e)), s && (this.table.tBodies.length && this.table.removeChild(this.table.tBodies[0]), this.table.appendChild(s))
-            },
+            const dataToTable = function(t) {
+                    let e = !1,
+                        s = !1;
+                    if ((t = t || this.options.data).headings) {
+                        e = createElement("thead");
+                        const s = createElement("tr");
+                        t.headings.forEach(t => {
+                            const e = createElement("th", {
+                                html: t
+                            });
+                            s.appendChild(e)
+                        }), e.appendChild(s)
+                    }
+                    t.data && t.data.length && (s = createElement("tbody"), t.data.forEach(e => {
+                        if (t.headings && t.headings.length !== e.length) throw new Error("The number of rows do not match the number of headings.");
+                        const a = createElement("tr");
+                        e.forEach(t => {
+                            const e = createElement("td", {
+                                html: t
+                            });
+                            a.appendChild(e)
+                        }), s.appendChild(a)
+                    })), e && (null !== this.table.tHead && this.table.removeChild(this.table.tHead), this.table.appendChild(e)), s && (this.table.tBodies.length && this.table.removeChild(this.table.tBodies[0]), this.table.appendChild(s))
+                },
                 defaultConfig = {
                     sortable: !0,
                     searchable: !0,
@@ -825,17 +826,17 @@
             class DataTable {
                 constructor(t, e = {}) {
                     if (this.initialized = !1, this.options = {
-                        ...defaultConfig,
-                        ...e,
-                        layout: {
-                            ...defaultConfig.layout,
-                            ...e.layout
-                        },
-                        labels: {
-                            ...defaultConfig.labels,
-                            ...e.labels
-                        }
-                    }, "string" == typeof t && (t = document.querySelector(t)), this.initialLayout = t.innerHTML, this.initialSortable = this.options.sortable, this.options.header || (this.options.sortable = !1), null === t.tHead && (!this.options.data || this.options.data && !this.options.data.headings) && (this.options.sortable = !1), t.tBodies.length && !t.tBodies[0].rows.length && this.options.data && !this.options.data.data) throw new Error("You seem to be using the data option, but you've not defined any rows.");
+                            ...defaultConfig,
+                            ...e,
+                            layout: {
+                                ...defaultConfig.layout,
+                                ...e.layout
+                            },
+                            labels: {
+                                ...defaultConfig.labels,
+                                ...e.labels
+                            }
+                        }, "string" == typeof t && (t = document.querySelector(t)), this.initialLayout = t.innerHTML, this.initialSortable = this.options.sortable, this.options.header || (this.options.sortable = !1), null === t.tHead && (!this.options.data || this.options.data && !this.options.data.headings) && (this.options.sortable = !1), t.tBodies.length && !t.tBodies[0].rows.length && this.options.data && !this.options.data.data) throw new Error("You seem to be using the data option, but you've not defined any rows.");
                     this.table = t, this.init()
                 }
                 static extend(t, e) {
@@ -896,10 +897,10 @@
                         }), t.appendChild(s)), this.head = t, this.table.insertBefore(this.head, this.body), this.hiddenHeader = !e.ajax
                     }
                     if (this.headings = [], this.hasHeadings = this.head.rows.length > 0, this.hasHeadings && (this.header = this.head.rows[0], this.headings = [].slice.call(this.header.cells)), e.header || this.head && this.table.removeChild(this.table.tHead), e.footer ? this.head && !this.foot && (this.foot = createElement("tfoot", {
-                        html: this.head.innerHTML
-                    }), this.table.appendChild(this.foot)) : this.foot && this.table.removeChild(this.table.tFoot), this.wrapper = createElement("div", {
-                        class: "dataTable-wrapper dataTable-loading"
-                    }), s += "<div class='dataTable-top'>", s += e.layout.top, s += "</div>", e.scrollY.length ? s += `<div class='dataTable-container' style='height: ${e.scrollY}; overflow-Y: auto;'></div>` : s += "<div class='dataTable-container'></div>", s += "<div class='dataTable-bottom'>", s += e.layout.bottom, s = (s += "</div>").replace("{info}", e.paging ? "<div class='dataTable-info'></div>" : ""), e.paging && e.perPageSelect) {
+                            html: this.head.innerHTML
+                        }), this.table.appendChild(this.foot)) : this.foot && this.table.removeChild(this.table.tFoot), this.wrapper = createElement("div", {
+                            class: "dataTable-wrapper dataTable-loading"
+                        }), s += "<div class='dataTable-top'>", s += e.layout.top, s += "</div>", e.scrollY.length ? s += `<div class='dataTable-container' style='height: ${e.scrollY}; overflow-Y: auto;'></div>` : s += "<div class='dataTable-container'></div>", s += "<div class='dataTable-bottom'>", s += e.layout.bottom, s = (s += "</div>").replace("{info}", e.paging ? "<div class='dataTable-info'></div>" : ""), e.paging && e.perPageSelect) {
                         let t = "<div class='dataTable-dropdown'>";
                         t += e.labels.perPage, t += "<label>Số lượng hiển thị</label></div>";
                         // let t = "<div class='dataTable-dropdown'>";
@@ -918,8 +919,8 @@
                     } else s = s.replace("{search}", "");
                     this.hasHeadings && this.render("header"), this.table.classList.add("dataTable-table");
                     const a = createElement("ul", {
-                        class: "pagination pagination-primary float-right dataTable-pagination"
-                    }),
+                            class: "pagination pagination-primary float-right dataTable-pagination"
+                        }),
                         i = createElement("ul");
                     a.appendChild(i), s = s.replace(/\{pager\}/g, a.outerHTML), this.wrapper.innerHTML = s, this.container = this.wrapper.querySelector(".dataTable-container"), this.pagers = this.wrapper.querySelectorAll(".dataTable-pagination"), this.label = this.wrapper.querySelector(".dataTable-info"), this.table.parentNode.replaceChild(this.wrapper, this.table), this.container.appendChild(this.table), this.rect = this.table.getBoundingClientRect(), this.data = Array.from(this.body.rows), this.activeRows = this.data.slice(), this.activeHeadings = this.headings.slice(), this.update(), e.ajax || this.setColumns(), this.fixHeight(), this.fixColumns(), e.header || this.wrapper.classList.add("no-header"), e.footer || this.wrapper.classList.add("no-footer"), e.sortable && this.wrapper.classList.add("sortable"), e.searchable && this.wrapper.classList.add("searchable"), e.fixedHeight && this.wrapper.classList.add("fixed-height"), e.fixedColumns && this.wrapper.classList.add("fixed-columns"), this.bindEvents()
                 }
@@ -1028,15 +1029,15 @@
                         let t, e = !1;
                         if (this.columnWidths = [], this.table.tHead) {
                             if (this.options.scrollY.length && ((e = createElement("thead")).appendChild(createElement("tr")), e.style.height = "0px", this.headerTable && (this.table.tHead = this.headerTable.tHead)), this.activeHeadings.forEach(t => {
-                                t.style.width = ""
-                            }), this.activeHeadings.forEach((t, s) => {
-                                const a = t.offsetWidth,
-                                    i = a / this.rect.width * 100;
-                                if (t.style.width = `${i}%`, this.columnWidths[s] = a, this.options.scrollY.length) {
-                                    const t = createElement("th");
-                                    e.firstElementChild.appendChild(t), t.style.width = `${i}%`, t.style.paddingTop = "0", t.style.paddingBottom = "0", t.style.border = "0"
-                                }
-                            }), this.options.scrollY.length) {
+                                    t.style.width = ""
+                                }), this.activeHeadings.forEach((t, s) => {
+                                    const a = t.offsetWidth,
+                                        i = a / this.rect.width * 100;
+                                    if (t.style.width = `${i}%`, this.columnWidths[s] = a, this.options.scrollY.length) {
+                                        const t = createElement("th");
+                                        e.firstElementChild.appendChild(t), t.style.width = `${i}%`, t.style.paddingTop = "0", t.style.paddingBottom = "0", t.style.border = "0"
+                                    }
+                                }), this.options.scrollY.length) {
                                 const t = this.table.parentElement;
                                 if (!this.headerTable) {
                                     this.headerTable = createElement("table", {
@@ -1084,7 +1085,8 @@
                                 if ((n = (i = e.cells[t]).hasAttribute("data-content") ? i.getAttribute("data-content") : i.textContent).toLowerCase().includes(s) && this.columns(i.cellIndex).visible()) {
                                     a = !0;
                                     break
-                                } return t && a
+                                }
+                            return t && a
                         }, !0) && !a ? (e.searchIndex = s, this.searchData.push(s)) : e.searchIndex = null
                     }), this.wrapper.classList.add("search-results"), this.searchData.length ? this.update() : (this.wrapper.classList.remove("search-results"), this.setMessage(this.options.labels.noRows)), void this.emit("datatable.search", t, this.searchData)) : (this.searching = !1, this.update(), this.emit("datatable.search", t, this.searchData), this.wrapper.classList.remove("search-results"), !1))
                 }
@@ -1129,7 +1131,7 @@
                         e.appendChild(t)
                     }
                 }
-                export(t) {
+                export (t) {
                     if (!this.hasHeadings && !this.hasRows) return !1;
                     const e = this.activeHeadings;
                     let s = [];
@@ -1160,7 +1162,8 @@
                                         if (!h.skipColumn.includes(e[n].originalCellIndex) && this.columns(e[n].originalCellIndex).visible()) {
                                             let t = s[i].cells[n].textContent;
                                             (t = (t = (t = (t = (t = t.trim()).replace(/\s{2,}/g, " ")).replace(/\n/g, "  ")).replace(/"/g, '""')).replace(/#/g, "%23")).includes(",") && (t = `"${t}"`), l += t + h.columnDelimiter
-                                        } l = l.trim().substring(0, l.length - 1), l += h.lineDelimiter
+                                        }
+                                    l = l.trim().substring(0, l.length - 1), l += h.lineDelimiter
                                 }
                                 l = l.trim().substring(0, l.length - 1), h.download && (l = `data:text/csv;charset=utf-8,${l}`)
                             } else if ("sql" === h.type) {
@@ -1180,7 +1183,7 @@
                     }
                     return !1
                 }
-                import(t) {
+                import (t) {
                     let e = !1;
                     if (!isObject(t)) return !1;
                     const s = {

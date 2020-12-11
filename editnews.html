@@ -2,30 +2,47 @@
 <html lang="en">
 
 <head>
-    
-   
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L.A.N | Thêm tin tức</title>
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="assets/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf">
+    <link rel="stylesheet" href="assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/vendors/chartjs/Chart.min.css">
+    <link rel="stylesheet" href="assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+    <!-- <link rel="stylesheet" href="assets/css/style.css"> -->
+    <!-- <link rel="stylesheet" href="assets/css/product.css"> -->
+    <link rel="stylesheet" href="assets/vendors/simple-datatables/style.css">
     <link rel="stylesheet" href="assets/css/alloder.css">
 
 
     <link rel="stylesheet" href="./assets/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff">
 
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>L.A.N | Sửa tin tức</title>
-
-    <link rel="stylesheet" href="assets/css/bootstrap.css">
-
-    <link rel="stylesheet" href="assets/vendors/quill/quill.bubble.css">
-    <link rel="stylesheet" href="assets/vendors/quill/quill.snow.css">
-    <link rel="stylesheet" href="assets/css/bootstrap.css">
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
-    <link rel="stylesheet" href="assets/css/app.css">
-    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
 </head>
 
+<style>
+    * {
+        font-size: 16px;
+    }
+    
+    span {
+        color: red;
+    }
+    
+    td,
+    th {
+        text-align: center;
+    }
+</style>
+
 <body>
+
+
     <div id="app">
         <div id="sidebar" class='active'>
             <div class="sidebar-wrapper active">
@@ -115,6 +132,26 @@
                             </ul>
 
                         </li>
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="fa fa-users" aria-hidden="true" style="font-size: 16px;"></i>
+
+                                <span>Quản lí TK người dùng</span>
+                            </a>
+                            <ul class="submenu">
+
+                                <li>
+                                    <a href="viewcustom.html">Xem khách hàng</a>
+                                </li>
+
+
+
+                                <li>
+                                    <a href="editstatuscustom.html">Thay đổi trạng thái</a>
+                                </li>
+                            </ul>
+
+                        </li>
 
                         <li class="sidebar-item  has-sub">
                             <a href="#" class='sidebar-link'>
@@ -150,7 +187,7 @@
                                 </li>
 
                                 <li>
-                                    <a href="replycomments.html">Sửa tài khoản</a>
+                                    <a href="replycomments.html">Phản hồi bình luận</a>
                                 </li>
 
 
@@ -176,16 +213,13 @@
         <div id="main">
             <nav class="navbar navbar-header navbar-expand navbar-light">
                 <a class="sidebar-toggler" href="#"><span class="navbar-toggler-icon"></span></a>
-                <button class="btn navbar-toggler" type="button" data-toggle="collapse"
-                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
+                <button class="btn navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav d-flex align-items-center navbar-light ml-auto">
                         <li class="dropdown nav-icon">
-                            <a href="#" data-toggle="dropdown"
-                                class="nav-link  dropdown-toggle nav-link-lg nav-link-user">
+                            <a href="#" data-toggle="dropdown" class="nav-link  dropdown-toggle nav-link-lg nav-link-user">
                                 <div class="d-lg-inline-block">
                                     <i data-feather="bell"></i>
                                 </div>
@@ -208,8 +242,7 @@
                             </div>
                         </li>
                         <li class="dropdown nav-icon mr-2">
-                            <a href="#" data-toggle="dropdown"
-                                class="nav-link  dropdown-toggle nav-link-lg nav-link-user">
+                            <a href="#" data-toggle="dropdown" class="nav-link  dropdown-toggle nav-link-lg nav-link-user">
                                 <div class="d-lg-inline-block">
                                     <i data-feather="mail"></i>
                                 </div>
@@ -223,8 +256,7 @@
                             </div>
                         </li>
                         <li class="dropdown">
-                            <a href="#" data-toggle="dropdown"
-                                class="nav-link dropdown-toggle nav-link-lg nav-link-user">
+                            <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
                                 <div class="avatar mr-1">
                                     <img src="assets/images/favicon.png" alt="" srcset="">
                                 </div>
@@ -241,79 +273,219 @@
                     </ul>
                 </div>
             </nav>
+            <div class="info-product">
+                <div class="container-fluid">
 
-            <div class="main-content container-fluid">
-                <div class="card-body">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-lg-2 col-md-4 col-6">
-                                <p>Tiêu đề:<u></u> <span class="span-title-product">*</span></p>
-                            </div>
-                            <div class="col-lg-10 col-md-8 col-6">
-                                <input type="text" class="form-control" placeholder="Nhập tiêu đề sản phẩm...">
-                            </div>
-                        </div>
-                        <div class="gap-sm"></div>
-                        <div class="row">
-                            <div class="col-lg-2 col-md-2 col-6">
-                                <p>Danh mục:</p>
-                            </div>
-                            <div class="col-lg-4 col-md-4 col-6">
-                                <select class="form-control" aria-placeholder="Ch">
-                                    <option>Tin công nghệ</option>
-                                    <option>Khuyến mại</option>
-                                    <option>Sản phẩm mới</option>
-
-                                </select>
-                            </div>
-
-                        </div>
-                        <div class="gap-sm"></div>
-                        <div class="row">
-                            <div class="col-lg-2 col-md-4 col-6">
-                                <p>Ghi chú:<u></u> <span class="span-title-product">*</span></p>
-                            </div>
-                            <div class="col-lg-10 col-md-8 col-6">
-                                <textarea name="" id="" cols="100" rows="3"></textarea>
-                            </div>
-                        </div>
-                        <div class="gap-sm"></div>
-                        <div class="row">
-
-                        </div>
-
+                    <div class="row">
+                        <h3 style="color: black;"> Quản trị Tin Tức</h3>
                     </div>
-                   
+                    <div class="gap-xs"></div>
+                    <div class="row">
+                        <div class="col-12">
+                            <section class="section">
+                                <div class="card">
+                                    <!-- all product-tab -->
+                                    <div class="card-body">
+                                        <table class='table table-striped' id="table1">
+                                            <thead>
+                                                <tr>
+                                                    <th style="text-align: center;">Tiêu đề</th>
+                                                    <th>Danh mục</th>
+                                                    <th>Ngày đăng</th>
+                                                    <th>Lượt xem</th>
+                                                    <th>Ghi chú</th>
+                                                    <th>Tác vụ</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+
+                                                <tr>
+                                                    <td><a href="#">Trải nghiệm nhanh MacBook Air 2020 chip M1</a></td>
+                                                    <td>Sản phảm mới</td>
+                                                    <td>06:00 am 27-11-2020</td>
+                                                    <td>1102</td>
+                                                    <td>Null</td>
+                                                    <td><a href="editnews.html"><span
+                                                                class="badge bg-primary">Sửa</span></a>
+                                                        <a href="deletenews.html"><span
+                                                                class="badge bg-danger">Xóa</span></a>
+                                                    </td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td><a href="#">Ngày cuối 'giựt' deal Black Friday</a></td>
+                                                    <td>Tin khuyến mại</td>
+                                                    <td>06:00 am 27-11-2020</td>
+                                                    <td>1102</td>
+                                                    <td>Null</td>
+                                                    <td><a href="editnews.html"><span
+                                                                class="badge bg-primary">Sửa</span></a>
+                                                        <a href="deletenews.html"><span
+                                                                class="badge bg-danger">Xóa</span></a>
+                                                    </td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td><a href="#">Mãn nhãn trước mẫu thiết kế iPhone 13</a></td>
+                                                    <td>Sản phảm mới</td>
+                                                    <td>06:00 am 27-11-2020</td>
+                                                    <td>1102</td>
+                                                    <td>Null</td>
+                                                    <td><a href="editnews.html"><span
+                                                                class="badge bg-primary">Sửa</span></a>
+                                                        <a href="deletenews.html"><span
+                                                                class="badge bg-danger">Xóa</span></a>
+                                                    </td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td><a href="#">*Tin đồn: Các mẫu laptop Nokia</a></td>
+                                                    <td>Sản phảm mới</td>
+                                                    <td>06:00 am 27-11-2020</td>
+                                                    <td>1102</td>
+                                                    <td>Null</td>
+                                                    <td><a href="editnews.html"><span
+                                                                class="badge bg-primary">Sửa</span></a>
+                                                        <a href="deletenews.html"><span
+                                                                class="badge bg-danger">Xóa</span></a>
+                                                    </td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td><a href="#">Trải nghiệm nhanh MacBook Air 2020 chip M1</a></td>
+                                                    <td>Sản phảm mới</td>
+                                                    <td>06:00 am 27-11-2020</td>
+                                                    <td>1102</td>
+                                                    <td>Null</td>
+                                                    <td><a href="editnews.html"><span
+                                                                class="badge bg-primary">Sửa</span></a>
+                                                        <a href="deletenews.html"><span
+                                                                class="badge bg-danger">Xóa</span></a>
+                                                    </td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td><a href="#">Ngày cuối 'giựt' deal Black Friday</a></td>
+                                                    <td>Tin khuyến mại</td>
+                                                    <td>06:00 am 27-11-2020</td>
+                                                    <td>1102</td>
+                                                    <td>Null</td>
+                                                    <td><a href="editnews.html"><span
+                                                                class="badge bg-primary">Sửa</span></a>
+                                                        <a href="deletenews.html"><span
+                                                                class="badge bg-danger">Xóa</span></a>
+                                                    </td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td><a href="#">Mãn nhãn trước mẫu thiết kế iPhone 13</a></td>
+                                                    <td>Sản phảm mới</td>
+                                                    <td>06:00 am 27-11-2020</td>
+                                                    <td>1102</td>
+                                                    <td>Null</td>
+                                                    <td><a href="editnews.html"><span
+                                                                class="badge bg-primary">Sửa</span></a>
+                                                        <a href="deletenews.html"><span
+                                                                class="badge bg-danger">Xóa</span></a>
+                                                    </td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td><a href="#">*Tin đồn: Các mẫu laptop Nokia</a></td>
+                                                    <td>Sản phảm mới</td>
+                                                    <td>06:00 am 27-11-2020</td>
+                                                    <td>1102</td>
+                                                    <td>Null</td>
+                                                    <td><a href="editnews.html"><span
+                                                                class="badge bg-primary">Sửa</span></a>
+                                                        <a href="deletenews.html"><span
+                                                                class="badge bg-danger">Xóa</span></a>
+                                                    </td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td><a href="#">Trải nghiệm nhanh MacBook Air 2020 chip M1</a></td>
+                                                    <td>Sản phảm mới</td>
+                                                    <td>06:00 am 27-11-2020</td>
+                                                    <td>1102</td>
+                                                    <td>Null</td>
+                                                    <td><a href="editnews.html"><span
+                                                                class="badge bg-primary">Sửa</span></a>
+                                                        <a href="deletenews.html"><span
+                                                                class="badge bg-danger">Xóa</span></a>
+                                                    </td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td><a href="#">Ngày cuối 'giựt' deal Black Friday</a></td>
+                                                    <td>Tin khuyến mại</td>
+                                                    <td>06:00 am 27-11-2020</td>
+                                                    <td>1102</td>
+                                                    <td>Null</td>
+                                                    <td><a href="editnews.html"><span
+                                                                class="badge bg-primary">Sửa</span></a>
+                                                        <a href="deletenews.html"><span
+                                                                class="badge bg-danger">Xóa</span></a>
+                                                    </td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td><a href="#">Mãn nhãn trước mẫu thiết kế iPhone 13</a></td>
+                                                    <td>Sản phảm mới</td>
+                                                    <td>06:00 am 27-11-2020</td>
+                                                    <td>1102</td>
+                                                    <td>Null</td>
+                                                    <td><a href="editnews.html"><span
+                                                                class="badge bg-primary">Sửa</span></a>
+                                                        <a href="deletenews.html"><span
+                                                                class="badge bg-danger">Xóa</span></a>
+                                                    </td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td><a href="#">*Tin đồn: Các mẫu laptop Nokia</a></td>
+                                                    <td>Sản phảm mới</td>
+                                                    <td>06:00 am 27-11-2020</td>
+                                                    <td>1102</td>
+                                                    <td>Null</td>
+                                                    <td><a href="editnews.html"><span
+                                                                class="badge bg-primary">Sửa</span></a>
+                                                        <a href="deletenews.html"><span
+                                                                class="badge bg-danger">Xóa</span></a>
+                                                    </td>
+
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                            </section>
+                        </div>
+                    </div>
                 </div>
 
-                <section class="section">
-                    <div class="card">
-
-                        <div class="card-body">
-
-                            <div id="full">
-                                <p>Nhập nội dung...</p>
-                                <p><br></p>
-                                <p><br></p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <div>
-                    <button class="btn btn-outline-primary">Lưu</button>
-                    <button class="btn btn-outline-danger">Hủy</button>
-                </div>
             </div>
+        </div>
+    </div>
 
+    </div>
+
+    <footer>
+        <div>
+            <p style="text-align: right; font-size: 12px;">L.A.N Computer Store - HKII-2021 !!! Thanks you for watching
+            </p>
 
         </div>
+    </footer>
+    </div>
     </div>
     <script src="assets/js/feather-icons/feather.min.js"></script>
     <script src="assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
     <script src="assets/js/app.js"></script>
 
-    <script src="assets/vendors/quill/quill.min.js"></script>
-    <script src="assets/js/pages/form-editor.js"></script>
+    <script src="assets/vendors/simple-datatables/simple.js"></script>
+    <script src="assets/js/vendors.js"></script>
 
     <script src="assets/js/main.js"></script>
 </body>

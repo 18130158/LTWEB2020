@@ -117,6 +117,26 @@
                             </ul>
 
                         </li>
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="fa fa-users" aria-hidden="true" style="font-size: 16px;"></i>
+
+                                <span>Quản lí TK người dùng</span>
+                            </a>
+                            <ul class="submenu">
+
+                                <li>
+                                    <a href="viewcustom.html">Xem khách hàng</a>
+                                </li>
+
+
+
+                                <li>
+                                    <a href="editstatuscustom.html">Thay đổi trạng thái</a>
+                                </li>
+                            </ul>
+
+                        </li>
 
                         <li class="sidebar-item  has-sub">
                             <a href="#" class='sidebar-link'>
@@ -152,7 +172,7 @@
                                 </li>
 
                                 <li>
-                                    <a href="replycomments.html">Sửa tài khoản</a>
+                                    <a href="replycomments.html">Phản hồi bình luận</a>
                                 </li>
 
 
@@ -178,16 +198,13 @@
         <div id="main">
             <nav class="navbar navbar-header navbar-expand navbar-light">
                 <a class="sidebar-toggler" href="#"><span class="navbar-toggler-icon"></span></a>
-                <button class="btn navbar-toggler" type="button" data-toggle="collapse"
-                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
+                <button class="btn navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav d-flex align-items-center navbar-light ml-auto">
                         <li class="dropdown nav-icon">
-                            <a href="#" data-toggle="dropdown"
-                                class="nav-link  dropdown-toggle nav-link-lg nav-link-user">
+                            <a href="#" data-toggle="dropdown" class="nav-link  dropdown-toggle nav-link-lg nav-link-user">
                                 <div class="d-lg-inline-block">
                                     <i data-feather="bell"></i>
                                 </div>
@@ -210,8 +227,7 @@
                             </div>
                         </li>
                         <li class="dropdown nav-icon mr-2">
-                            <a href="#" data-toggle="dropdown"
-                                class="nav-link  dropdown-toggle nav-link-lg nav-link-user">
+                            <a href="#" data-toggle="dropdown" class="nav-link  dropdown-toggle nav-link-lg nav-link-user">
                                 <div class="d-lg-inline-block">
                                     <i data-feather="mail"></i>
                                 </div>
@@ -225,8 +241,7 @@
                             </div>
                         </li>
                         <li class="dropdown">
-                            <a href="#" data-toggle="dropdown"
-                                class="nav-link dropdown-toggle nav-link-lg nav-link-user">
+                            <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
                                 <div class="avatar mr-1">
                                     <img src="assets/images/favicon.png" alt="" srcset="">
                                 </div>
@@ -255,18 +270,14 @@
 
 
 
-                                            <div class="tab-pane fade show active" id="all" role="tabpanel"
-                                                aria-labelledby="all-tab">
+                                            <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab">
                                                 <!-- tất cả đơn hàng -->
                                                 <div class="container-fluid">
                                                     <div class="gap-sm"></div>
                                                     <div class="row">
                                                         <div class="col-lg-3 col-md-3 col-sm-5 col-5">
                                                             <div class="input-group mb-3">
-                                                                <input type="text" class="form-control"
-                                                                    placeholder="Tìm mã đơn hàng..."
-                                                                    aria-label="Recipient's username"
-                                                                    aria-describedby="basic-addon2">
+                                                                <input type="text" class="form-control" placeholder="Tìm mã đơn hàng..." aria-label="Recipient's username" aria-describedby="basic-addon2">
                                                                 <div class="input-group-append">
                                                                     <span class="input-group-text" id="basic-addon2"><i
                                                                             class="fa fa-search"
@@ -363,117 +374,105 @@
                                                                                         <span
                                                                                             class="badge bg-success">Đang
                                                                                             hoàn hàng</span>
-                                                                                    </td>
-                                                                                </tr>
-                                                                                <tr>
-                                                                                    <td><a
-                                                                                            href="chitietdonhang.html">DH01</a>
-                                                                                    </td>
-                                                                                    </td>
-                                                                                    <td>THAONHA01
-                                                                                    </td>
-                                                                                    <td>ĐH Nông Lâm TPHCM</td>
-                                                                                    <td>10.000.000</td>
-                                                                                    <td>21:10 12-11-2020</td>
-                                                                                    <td>09:10 13-11-2020</td>
-                                                                                    <td>Không thích</td>
-                                                                                    <td>
-                                                                                        <span
-                                                                                            class="badge bg-success">Đang
+                                                                    </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td><a href="chitietdonhang.html">DH01</a>
+                                                                        </td>
+                                                                        </td>
+                                                                        <td>THAONHA01
+                                                                        </td>
+                                                                        <td>ĐH Nông Lâm TPHCM</td>
+                                                                        <td>10.000.000</td>
+                                                                        <td>21:10 12-11-2020</td>
+                                                                        <td>09:10 13-11-2020</td>
+                                                                        <td>Không thích</td>
+                                                                        <td>
+                                                                            <span class="badge bg-success">Đang
                                                                                             hoàn hàng</span>
-                                                                                    </td>
-                                                                                </tr>
-                                                                                <tr>
-                                                                                    <td><a
-                                                                                            href="chitietdonhang.html">DH03</a>
-                                                                                    </td>
-                                                                                    <td>THAONHA01
-                                                                                    </td>
-                                                                                    <td>ĐH Nông Lâm TPHCM</td>
-                                                                                    <td>10.000.000</td>
-                                                                                    <td>21:10 12-11-2020</td>
-                                                                                    <td>09:10 13-11-2020</td>
-                                                                                    <td>Tìm đc sp rẻ hơn</td>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td><a href="chitietdonhang.html">DH03</a>
+                                                                        </td>
+                                                                        <td>THAONHA01
+                                                                        </td>
+                                                                        <td>ĐH Nông Lâm TPHCM</td>
+                                                                        <td>10.000.000</td>
+                                                                        <td>21:10 12-11-2020</td>
+                                                                        <td>09:10 13-11-2020</td>
+                                                                        <td>Tìm đc sp rẻ hơn</td>
 
-                                                                                    <td>
-                                                                                        <span
-                                                                                            class="badge bg-success">Đang
+                                                                        <td>
+                                                                            <span class="badge bg-success">Đang
                                                                                             hoàn hàng</span>
-                                                                                    </td>
-                                                                                </tr>
-                                                                                <tr>
-                                                                                    <td><a
-                                                                                            href="chitietdonhang.html">DH03</a>
-                                                                                    </td>
-                                                                                    <td>THAONHA01
-                                                                                    </td>
-                                                                                    <td>ĐH Nông Lâm TPHCM</td>
-                                                                                    <td>10.000.000</td>
-                                                                                    <td>21:10 12-11-2020</td>
-                                                                                    <td>09:10 13-11-2020</td>
-                                                                                    <td>Không thích</td>
-                                                                                    <td>
-                                                                                        <span
-                                                                                            class="badge bg-success">Đang
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td><a href="chitietdonhang.html">DH03</a>
+                                                                        </td>
+                                                                        <td>THAONHA01
+                                                                        </td>
+                                                                        <td>ĐH Nông Lâm TPHCM</td>
+                                                                        <td>10.000.000</td>
+                                                                        <td>21:10 12-11-2020</td>
+                                                                        <td>09:10 13-11-2020</td>
+                                                                        <td>Không thích</td>
+                                                                        <td>
+                                                                            <span class="badge bg-success">Đang
                                                                                             hoàn hàng</span>
-                                                                                    </td>
-                                                                                </tr>
-                                                                                <tr>
-                                                                                    <td><a
-                                                                                            href="chitietdonhang.html">DH03</a>
-                                                                                    </td>
-                                                                                    <td>THAONHA01
-                                                                                    </td>
-                                                                                    <td>ĐH Nông Lâm TPHCM</td>
-                                                                                    <td>10.000.000</td>
-                                                                                    <td>21:10 12-11-2020</td>
-                                                                                    <td>09:10 13-11-2020</td>
-                                                                                    <td>Không thích</td>
-                                                                                    <td>
-                                                                                        <span
-                                                                                            class="badge bg-success">Đang
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td><a href="chitietdonhang.html">DH03</a>
+                                                                        </td>
+                                                                        <td>THAONHA01
+                                                                        </td>
+                                                                        <td>ĐH Nông Lâm TPHCM</td>
+                                                                        <td>10.000.000</td>
+                                                                        <td>21:10 12-11-2020</td>
+                                                                        <td>09:10 13-11-2020</td>
+                                                                        <td>Không thích</td>
+                                                                        <td>
+                                                                            <span class="badge bg-success">Đang
                                                                                             hoàn hàng</span>
-                                                                                    </td>
-                                                                                </tr>
-                                                                                <tr>
-                                                                                    <td><a
-                                                                                            href="chitietdonhang.html">DH03</a>
-                                                                                    </td>
-                                                                                    <td>THAONHA01
-                                                                                    </td>
-                                                                                    <td>ĐH Nông Lâm TPHCM</td>
-                                                                                    <td>10.000.000</td>
-                                                                                    <td>21:10 12-11-2020</td>
-                                                                                    <td>09:10 13-11-2020</td>
-                                                                                    <td>Không thích</td>
-                                                                                    <td>
-                                                                                        <span
-                                                                                            class="badge bg-success">Đang
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td><a href="chitietdonhang.html">DH03</a>
+                                                                        </td>
+                                                                        <td>THAONHA01
+                                                                        </td>
+                                                                        <td>ĐH Nông Lâm TPHCM</td>
+                                                                        <td>10.000.000</td>
+                                                                        <td>21:10 12-11-2020</td>
+                                                                        <td>09:10 13-11-2020</td>
+                                                                        <td>Không thích</td>
+                                                                        <td>
+                                                                            <span class="badge bg-success">Đang
                                                                                             hoàn hàng</span>
-                                                                                    </td>
-                                                                                </tr>
-                                                                                <tr>
-                                                                                    <td><a
-                                                                                            href="chitietdonhang.html">DH03</a>
-                                                                                    </td>
-                                                                                    <td>THAONHA01
-                                                                                    </td>
-                                                                                    <td>ĐH Nông Lâm TPHCM</td>
-                                                                                    <td>10.000.000</td>
-                                                                                    <td>21:10 12-11-2020</td>
-                                                                                    <td>09:10 13-11-2020</td>
-                                                                                    <td>Không thích</td>
-                                                                                    <td>
-                                                                                        <span
-                                                                                            class="badge bg-success">Đang
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td><a href="chitietdonhang.html">DH03</a>
+                                                                        </td>
+                                                                        <td>THAONHA01
+                                                                        </td>
+                                                                        <td>ĐH Nông Lâm TPHCM</td>
+                                                                        <td>10.000.000</td>
+                                                                        <td>21:10 12-11-2020</td>
+                                                                        <td>09:10 13-11-2020</td>
+                                                                        <td>Không thích</td>
+                                                                        <td>
+                                                                            <span class="badge bg-success">Đang
                                                                                             hoàn hàng</span>
-                                                                                    </td>
-                                                                                </tr>
+                                                                        </td>
+                                                                    </tr>
 
-                                                                            </tbody>
-                                                                        </table>
-                                                                    </div>
+                                                                    </tbody>
+                                                                    </table>
                                                                 </div>
+                                                            </div>
 
                                                             </section>
                                                         </div>

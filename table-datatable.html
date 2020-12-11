@@ -2,28 +2,29 @@
 <html lang="en">
 
 <head>
-
-
-    <link rel="stylesheet" href="assets/css/alloder.css">
-
-
-    <link rel="stylesheet" href="./assets/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff">
-
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>L.A.N | Sửa tin tức</title>
+    <title>L.A.N | Góp ý</title>
 
     <link rel="stylesheet" href="assets/css/bootstrap.css">
-
-    <link rel="stylesheet" href="assets/vendors/quill/quill.bubble.css">
-    <link rel="stylesheet" href="assets/vendors/quill/quill.snow.css">
-    <link rel="stylesheet" href="assets/css/bootstrap.css">
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/vendors/chartjs/Chart.min.css">
     <link rel="stylesheet" href="assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
     <link rel="stylesheet" href="assets/css/app.css">
     <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 </head>
+<style>
+    * {
+        color: black !important;
+        font-size: 16px;
+    }
+    
+    li a {
+        font-size: 14px !important;
+    }
+</style>
 
 <body>
     <div id="app">
@@ -181,7 +182,7 @@
 
                         <li class="sidebar-item  ">
                             <a href="table-datatable.html" class='sidebar-link'>
-                                <i class="fa fa-file-text" aria-hidden="true" style="font-size: 16px"></i>
+                                <i class="fa fa-file-text" aria-hidden="true"></i>
                                 <span>Góp ý</span>
                             </a>
 
@@ -256,81 +257,96 @@
                     </ul>
                 </div>
             </nav>
+            <div class="gap-sm">
+            </div>
+            <div class="detail-product">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 ">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="title-form">
+                                        <h3 class="title-product">Góp ý </h3>
+                                    </h4>
+                                </div>
+                                <div class="card-body">
+                                    <div class="gap-sm"></div>
+                                    <div class="row">
+                                        <div class="col-lg-2 col-md-2 col-4">
+                                            <p>Họ Tên:<span class="span-title-product">*</span></p>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-8">
+                                            <input type="text" class="form-control" placeholder="Nhập họ tên...">
+                                        </div>
+                                        <div class="col-lg-2 col-md-2 col-4">
+                                            <p>Số điện thoại:<span class="span-title-product">*</span></p>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-8">
+                                            <input type="text" class="form-control" placeholder="Nhập số điện thoại...">
+                                        </div>
+                                    </div>
+                                    <div class="gap-sm"></div>
+                                    <div class="row">
+                                        <div class="col-lg-2 col-md-4 col-6">
+                                            <p>Tiêu đề:<span class="span-title-product">*</span></p>
+                                        </div>
+                                        <div class="col-lg-10 col-md-8 col-6">
+                                            <input type="text" class="form-control" placeholder="Nhập tiêu đề góp ý...">
+                                        </div>
+                                    </div>
+                                    <div class="gap-sm"></div>
+                                    <div class="row">
+                                        <div class="col-lg-2 col-md-4 col-6">
+                                            <p>Nội dung góp ý: <span class="span-title-product">*</span></p>
+                                        </div>
+                                        <div class="col-lg-10 col-md-8 col-6">
+                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="Nhập mô tả sản phẩm..."></textarea>
+                                        </div>
+                                    </div>
 
-            <div class="main-content container-fluid">
-                <div class="card-body">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-lg-2 col-md-4 col-6">
-                                <p>Tiêu đề:<u></u> <span class="span-title-product">*</span></p>
-                            </div>
-                            <div class="col-lg-10 col-md-8 col-6">
-                                <input type="text" class="form-control" placeholder="Nhập tiêu đề sản phẩm...">
+                                    <div class="gap-sm"></div>
+
+                                    <div class="row">
+                                        <div class="col-12" style="text-align: center;">
+                                            <button class="btn btn-outline-primary" style="padding-left: 1.2rem; padding-right: 1.2rem; margin-right: 40px;">Gửi</button>
+                                            <button type="button" class="btn btn-outline-danger">Hủy</button>
+                                        </div>
+                                    </div>
+                                    <div class="gap-lg"></div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <h6 style="text-align: center; font-size: 14px; color: rgb(255, 115, 0) !important;">Chân thành cảm ơn bạn đã gửi góp ý cho chúng tôi! Chúng tôi sẽ nỗ lực để cố gắng hoàn thiện
+                                                <i class="fa fa-thumbs-up" style="color: rgb(255, 115, 0) !important;"></i></h6>
+                                        </div>
+                                    </div>
+
+                                </div>
                             </div>
                         </div>
-                        <div class="gap-sm"></div>
-                        <div class="row">
-                            <div class="col-lg-2 col-md-2 col-6">
-                                <p>Danh mục:</p>
-                            </div>
-                            <div class="col-lg-4 col-md-4 col-6">
-                                <select class="form-control" aria-placeholder="Ch">
-                                    <option>Tin công nghệ</option>
-                                    <option>Khuyến mại</option>
-                                    <option>Sản phẩm mới</option>
-
-                                </select>
-                            </div>
-
-                        </div>
-                        <div class="gap-sm"></div>
-                        <div class="row">
-                            <div class="col-lg-2 col-md-4 col-6">
-                                <p>Ghi chú:<u></u> <span class="span-title-product">*</span></p>
-                            </div>
-                            <div class="col-lg-10 col-md-8 col-6">
-                                <textarea name="" id="" cols="100" rows="3"></textarea>
-                            </div>
-                        </div>
-                        <div class="gap-sm"></div>
-                        <div class="row">
-
-                        </div>
-
                     </div>
-
-                </div>
-
-                <section class="section">
-                    <div class="card">
-
-                        <div class="card-body">
-
-                            <div id="full">
-                                <p>Nhập nội dung...</p>
-                                <p><br></p>
-                                <p><br></p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <div>
-                    <button class="btn btn-outline-primary">Lưu</button>
-                    <button class="btn btn-outline-danger">Hủy</button>
                 </div>
             </div>
 
+        </div>
+
+    </div>
+    <footer>
+        <div>
+            <p style=" text-align: right; font-size: 12px; ">L.A.N Computer Store - HKII-2021 !!! Thanks you for watching
+            </p>
 
         </div>
-    </div>
-    <script src="assets/js/feather-icons/feather.min.js"></script>
-    <script src="assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
-    <script src="assets/js/app.js"></script>
+    </footer>
 
-    <script src="assets/vendors/quill/quill.min.js"></script>
-    <script src="assets/js/pages/form-editor.js"></script>
+    <script src="assets/js/feather-icons/feather.min.js "></script>
+    <script src="assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js "></script>
+    <script src="assets/js/app.js "></script>
+    <script src="./assets/js/bootstrap.min.js "></script>
+    <script src="assets/vendors/chartjs/Chart.min.js "></script>
+    <script src="assets/vendors/apexcharts/apexcharts.min.js "></script>
+    <script src="assets/js/pages/dashboard.js "></script>
 
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/main.js "></script>
 </body>
 
 </html>
