@@ -69,8 +69,9 @@
 								<li><i class="ti-alarm-clock"></i> <a href="#">Deal HOT trong ngày</a></li>
 								<li><i class="ti-user"></i> <a href="account.html">Tài Khoản</a></li>
 								<li><i class="ti-power-off"></i><a href="login.html">Đăng Nhập</a></li>
-								<li><i class="ti-pencil"></i><a href="sign-up.html">Đăng Kí</a></li>
-							</ul>
+								 <li><i class="ti-pencil"></i><a href="sign-up.html">Đăng Kí</a></li>
+                                <li><i class="fas fa-sign-in-alt"></i><a href="index.html">Đăng xuất</a></li>
+                            </ul>
 						</div>
 						<!-- End Top Right -->
 					</div>
@@ -226,17 +227,17 @@
                         <a href="" data-target="#profile" data-toggle="tab" class="nav-link active nav-link-2"><i class="fas fa-user" style="color: #f9a31d;"></i>&nbsp;Tài Khoản Của Tôi</a>
                     </li>
                     <li class="nav-item">
-                        <a href="" data-target="#edit" data-toggle="tab" class="nav-link nav-link-2"><i class="fas fa-sticky-note" style="color: #f9a31d;"></i>&nbsp;Đơn Mua</a>
+                        <a href="" data-target="#edit" data-toggle="tab" class="nav-link nav-link-2"><i class="fas fa-sticky-note" style="color: #f9a31d;"></i>&nbsp;Đơn Mua Của Tôi</a>
                     </li>
                     <li class="nav-item">
-                      <a href="" data-target="#like" data-toggle="tab" class="nav-link nav-link-2"><i class="fas fa-heart" style="color: #f9a31d;"></i>&nbsp;Sản Phẩm Yêu Thích</a>
+                      <a href="" data-target="#like" data-toggle="tab" class="nav-link nav-link-2"><i class="fas fa-heart" style="color: #f9a31d;"></i>&nbsp;Sản Phẩm Đã Yêu Thích</a>
 					</li>
 					<li class="nav-item">
-                        <a href="" data-target="#messages" data-toggle="tab" class="nav-link nav-link-2"><i class="fas fa-unlock-alt" style="color: #f9a31d;"></i>&nbsp;Đổi Mật Khẩu</a>
+                        <a href="" data-target="#messages" data-toggle="tab" class="nav-link nav-link-2"><i class="fas fa-unlock-alt" style="color: #f9a31d;"></i>&nbsp;Thay Đổi Mật Khẩu</a>
                     </li>
-					<li class="nav-item">
-						<a href="" data-target="#login" data-toggle="tab" class="nav-link nav-link-2"><i class="fas fa-sign-in-alt" style="color: #f9a31d;"></i>&nbsp;Đăng xuất</a>
-					</li>
+					<!-- <li class="nav-item">
+						<a href="" data-target="#comment" data-toggle="tab" class="nav-link nav-link-2"><i class="fas fa-comment-dots" style="color: #f9a31d;"></i>&nbsp;Nhận xét</a>
+					</li> -->
                 </ul>
                 <div class="tab-content py-5">
                     <div class="tab-pane active" id="profile">
@@ -305,43 +306,37 @@
                                         <form>
                                           <h5>Thông Tin</h5>
                                           <div class="form-group">
-                                            <label for="recipient-name" class="col-form-label">Họ tên</label>
+                                            <label >Họ tên</label>
                                             <input type="text" class="form-control" id="recipient-name" style=" height: 42px;">
                                           </div>
                                           <div class="form-group">
-                                            <label for="recipient-name" class="col-form-label">Số điện thoại</label>
+                                            <label>Số điện thoại</label>
                                             <input type="text" class="form-control" id="recipient-name" style=" height: 42px;" >
                                           </div>
                                           <div class="form-group">
-                                            <label for="recipient-name" class="col-form-label">Email</label>
+                                            <label>Email</label>
                                             <input type="text" class="form-control" id="recipient-name" style=" height: 42px;">
                                           </div>
                                         
                                         </form>
                                       </div>
                                     
-                                      <div class="col-md-6">
+                                      <div class="col-md-6" >
                                         <form>
 										  <h5>Địa Chỉ</h5>
-										  <br> 
-                                          <div class="form-group " style="margin-top: 10px;">
-                                            <select style="
-                                            height: 38px;
-                                            border-radius: 5px;
-                                            border-color: #e5e5e5;">
-                                              <option>Tỉnh/Thành phố</option>
+										  <label>Tỉnh/Thành phố</label>
+                                          <div class="form-group " >
+                                            <select >
                                               <option>Tp Hồ Chí Minh</option>
+											  <option>An Giang</option>
                                               <option>Long An</option>
                                               <option>Tiền Giang</option>
                                               <option>Bến Tre</option>
                                               </select>
 										  </div>
-                                          <div class="form-group " style="margin-top: 50px;">
-                                            <select style="
-                                            border-color: grey;
-                                            border-radius: 5px;
-                                            border-color: #e5e5e5;">
-                                              <option>Quận/Huyện</option>
+										  <label>Quận/Huyện</label>
+                                          <div class="form-group " >
+                                            <select >
                                               <option>Quận 1</option>
                                               <option>Quận 2</option>
                                               <option>Huyện Thủ Thừa</option>
@@ -350,14 +345,10 @@
                                               <option>Thị xã Kiến Tường</option>
                                               </select>
                                           </div>
-                                          <div class="form-group " style="margin-top: 133px;">
-                                            <select style="
-                                            height: 30px;
-                                            margin-top: 36px;
-                                            border-color: grey;
-                                            border-radius: 5px;
-                                            border-color: #e5e5e5;">
-                                              <option>Phường/Xã</option>
+										  <br> 
+										  <label style="margin-top: 19px;margin-left: -97px;">Phường/Xã</label>
+                                          <div class="form-group ">
+                                            <select >
                                               <option>Hiệp Bình Chánh</option>
                                               <option>Hiệp Bình Phước</option>
                                               <option>Linh Chiểu</option>
@@ -375,7 +366,7 @@
 										  <br>
                                         <center>
                                           <button type="button" class="btn btn-info" data-dismiss="modal" style="background-color: rgb(60, 171, 245);    margin-left: 93px;margin-top: 32px;">Hủy bỏ</button>
-                                          <button type="button" class="btn btn-danger" style="background-color: #f9a31d;">Đồng ý</button>
+                                          <button type="button" class="btn btn-danger" style="background-color: #bd2130;">Đồng ý</button>
                                         </center>
                                           
                                       </div>
@@ -390,7 +381,7 @@
 							<div class="row">
 								<label class="col-md-3 control-label"></label>
 								<div class="col-lg-6 col-md-9">
-									<button type="button" class="btn btn-warning" style="background-color: #f9a31d;">LƯU</button>
+									<button type="button" class="btn btn-warning" style="background-color: black;border-color:black;">LƯU</button>
 								</div>
 								
 							</div>
@@ -435,7 +426,7 @@
                                   <div class="row">
                                   <label class="col-md-3 control-label"></label>
                                   <div class="col-lg-6 col-md-9">
-									<button type="button" class="btn btn-warning">LƯU THAY ĐỔI</button>
+									<button type="button" class="btn btn-warning" style="border-color: black;">LƯU THAY ĐỔI</button>
                                   </div>
                               </div>
                               </div>
@@ -444,7 +435,7 @@
                       </div>
                       <!--/row-->
 				  </div>
-				  <div class="tab-pane" id="login">
+				  <div class="tab-pane" id="comment">
 					<div class="row" style="margin: auto;">
 						<p style=" margin-left: 36%;">
 							Bấm vào đây để đăng xuất <br><br>
@@ -461,8 +452,8 @@
 								<strong style="    margin-left: 26px;">Ảnh </strong>
 								
 							</div>
-							<div class="col-6" style="margin:auto;">
-								<strong style="margin-left: 88px;">Tên Sản Phẩm</strong>
+							<div class="col-4" style="margin:auto;">
+								<strong style="margin-left: 63px;">Tên Sản Phẩm</strong>
 							</div>
 							<div class="col-2" >
 								<strong style="margin-left: 23px;">Giá</strong>
@@ -470,6 +461,9 @@
 							</div>
 							<div class="col-2" style="margin:auto;">
 								<strong>Trạng Thái</strong>
+							</div>
+							<div class="col-2" style="margin:auto;">
+								<strong>Thời Gian</strong>
 							</div>
 						</div>
 						<br>
@@ -484,7 +478,7 @@
 								</div>
 								
 							</div>
-							<div class="col-6" style="margin:auto;">
+							<div class="col-4" style="margin:auto;">
 								<h5><a href="CPUproductdetail.html">CPU Intel I8-8400 8th GEN</a></h5><br>x1
 
 							</div>
@@ -492,8 +486,12 @@
 								5.000.000 đ
 							
 							</div>
-							<div class="col-2" style="margin:auto;color: red;">
+							<div class="col-2" style="margin:auto;color: red;padding-left: 28px;">
 								ĐÃ HỦY
+							</div>
+							<div class="col-2" style="margin:auto;">
+								11/12/2020
+							
 							</div>
 						</div> <br>
 						<div class="row" style="border: 1px solid #F6F7FB;background-color: #F6F7FB;">
@@ -507,7 +505,7 @@
 								</div>
 								
 							</div>
-							<div class="col-6" style="margin:auto;">
+							<div class="col-4" style="margin:auto;">
 								<h5><a href="Gearproductdetail2.html">Bàn Phím Cơ E-DRA EK387 Dream Pink </a></h5><br>x2
 
 							</div>
@@ -518,9 +516,11 @@
 							<div class="col-2" style="margin:auto;color: red;">
 								ĐÃ NHẬN ĐƯỢC HÀNG
 							</div>
+						<div class="col-2" style="margin:auto;">
+								12/12/2020
 						</div>
-						
-				    </div>
+						</div>
+					</div>
                     <div class="tab-pane " id="like">
                       <div class="row">
                         <div class="col-lg-4 col-md-6 col-sm-6">
@@ -539,9 +539,7 @@
 											<a  title="" href="shopingcart.html"><i class="ti-bag"></i><span>Mua ngay</span></a>
 											<a title="" href="#"><i class=" ti-heart "></i><span>Yêu
 													thích</span></a>
-											<a title="" href="#"><i
-													class="ti-bar-chart-alt"></i><span>So
-													Sánh</span></a>
+											
 										</div>
 										<div class="product-action-2">
 											<a title="" href="#">Thêm vào giỏ</a>
@@ -569,9 +567,7 @@
 												ngay</span></a>
 										<a title="" href="#"><i class=" ti-heart "></i><span>Yêu
 												thích</span></a>
-										<a title="" href="#"><i
-												class="ti-bar-chart-alt"></i><span>So
-												sánh</span></a>
+										
 									</div>
 									<div class="product-action-2">
 										<a title="" href="#">Thêm vào giỏ</a>
@@ -599,9 +595,7 @@
 												ngay</span></a>
 										<a title="" href="#"><i class=" ti-heart "></i><span>Yêu
 												thích</span></a>
-										<a title="" href="#"><i
-												class="ti-bar-chart-alt"></i><span>So
-												sánh</span></a>
+										
 									</div>
 									<div class="product-action-2">
 										<a title="" href="#">Thêm vào giỏ</a>
