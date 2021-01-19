@@ -73,7 +73,7 @@
 <!-- Header -->
 <%@ include file="header.jsp" %>
 <!--/ End Header -->
-<div class="col-sm"></div>
+
 <!-- Breadcrumbs -->
 <div class="breadcrumbs">
     <div class="container">
@@ -96,9 +96,8 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <a href="index.jsp">
-                        <img class="img-fluid" src="images/logo.png" alt=""
-                             style="max-width: 1200px;height: 228px;width: 460px;margin-top: -140px;margin-bottom: -80px;">
+                    <a href="index.html">
+                        <img class="img-fluid" src="images/logo.png" alt="" style="max-width: 1200px;height: 228px;width: 460px;margin-top: -140px;margin-bottom: -80px;">
                     </a>
                 </div>
             </div>
@@ -229,7 +228,7 @@
     </div>
 </section>
 
-<div class="col-sm"></div>
+
 <!-- Footer -->
 <!-- Start Footer Area -->
 <%@ include file="footer.jsp" %>

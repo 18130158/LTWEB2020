@@ -6,11 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Web_CuoiKy" />
+        <module name="CuoiKyWeb" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="Web_CuoiKy" target="1.8" />
+      <module name="CuoiKyWeb" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
