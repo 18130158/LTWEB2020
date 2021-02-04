@@ -1,22 +1,11 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<%@ page import="com.ltweb.service.ICategoryService" %>
+<%@ page import="com.ltweb.service.impl.CategoryService" %>
+<%@ page import="com.ltweb.model.CatalogModel" %>
+<%@ page import="com.ltweb.model.CatalogModel" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@include file="/common/taglib.jsp" %>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="icon" type="image/png" href="images/logoicon.png">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
-    <link rel="stylesheet" href="css/font-awesome.css">
-    <link rel="stylesheet" href="css/themify-icons.css">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="css/responsive.css">
-</head>
-<body>
+<!--Header-->
 <header class="header shop">
     <!-- Top_header -->
     <div class="topbar">
@@ -38,10 +27,19 @@
                         <ul class="list-main">
                             <li><i class="ti-location-pin"></i><a href="">Địa Chỉ</a></li>
                             <li><i class="ti-alarm-clock"></i> <a href="#">Deal HOT trong ngày</a></li>
-                            <li><i class="ti-user"></i> <a href="account.jsp">Tài Khoản</a></li>
-                            <li><i class="ti-power-off"></i><a href="login.jsp">Đăng Nhập</a></li>
-                            <li><i class="ti-pencil"></i><a href="sign-up.jsp">Đăng Kí</a></li>
-                            <li><i class="fas fa-sign-in-alt"></i><a href="index.jsp">Đăng xuất</a></li>
+                            <c:if test="${not empty user}">
+                                <li><i class="ti-user"></i> <a href="<c:url value="/tai-khoan"/>">Tài Khoản</a></li>
+                                <li><i class="ti-user"></i> <a href="<c:url value="/tai-khoan"/>">Xin
+                                    chào, ${user.getName()}</a></li>
+                                <li><i class="fas fa-sign-in-alt"></i><a
+                                        href="<c:url value="/dang-nhap?action=logout"/>">Đăng xuất</a></li>
+                            </c:if>
+                            <c:if test="${empty user}">
+                                <li><i class="ti-power-off"></i><a href="<c:url value="/dang-nhap"/>">Đăng Nhập</a></li>
+                                <li><i class="ti-pencil"></i><a href="<c:url value="/dang-ki"/>">Đăng Kí</a></li>
+                            </c:if>
+
+
                         </ul>
                     </div>
                     <!-- End Top Right -->
@@ -56,7 +54,7 @@
                 <div class="col-lg-3 col-md-3 col-12">
                     <!-- Logo -->
                     <div class="logo">
-                        <a href="index.jsp"><img src="images/logo.png" alt="logo"></a>
+                        <a href="<c:url value="/trang-chu"/>"><img src="<c:url value="/templates/web/images/logo.png"/>" alt="logo"></a>
                     </div>
                     <!--/ End Logo -->
                     <!-- Search Form -->
@@ -73,16 +71,36 @@
                     </div>
                     <!--/ End Search Form -->
                     <div class="mobile-nav">
+                        <div class="slicknav_menu"><a href="#" aria-haspopup="true" role="button" tabindex="0"
+                                                      class="slicknav_btn slicknav_collapsed" style=""><span
+                                class="slicknav_menutxt"></span><span class="slicknav_icon slicknav_no-text"><span
+                                class="slicknav_icon-bar"></span><span class="slicknav_icon-bar"></span><span
+                                class="slicknav_icon-bar"></span></span></a>
+                            <ul class="slicknav_nav slicknav_hidden" aria-hidden="true" role="menu"
+                                style="display: none;">
+                                <li><a href="<c:url value="/trang-chu"/>" role="menuitem" tabindex="-1">Trang chủ</a>
+                                </li>
+                                <li><a href="<c:url value="/san-pham?page=1"/>" role="menuitem" tabindex="-1">Sản
+                                    phẩm</a></li>
+                                <li><a href="<c:url value="/hoan-tra-hang"/>" role="menuitem" tabindex="-1">Hoàn trả
+                                    hàng</a></li>
+                                <li><a href="<c:url value="/bao-hanh"/>" role="menuitem" tabindex="-1">Bảo hành</a></li>
+                                <li><a href="<c:url value="/gioi-thieu"/>" role="menuitem" tabindex="-1">Giới thiệu</a>
+                                </li>
+                                <li><a href="<c:url value="/lien-he"/>" role="menuitem" tabindex="-1">Liên hệ</a></li>
+                                <li><a href="<c:url value="/tin-tuc"/>" role="menuitem" tabindex="-1">Tin tức</a></li>
+                                <li><a href="<c:url value="/dich-vu"/>" role="menuitem" tabindex="-1">Dịch vụ</a></li>
+                            </ul>
+                        </div>
 
                     </div>
                 </div>
                 <div class="col-lg-7 col-md-6 col-12">
                     <div class="search-bar-top">
                         <div class="search-bar">
-
-                            <form>
+                            <form action="<c:url value="san-pham"/>" method="get">
                                 <input name="search" placeholder="Nhập mã hoặc tên sản phẩm..." type="search">
-                                <button class="btnn"><i class="ti-search"></i></button>
+                                <button type="submit" class="btnn"><i class="ti-search"></i></button>
                             </form>
                         </div>
                     </div>
@@ -103,29 +121,32 @@
                             <div class="shopping-item">
 
                                 <ul class="shopping-list">
-                                    <li>
-                                        <a href="#" class="remove" title="Xóa sản phẩm "><i
-                                                class="fa fa-remove"></i></a>
-                                        <a class="cart-img" href="#"><img src="images/giohang/chuot-cerberus.jpg"
-                                                                          alt="#"></a>
-                                        <h4><a href="#">Chuột Cesberus</a></h4>
-                                        <p class="quantity">1x - <span class="amount">199.000₫</span></p>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="remove" title="Xóa sản phẩm"><i
-                                                class="fa fa-remove"></i></a>
-                                        <a class="cart-img" href="#"><img
-                                                src="images/collection-trending-cpu-items/g5400-hover.jpg" alt="#"></a>
-                                        <h4><a href="#">CPU Intel Pentium G5400</a></h4>
-                                        <p class="quantity">1x - <span class="amount">2.000.000₫</span></p>
-                                    </li>
+
+                                    <c:if test="${not empty cart}">
+                                        <c:forEach items="${cart.getList()}" var="c">
+                                            <li>
+                                                <a class="cart-img" href="#"><img src="${c.getAnh()}" alt="#"></a>
+                                                <h4><a href="#">${c.getTen()}</a></h4>
+                                                <span class="amount">${c.getGiaString(c.getGiatien())}₫</span></p>
+                                            </li>
+                                        </c:forEach>
+                                    </c:if>
+
                                 </ul>
                                 <div class="bottom">
                                     <div class="total">
+
+                                        <c:if test="${empty cart}">
+                                            <a href="<c:url value="/dang-nhap"/>" class="btn animate">Giỏ hàng</a>
+                                        </c:if>
+                                        <c:if test="${not empty cart}">
                                         <span style="color: red;">Tổng Cộng</span>
-                                        <span class="total-amount" style="color: red;">2.199.000₫</span>
+                                        <span class="total-amount" style="color: red;">
+                                                ${cart.getGiaString(cart.tongGia())} đ
+                                                <a href="<c:url value="/gio-hang"/>" class="btn animate">Giỏ hàng</a>
+                                            </c:if>
+                                        </span>
                                     </div>
-                                    <a href="shopingcart.jsp" class="btn animate">Giỏ hàng</a>
                                 </div>
                             </div>
                             <!--/ End Shopping Item -->
@@ -144,19 +165,14 @@
                         <div class="all-category">
                             <h3 class="cat-heading"><i class="fa fa-bars" aria-hidden="true"></i> DANH MỤC</h3>
                             <ul class="main-category">
-                                <li><a href="MainBoard_page1.jsp">Main Board - Bo mạch chủ</a></li>
-                                <li><a href="CPU_page1.jsp">CPU - Bộ vi xử lí </a></li>
-                                <li><a href="RAM_page1.jsp">Bộ nhớ RAM </a></li>
-                                <li><a href="VGA_page1.jsp">VGA - Card màn hình </a></li>
-                                <li><a href="SSD_page1.jsp">Ổ cứng</a></li>
-                                <li><a href="PSU_page1.jsp">PSU - Nguồn máy tính</a></li>
-                                <li><a href="Case_page.jsp">Case - Vỏ máy tính</a></li>
-                                <li><a>Gear - Thiết bị ngoại vi</a>
-                                    <ul class="sub-category">
-                                        <li><a href="Gear_Headphone.jsp">Tai nghe</a></li>
-                                        <li><a href="Gear_Keyboard.jsp">Bàn phím</a></li>
-                                        <li><a href="Gear_Mouse.jsp">Chuột</a></li>
-                                    </ul>
+                                <% CategoryService categoryService = new CategoryService();
+                                    for (CatalogModel catalogModelOrder : categoryService.findAll()) {
+                                        ;%>
+                                <li>
+                                    <a href="san-pham?catalog_id=<%=catalogModelOrder.getId()%>&page=1"><%=catalogModelOrder.getName()%>
+                                    </a>
+                                </li>
+                                <%}%>
                                 </li>
                             </ul>
                         </div>
@@ -168,14 +184,14 @@
                                 <div class="navbar-collapse">
                                     <div class="nav-inner">
                                         <ul class="nav main-menu menu navbar-nav">
-                                            <li class="active"><a href="index.jsp">Trang chủ</a></li>
-                                            <li><a href="product1.jsp">Sản phẩm</a></li>
-                                            <li><a href="return.jsp">Hoàn trả hàng</a></li>
-                                            <li><a href="guarantee.jsp">Bảo hành</a></li>
-                                            <li><a href="about.jsp">Giới thiệu</a></li>
-                                            <li><a href="contact.jsp">Liên hệ</a></li>
-                                            <li><a href="news.jsp">Tin tức</a></li>
-                                            <li><a href="service.jsp">Dịch vụ</a></li>
+                                            <li><a href="<c:url value="/trang-chu"/>">Trang chủ</a></li>
+                                            <li><a href="<c:url value="/san-pham?&page=1"/>">Sản phẩm</a></li>
+                                            <li><a href="<c:url value="/hoan-tra-hang"/>">Hoàn trả hàng</a></li>
+                                            <li><a href="<c:url value="/bao-hanh"/>">Bảo hành</a></li>
+                                            <li><a href="<c:url value="/gioi-thieu"/>">Giới thiệu</a></li>
+                                            <li><a href="<c:url value="/lien-he"/>">Liên hệ</a></li>
+                                            <li><a href="<c:url value="/tin-tuc"/>">Tin tức</a></li>
+                                            <li><a href="<c:url value="/dich-vu"/>">Dịch vụ</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -189,5 +205,4 @@
     </div>
     <!--/ End Header Inner -->
 </header>
-</body>
-</html>
+<!--End Header-->

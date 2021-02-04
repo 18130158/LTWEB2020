@@ -1,15 +1,43 @@
 package com.ltweb.model;
 
 public class UserModel {
+    private int id;
     private String name;
-    private String pass;
+    private String email;
+    private String phone;
+    private String address;
+    private String username;
+    private String password;
+    private boolean role;
 
-    public UserModel(String name, String pass) {
-        this.name = name;
-        this.pass = pass;
+    public String getUsername() {
+        return username;
     }
 
-    public UserModel() {
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    @Override
+    public String toString() {
+        return "UserModel{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", email='" + email + '\'' +
+                ", phone='" + phone + '\'' +
+                ", address='" + address + '\'' +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", role=" + role +
+                '}';
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -20,11 +48,43 @@ public class UserModel {
         this.name = name;
     }
 
-    public String getPass() {
-        return pass;
+    public String getEmail() {
+        return email;
     }
 
-    public void setPass(String pass) {
-        this.pass = pass;
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public boolean isRole() {
+        return role;
+    }
+
+    public void setRole(boolean role) {
+        this.role = role;
     }
 }

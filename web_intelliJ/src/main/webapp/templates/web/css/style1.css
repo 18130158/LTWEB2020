@@ -858,7 +858,8 @@ header.masthead {
     -moz-box-shadow: 0px 5px 15px #0000000a;
     box-shadow: 0px 5px 15px #0000000a;
 }
-.header.shop .all-category:hover .main-category{
+
+.header.shop .all-category:hover .main-category {
     display: block;
 }
 
@@ -1379,7 +1380,7 @@ header.masthead {
 
 .hero-slider .single-slider {
     height: auto;
-    background-image: url(images/banner.jpg);
+    background-image: url("/templates/web/images/banner.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -2474,10 +2475,12 @@ header.masthead {
 .shop-sidebar .categor-list li a:hover {
     color: #F7941D;
 }
-.shop-sidebar .categor-list .gear-sub{
+
+.shop-sidebar .categor-list .gear-sub {
     display: none;
 }
-.shop-sidebar .categor-list .gear:hover .gear-sub{
+
+.shop-sidebar .categor-list .gear:hover .gear-sub {
     display: block;
 }
 
@@ -4082,7 +4085,6 @@ header.masthead {
     font-size: 13px;
     border-radius: 30px;
     height: auto;
-    line-height: a;
     padding: 13px 32px;
 }
 
@@ -4858,7 +4860,7 @@ header.masthead {
 }
 
 .mail-success .mail-inner p {
-    font-size: 14;
+    font-size: 14px;
     color: #333;
     margin-bottom: 30px;
     line-height: 22px;
@@ -5091,6 +5093,146 @@ header.masthead {
     text-decoration: underline;
 }
 
+body {
+    color: #fff;
+    background: white;
+}
+
+.form-control {
+    min-height: 41px;
+    background: #f2f2f2;
+
+    border: 1px solid grey;
+}
+
+.form-control:focus {
+    background: #e2e2e2;
+}
+
+.form-control, .btn {
+    border-radius: 2px;
+}
+
+.login-form {
+    width: 350px;
+    margin: 30px auto;
+    text-align: center;
+
+}
+
+.login-form h2 {
+    margin: 10px 0 25px;
+}
+
+.login-form form {
+    color: #7a7a7a;
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+    margin-bottom: 15px;
+    width: 398px;
+    background: #fff;
+    box-shadow: 0px 3px 3px rgba(128, 111, 111, 0.3);
+    padding: 30px;
+    background: linear-gradient(to right bottom, white, #e5e5e5);
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+
+.login-form .btn {
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 42px;
+    background: #F7941D;
+    border: none;
+    outline: none !important;
+}
+
+.login-form .btn:hover, .login-form .btn:focus {
+    background: black;
+}
+
+.login-form a {
+    color: black;
+    text-decoration: underline;
+}
+
+.login-form a:hover {
+    text-decoration: none;
+}
+
+.login-form form a {
+    color: #7a7a7a;
+    text-decoration: none;
+}
+
+.login-form form a:hover {
+    text-decoration: underline;
+}
+
+.form-group {
+    font-size: 18px;
+}
+
+.small a:hover {
+    color: #F7941D;
+}
+
+.form_signup a:hover {
+    color: #F7941D;
+}
+
+.buttons_added {
+    opacity: 1;
+    display: inline-block;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    white-space: nowrap;
+    vertical-align: top;
+}
+
+.is-form {
+    overflow: hidden;
+    position: relative;
+    background-color: #f9f9f9;
+    height: 2.2rem;
+    width: 1.9rem;
+    padding: 0;
+    text-shadow: 1px 1px 1px #fff;
+    border: 1px solid #ddd;
+}
+
+.is-form:focus, .input-text:focus {
+    outline: none;
+}
+
+.is-form.minus {
+    border-radius: 4px 0 0 4px;
+}
+
+.is-form.plus {
+    border-radius: 0 4px 4px 0;
+}
+
+.input-qty {
+    background-color: #fff;
+    height: 2.2rem;
+    text-align: center;
+    font-size: 1rem;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    border-left: 0;
+    border-right: 0;
+    padding: 0px;
+}
+.buttons_added input[type="number"]{
+    padding: 0px;
+}
+.input-qty::-webkit-outer-spin-button, .input-qty::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
 
 /*=============================
 	End Footer CSS

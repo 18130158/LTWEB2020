@@ -1,20 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<%@include file="/common/taglib.jsp" %>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="icon" type="image/png" href="images/logoicon.png">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap"
-          rel="stylesheet">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/themify-icons.css">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
 <footer class="footer">
     <!-- Footer Top -->
     <div class="footer-top section">
@@ -24,11 +10,10 @@
                     <!-- Single Widget -->
                     <div class="single-footer about">
                         <div class="logo">
-                            <a href="index.jsp"><img src="images/logo.png" alt="#"></a>
+                            <a href="home.jsp"><img src="/templates/web/images/logo.png" alt="#"></a>
                         </div>
                         <p class="text">Chào mừng đến với trang web L.A.N !! </p>
-                        <p class="call">Mọi thắc mắc vui lòng liên hệ: <span><a href="tel:123456789">+84 000 111 000</a></span>
-                        </p>
+                        <p class="call">Mọi thắc mắc vui lòng liên hệ: <span><a href="tel:123456789">+84 000 111 000</a></span></p>
                     </div>
                     <!-- End Single Widget -->
                 </div>
@@ -86,5 +71,4 @@
     <!-- End Footer Top -->
 
 </footer>
-</body>
-</html>
+

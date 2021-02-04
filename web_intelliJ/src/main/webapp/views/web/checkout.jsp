@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<%@include file="/common/taglib.jsp" %>
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
@@ -11,47 +11,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Title Tag  -->
     <title>Thanh toán</title>
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="images/logoicon.png">
-    <!-- Web Font -->
-    <link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap"
-          rel="stylesheet">
-
-    <!-- StyleSheet -->
-
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <!-- Magnific Popup -->
-    <link rel="stylesheet" href="css/magnific-popup.min.css">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
-
-    <link rel="stylesheet" href="css/font-awesome.css">
-    <!-- Fancybox -->
-    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
-    <!-- Themify Icons -->
-    <link rel="stylesheet" href="css/themify-icons.css">
-    <!-- Nice Select CSS -->
-    <link rel="stylesheet" href="css/niceselect.css">
-    <!-- Animate CSS -->
-    <link rel="stylesheet" href="css/animate.css">
-    <!-- Flex Slider CSS -->
-    <link rel="stylesheet" href="css/flex-slider.min.css">
-    <!-- Owl Carousel -->
-    <link rel="stylesheet" href="css/owl-carousel.css">
-    <!-- Slicknav -->
-    <link rel="stylesheet" href="css/slicknav.min.css">
-
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="css/responsive.css">
-
 
 </head>
 <body class="js">
-<!-- Header -->
-<%@ include file="header.jsp" %>
-<!--/ End Header -->
 
 <!-- Breadcrumbs -->
 <div class="breadcrumbs">
@@ -60,8 +22,8 @@
             <div class="col-12">
                 <div class="bread-inner">
                     <ul class="bread-list">
-                        <li><a href="index.jsp">Trang chủ<i class="ti-arrow-right"></i></a></li>
-                        <li class="active"><a href="checkout.jsp">Thanh toán</a></li>
+                        <li><a href="<c:url value="/trang-chu"/>">Trang chủ<i class="ti-arrow-right"></i></a></li>
+                        <li class="active"><a href="<c:url value="/thanh-toan"/>">Thanh toán</a></li>
                     </ul>
                 </div>
             </div>
@@ -184,7 +146,7 @@
                         <!-- Payment Method Widget -->
                         <div class="single-widget payement">
                             <div class="content">
-                                <img src="images/payment-method.png" alt="#">
+                                <img src="/templates/web/images/payment-method.png" alt="#">
                             </div>
                         </div>
                         <!--/ End Payment Method Widget -->
@@ -205,45 +167,5 @@
 </section>
 <!--/ End Checkout -->
 
-<!-- Start Footer Area -->
-<%@ include file="footer.jsp" %>
-<!-- /End Footer Area -->
-
-<!-- Jquery -->
-<script src="js/jquery.min.js"></script>
-<script src="js/jquery-migrate-3.0.0.js"></script>
-<script src="js/jquery-ui.min.js"></script>
-<!-- Popper JS -->
-<script src="js/popper.min.js"></script>
-<!-- Bootstrap JS -->
-<script src="js/bootstrap.min.js"></script>
-<!-- Color JS -->
-<script src="js/colors.js"></script>
-<!-- Slicknav JS -->
-<script src="js/slicknav.min.js"></script>
-<!-- Owl Carousel JS -->
-<script src="js/owl-carousel.js"></script>
-<!-- Magnific Popup JS -->
-<script src="js/magnific-popup.js"></script>
-<!-- Fancybox JS -->
-<script src="js/facnybox.min.js"></script>
-<!-- Waypoints JS -->
-<script src="js/waypoints.min.js"></script>
-<!-- Countdown JS -->
-<script src="js/finalcountdown.min.js"></script>
-<!-- Nice Select JS -->
-<script src="js/nicesellect.js"></script>
-<!-- Ytplayer JS -->
-<script src="js/ytplayer.min.js"></script>
-<!-- Flex Slider JS -->
-<script src="js/flex-slider.js"></script>
-<!-- ScrollUp JS -->
-<script src="js/scrollup.js"></script>
-<!-- Onepage Nav JS -->
-<script src="js/onepage-nav.min.js"></script>
-<!-- Easing JS -->
-<script src="js/easing.js"></script>
-<!-- Active JS -->
-<script src="js/active.js"></script>
 </body>
 </html>

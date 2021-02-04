@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@include file="/common/taglib.jsp" %>
 <!DOCTYPE html>
 
 
@@ -12,50 +12,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<!-- Title Tag  -->
 	<title>Chính sách Bảo Hành</title>
-	<!-- Favicon -->
-	<link rel="icon" type="image/png" href="images/logoicon.png">	
-	<!-- Web Font -->
-	<link
-		href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap"
-		rel="stylesheet">
-
-	<!-- StyleSheet -->
-
-	<!-- Bootstrap -->
-	<link rel="stylesheet" href="css/bootstrap.css">
-	<!-- Magnific Popup -->
-	<link rel="stylesheet" href="css/magnific-popup.min.css">
-	<!-- Font Awesome -->
-	<link rel="stylesheet" href="css/font-awesome.css">
-	<!-- Fancybox -->
-	<link rel="stylesheet" href="css/jquery.fancybox.min.css">
-	<!-- Themify Icons -->
-	<link rel="stylesheet" href="css/themify-icons.css">
-	<!-- Nice Select CSS -->
-	<link rel="stylesheet" href="css/niceselect.css">
-	<!-- Animate CSS -->
-	<link rel="stylesheet" href="css/animate.css">
-	<!-- Flex Slider CSS -->
-	<link rel="stylesheet" href="css/flex-slider.min.css">
-	<!-- Owl Carousel -->
-	<link rel="stylesheet" href="css/owl-carousel.css">
-	<!-- Slicknav -->
-	<link rel="stylesheet" href="css/slicknav.min.css">
-
-	
-	<link rel="stylesheet" href="css/reset.css">
-	<link rel="stylesheet" href="style.css">
-	<link rel="stylesheet" href="css/responsive.css">
-
-
 
 </head>
 
 <body class="js">
-
-<!-- Header -->
-<%@ include file="header.jsp" %>
-<!--/ End Header -->
 
 	<!-- Breadcrumbs -->
 	<div class="breadcrumbs">
@@ -64,8 +24,8 @@
 				<div class="col-12">
 					<div class="bread-inner">
 						<ul class="bread-list">
-							<li><a href="index.jsp">Trang chủ<i class="ti-arrow-right"></i></a></li>
-							<li class="active"><a href="guarantee.jsp">Bảo hành</a></li>
+							<li><a href="<c:url value="/trang-chu"/>">Trang chủ<i class="ti-arrow-right"></i></a></li>
+							<li class="active"><a href="<c:url value="/bao-hanh"/>">Bảo hành</a></li>
 						</ul>
 					</div>
 				</div>
@@ -83,7 +43,7 @@
 						<div class="form-main"><br><br><br><br><br><br>
 							<div class="title">
                                 <p style="text-align: center;">
-								   <img src="images/logo.png" style="max-width: 1200px;height: 228px;width: 460px;margin-top: -140px;margin-bottom: -80px;">
+								   <img src="/templates/web/images/logo.png" style="max-width: 1200px;height: 228px;width: 460px;margin-top: -140px;margin-bottom: -80px;">
 							    </p><br><br><br><br><br>
 								<div class="container">
 									<div>
@@ -99,7 +59,7 @@
                                     <strong>I. QUY ĐỊNH BẢO HÀNH TẠI L.A.N</strong>
 								</span>
 								<br><br>
-								<center><img src="images/baohanh/baohanh_image.jpg" alt="" style="width: 600px;"></center>
+								<center><img src="/templates/web/images/baohanh/baohanh_image.jpg" alt="" style="width: 600px;"></center>
                             </p>
                             <br>
                             <P>
@@ -130,8 +90,8 @@
 								    <strong> Sản phẩm lỗi do người sử dụng:</strong>
 								</span><br><br>
 								<center>
-									<img src="images/baohanh/baohanh7.jpg" alt="" style="width: 410px; height: 270px;">
-									<img src="images/baohanh/baohanh8.jpg" alt="" style="width: 410px; height: 270px;">
+									<img src="/templates/web/images/baohanh/baohanh7.jpg" alt="" style="width: 410px; height: 270px;">
+									<img src="/templates/web/images/baohanh/baohanh8.jpg" alt="" style="width: 410px; height: 270px;">
                                 </center>
                             </p><br>
                             <ul>
@@ -154,12 +114,12 @@
 							</ul> <br>
 							<div style="font-size: 14px;">
 								- Quý khách có thể tham khảo quy định bảo hành của một số nhà sản xuất theo đường dẫn dưới đây:<br><br>
-								<img src="images/baohanh/baohanh1.jpg" alt="">
-								<img src="images/baohanh/baohanh2.jpg" alt="">
-								<img src="images/baohanh/baohanh3.jpg" alt="">&nbsp;&nbsp;&nbsp;
-								<img src="images/baohanh/baohanh4.jpg" alt="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-								<img src="images/baohanh/baohanh5.jpg" alt="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-								<img src="images/baohanh/baohanh6.jpg" alt="">
+								<img src="/templates/web/images/baohanh/baohanh1.jpg" alt="">
+								<img src="/templates/web/images/baohanh/baohanh2.jpg" alt="">
+								<img src="/templates/web/images/baohanh/baohanh3.jpg" alt="">&nbsp;&nbsp;&nbsp;
+								<img src="/templates/web/images/baohanh/baohanh4.jpg" alt="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								<img src="/templates/web/images/baohanh/baohanh5.jpg" alt="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								<img src="/templates/web/images/baohanh/baohanh6.jpg" alt="">
 							
 							</div>
 								<br>
@@ -240,54 +200,6 @@
 		</div>
 	</section>
 	<!--/ End Guarantee -->
-
-<!-- Start Footer Area -->
-<%@ include file="footer.jsp" %>
-<!-- /End Footer Area -->
-
-
-	<!-- Jquery -->
-	<script src="js/jquery.min.js"></script>
-	<script src="js/jquery-migrate-3.0.0.js"></script>
-	<script src="js/jquery-ui.min.js"></script>
-	<!-- Popper JS -->
-	<script src="js/popper.min.js"></script>
-	<!-- Bootstrap JS -->
-	<script src="js/bootstrap.min.js"></script>
-	<!-- Color JS -->
-	<script src="js/colors.js"></script>
-	<!-- Slicknav JS -->
-	<script src="js/slicknav.min.js"></script>
-	<!-- Owl Carousel JS -->
-	<script src="js/owl-carousel.js"></script>
-	<!-- Magnific Popup JS -->
-	<script src="js/magnific-popup.js"></script>
-	<!-- Fancybox JS -->
-	<script src="js/facnybox.min.js"></script>
-	<!-- Waypoints JS -->
-	<script src="js/waypoints.min.js"></script>
-	<!-- Jquery Counterup JS -->
-	<script src="js/jquery-counterup.min.js"></script>
-	<!-- Countdown JS -->
-	<script src="js/finalcountdown.min.js"></script>
-	<!-- Nice Select JS -->
-	<script src="js/nicesellect.js"></script>
-	<!-- Ytplayer JS -->
-	<script src="js/ytplayer.min.js"></script>
-	<!-- Flex Slider JS -->
-	<script src="js/flex-slider.js"></script>
-	<!-- ScrollUp JS -->
-	<script src="js/scrollup.js"></script>
-	<!-- Onepage Nav JS -->
-	<script src="js/onepage-nav.min.js"></script>
-	<!-- Easing JS -->
-	<script src="js/easing.js"></script>
-	<!-- Google Map JS -->
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnhgNBg6jrSuqhTeKKEFDWI0_5fZLx0vM"></script>
-	<script src="js/gmap.min.js"></script>
-	<script src="js/map-script.js"></script>
-	<!-- Active JS -->
-	<script src="js/active.js"></script>
 </body>
 
 </html>
